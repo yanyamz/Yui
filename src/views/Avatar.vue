@@ -90,4 +90,16 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.card {
+    &-image {
+        height: 12rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+}
+</style>
