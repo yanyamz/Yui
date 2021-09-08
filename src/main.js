@@ -8,9 +8,17 @@ import scss from '@/assets/scss/main.scss'
 
 import Logo from '@/components/UI/Logo'
 
-createApp(App)
-    .use(store)
-    .use(router)
-    .use(scss)
-    .component('Logo', Logo)
-    .mount('#app')
+import { projectAuth } from './firebase/config'
+
+let app
+
+projectAuth.onAuthStateChanged(() => {
+    if (!app) {
+        app = createApp(App)
+            .use(store)
+            .use(router)
+            .use(scss)
+            .component('Logo', Logo)
+            .mount('#app')
+    }
+})
