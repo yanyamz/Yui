@@ -1,27 +1,55 @@
 <template>
-    <div class="container">
-        <div class="title">Login</div>
-        <div class="field">
-            <label class="label">Email</label>
-            <div class="control">
-                <input class="input is-primary" type="email" placeholder="iloveanime@gmail.com" />
+    <form @submit.prevent="handleSubmit">
+        <div class="container">
+            <div class="title">Login</div>
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                    <input
+                        v-model="email"
+                        class="input is-primary"
+                        type="email"
+                        placeholder="iloveanime@gmail.com"
+                    />
+                </div>
             </div>
-        </div>
-        <div class="field">
-            <div class="label">Password</div>
-            <div class="control">
-                <input class="input is-primary" type="password" />
+            <div class="field">
+                <div class="label">Password</div>
+                <div class="control">
+                    <input v-model="password" class="input is-primary" type="password" />
+                </div>
             </div>
+            <button class="button is-primary my-2">Login</button>
+            <p class="is-size-8">
+                Need an account?
+                <span @click="$emit('showSignup')" class="has-text-link is-clickable">Signup</span>
+            </p>
         </div>
-        <button class="button is-primary my-2">Login</button>
-        <p class="is-size-8">
-            Need an account? <span class="has-text-link is-clickable">Signup</span>
-        </p>
-    </div>
+    </form>
 </template>
 
 <script>
-export default {}
+import { ref } from '@vue/reactivity'
+import useLogin from '@/composables/useLogin'
+
+export default {
+    emits: ['showSignup'],
+    setup(props, context) {
+        const email = ref('')
+        const password = ref('')
+        const { error, login } = useLogin()
+        const handleSubmit = async () => {
+            console.log(email.value, password.value)
+            await login(email.value, password.value)
+            if (!error.value) {
+                console.log('user logged in')
+                context.emit('login')
+            }
+        }
+        return { email, password, handleSubmit }
+    },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -32,7 +60,7 @@ export default {}
     padding: 2rem;
     .field,
     button {
-        width: clamp(22rem, 80%, 100%);
+        width: clamp(22rem, 30%, 100%);
     }
 }
 </style>

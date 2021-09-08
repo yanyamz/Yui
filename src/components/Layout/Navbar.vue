@@ -4,10 +4,10 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-primary">
+                        <a @click="$emit('showSignup')" href="#auth" class="button is-primary">
                             <strong>Sign up</strong>
                         </a>
-                        <a class="button is-light">
+                        <a @click="$emit('showLogin')" href="#auth" class="button is-light">
                             Log in
                         </a>
                     </div>
@@ -18,7 +18,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+    emits: ['showLogin', 'showSignup'],
+}
 </script>
 
 <style></style>
