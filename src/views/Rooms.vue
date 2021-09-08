@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import NavbarLoggedIn from '../components/Layout/NavbarLoggedIn.vue'
+import NavbarLoggedIn from '@/components/Layout/NavbarLoggedIn.vue'
 
 export default {
     components: { NavbarLoggedIn },
