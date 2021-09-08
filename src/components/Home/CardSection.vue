@@ -33,7 +33,7 @@
                         <img src="@/assets/svg/rankings.svg" alt="image" />
                     </div>
                     <p class="card-content has-text-centered">
-                        Rank up as you play, and compete with friends
+                        Compete with your friends to see who's the ultimate nerd
                     </p>
                 </div>
             </div>

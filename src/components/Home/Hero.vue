@@ -6,8 +6,9 @@
                     Yui
                 </p>
                 <p class="subtitle">
-                    A multiplayer, no hassle,
-                    <span class="has-text-weight-bold">"Guess the Anime Opening"</span> quiz.
+                    A multiplayer
+                    <span class="has-text-weight-bold">"Guess the Anime Opening"</span> quiz. to
+                    compete against your friends, and others
                 </p>
             </div>
         </div>
@@ -16,6 +17,9 @@
 </template>
 
 <style lang="scss">
+.subtitle {
+    max-width: 60ch;
+}
 img {
     width: 100%;
     height: 100%;
