@@ -17,7 +17,7 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="button is-primary block is-pulled-right">Create Room</div>
+            <div class="button is-primary block">Create Room</div>
         </div>
     </div>
 </template>
@@ -37,4 +37,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+</style>

@@ -3,7 +3,7 @@
         <div class="hero-body">
             <div class="">
                 <p class="title">
-                    Shana
+                    Yui
                 </p>
                 <p class="subtitle">
                     A multiplayer, no hassle,

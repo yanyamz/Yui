@@ -2,7 +2,7 @@
     <footer class="footer mt-3 py-5">
         <div class="content has-text-centered">
             <p>
-                <strong>Shana</strong> developed by <a href="https://github.com/yanyamz">Yanyamz</a>
+                <strong>Yui</strong> developed by <a href="https://github.com/yanyamz">Yanyamz</a>
             </p>
         </div>
     </footer>
