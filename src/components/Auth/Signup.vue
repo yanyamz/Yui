@@ -32,6 +32,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
     .field,
     button {
         width: clamp(22rem, 80%, 100%);
