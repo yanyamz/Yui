@@ -4,8 +4,8 @@
         <Hero />
         <CardSection />
         <div id="auth">
-            <Login v-if="hasLogin" @showSignup="showSignup" />
-            <Signup v-else @showLogin="showLogin" />
+            <Login v-if="hasLogin" @login="enterRooms" @showSignup="showSignup" />
+            <Signup v-else @signup="enterRooms" @showLogin="showLogin" />
         </div>
         <Footer />
     </div>
@@ -19,6 +19,7 @@ import Login from '@/components/Auth/Login'
 import CardSection from '@/components/Home/CardSection'
 import Signup from '@/components/Auth/Signup'
 import { ref } from '@vue/reactivity'
+import { useRouter } from 'vue-router'
 
 export default {
     components: {
@@ -33,7 +34,12 @@ export default {
         const hasLogin = ref(true)
         const showLogin = () => (hasLogin.value = true)
         const showSignup = () => (hasLogin.value = false)
-        return { hasLogin, showLogin, showSignup }
+
+        const router = useRouter()
+        const enterRooms = () => {
+            router.push({ name: 'Rooms' })
+        }
+        return { hasLogin, showLogin, showSignup, enterRooms }
     },
 }
 </script>

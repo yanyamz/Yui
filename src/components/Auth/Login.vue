@@ -40,7 +40,6 @@ export default {
         const password = ref('')
         const { error, login } = useLogin()
         const handleSubmit = async () => {
-            console.log(email.value, password.value)
             await login(email.value, password.value)
             if (!error.value) {
                 console.log('user logged in')

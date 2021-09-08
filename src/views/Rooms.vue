@@ -1,9 +1,14 @@
 <template>
+    <NavbarLoggedIn />
     <h1>Hello</h1>
 </template>
 
 <script>
-export default {}
+import NavbarLoggedIn from '../components/Layout/NavbarLoggedIn.vue'
+
+export default {
+    components: { NavbarLoggedIn },
+}
 </script>
 
 <style></style>
