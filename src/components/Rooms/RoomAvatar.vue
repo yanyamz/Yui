@@ -10,7 +10,9 @@
                 <img src="https://avatars.githubusercontent.com/u/89555647?v=4" alt="image" />
             </div>
             <div class="card-content has-text-centered">
-                <a class="button is-primary">Customize</a>
+                <router-link :to="{ name: 'Avatar' }">
+                    <a class="button is-primary">Customize</a>
+                </router-link>
             </div>
         </div>
     </div>
