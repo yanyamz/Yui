@@ -13,11 +13,8 @@
                             Avatars
                         </p>
                     </div>
-                    <div class="card-image has-text-centered">
-                        <img
-                            src="https://avatars.githubusercontent.com/u/89555647?v=4"
-                            alt="image"
-                        />
+                    <div class="card-image has-text-centered mt-2">
+                        <img src="@/assets/images/shana.png" alt="image" />
                     </div>
                     <p class="card-content has-text-centered">
                         Choose through a variety of avatars
