@@ -1,7 +1,6 @@
 <template>
     <div class="column">
         <div class="card">
-            <div class="button is-primary block">Create Room</div>
             <table class="table block">
                 <thead>
                     <th>Room</th>
@@ -18,6 +17,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="button is-primary block is-pulled-right">Create Room</div>
         </div>
     </div>
 </template>

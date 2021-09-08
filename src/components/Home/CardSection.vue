@@ -7,9 +7,7 @@
             <div class="column is-one-third">
                 <div class="card">
                     <div class="card-header">
-                        <p
-                            class="card-header-title is-centered has-background-primary has-text-white"
-                        >
+                        <p class="card-header-title is-centered has-background-primary-light">
                             Avatars
                         </p>
                     </div>
@@ -27,9 +25,7 @@
             <div class="column is-one-third">
                 <div class="card">
                     <div class="card-header">
-                        <p
-                            class="card-header-title is-centered has-background-primary has-text-white"
-                        >
+                        <p class="card-header-title is-centered has-background-primary-light">
                             Rankings
                         </p>
                     </div>
@@ -44,9 +40,7 @@
             <div class="column is-one-third">
                 <div class="card">
                     <div class="card-header">
-                        <p
-                            class="card-header-title is-centered has-background-primary has-text-white"
-                        >
+                        <p class="card-header-title is-centered has-background-primary-light">
                             Customize
                         </p>
                     </div>

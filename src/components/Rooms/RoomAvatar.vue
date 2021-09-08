@@ -2,7 +2,7 @@
     <div class="column is-one-quarter">
         <div class="card">
             <div class="card-header">
-                <p class="card-header-title is-centered has-background-primary has-text-white">
+                <p class="card-header-title is-centered has-background-primary-light">
                     Current Avatar
                 </p>
             </div>
