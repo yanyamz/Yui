@@ -2,7 +2,9 @@
     <div class="container">
         <NavbarLoggedIn />
         <router-link :to="{ name: 'Rooms' }">
-            <div class="fas fa-arrow-circle-left p-4 is-size-3 has-text-primary is-clickable"></div>
+            <div
+                class="fas fa-arrow-circle-left p-4 is-size-3 has-text-primary is-clickable mb-5"
+            ></div>
         </router-link>
         <div class="columns">
             <div class="column is-3">
@@ -25,6 +27,7 @@
                             @click="modifyIndex('subtract')"
                             class="fas fa-arrow-left has-text-primary is-pulled-left p-1 is-size-4 is-clickable"
                         ></i>
+                        <p class="is-capitalized is-size-5">{{ tempAvatar }}</p>
                         <i
                             @click="modifyIndex('add')"
                             class="fas fa-arrow-right has-text-primary is-pulled-right p-1 is-size-4 is-clickable"
@@ -51,7 +54,7 @@
                 <div class="card">
                     <div class="card-header">
                         <p class="card-header-title is-centered has-background-primary-light">
-                            Positive Emotion
+                            Positive
                         </p>
                     </div>
                     <div class="card-image has-text-centered">
@@ -66,7 +69,7 @@
                 <div class="card">
                     <div class="card-header">
                         <p class="card-header-title is-centered has-background-primary-light">
-                            Negative Emotion
+                            Negative
                         </p>
                     </div>
                     <div class="card-image has-text-centered">
@@ -100,11 +103,11 @@ export default {
         NavbarLoggedIn,
     },
     computed: {
-        ...mapGetters('user', ['tempAvatar']),
+        ...mapGetters(['tempAvatar']),
     },
     methods: {
-        ...mapActions('user', ['modifyIndex']),
-        ...mapMutations('user', ['resetTempAvatarIndex', 'saveAvatarState']),
+        ...mapActions(['modifyIndex']),
+        ...mapMutations(['resetTempAvatarIndex', 'saveAvatarState']),
     },
 }
 </script>

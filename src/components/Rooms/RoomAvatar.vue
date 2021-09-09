@@ -23,7 +23,7 @@ import { mapGetters } from 'vuex'
 
 export default {
     computed: {
-        ...mapGetters('user', ['avatar']),
+        ...mapGetters(['avatar']),
     },
 }
 </script>
