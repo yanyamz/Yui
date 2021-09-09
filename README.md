@@ -1,5 +1,7 @@
 # Yui
 
+<img src='https://aniopeningsonline.netlify.app/rooms'>
+
 ## Project setup
 
 ```
