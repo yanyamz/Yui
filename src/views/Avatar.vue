@@ -83,7 +83,7 @@
         </div>
 
         <button
-            @click="saveAvatarState(), $router.push({ name: 'Rooms' })"
+            @click="saveAvatarState(), $router.push({ name: 'Rooms' }), setAvatarInFirebase()"
             class="button is-primary"
         >
             Save and Close
@@ -103,7 +103,7 @@ export default {
         NavbarLoggedIn,
     },
     computed: {
-        ...mapGetters(['tempAvatar']),
+        ...mapGetters(['tempAvatar', 'avatar']),
     },
     methods: {
         ...mapActions(['modifyIndex']),

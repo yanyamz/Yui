@@ -1,9 +1,9 @@
 import { createStore } from 'vuex'
 
-import user from './user.js'
+import auth from './auth.js'
 
 export default createStore({
-    modules: { user },
+    modules: { auth },
     state: {
         avatars: ['yui', 'bunny', 'rumia', 'michi', 'akari', 'jin', 'atarah', 'freya', 'lance'],
         currentAvatarIndex: 0,

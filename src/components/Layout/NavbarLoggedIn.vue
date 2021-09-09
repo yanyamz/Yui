@@ -31,29 +31,30 @@
 </template>
 
 <script>
-import { useRouter } from 'vue-router'
-import useLogout from '@/composables/useLogout'
-import { ref } from '@vue/runtime-core'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
-    setup() {
-        const { logout, error } = useLogout()
-        const router = useRouter()
-        const handleClick = async () => {
-            await logout()
-            router.push({ name: 'Home' })
-            if (!error.value) {
-                // console.log('user logged out')
+    data() {
+        return {
+            isOpen: false,
+        }
+    },
+    getters: {
+        ...mapGetters('auth', ['error']),
+    },
+    methods: {
+        ...mapActions('auth', ['logout']),
+        async toggleMenuState() {
+            this.isOpen = !this.isOpen
+            this.$refs.mobileMenu.classList.toggle('is-active')
+        },
+        async handleClick() {
+            await this.logout()
+            this.$router.push({ name: 'Home' })
+            if (!this.error) {
+                //
             }
-        }
-
-        const mobileMenu = ref(null)
-        const isOpen = ref(false)
-        const toggleMenuState = () => {
-            isOpen.value = !isOpen.value
-            mobileMenu.value.classList.toggle('is-active')
-        }
-        return { handleClick, mobileMenu, toggleMenuState, isOpen }
+        },
     },
 }
 </script>

@@ -9,17 +9,16 @@
 </template>
 
 <script>
-import getUser from '@/composables/getUser'
 import NavbarLoggedIn from '@/components/Layout/NavbarLoggedIn.vue'
 import RoomsList from '@/components/Rooms/RoomsList'
 import RoomAvatar from '@/components/Rooms/RoomAvatar.vue'
 import Footer from '@/components/Layout/Footer'
+import { mapGetters } from 'vuex'
 
 export default {
     components: { NavbarLoggedIn, RoomAvatar, RoomsList, Footer },
-    setup() {
-        const { user } = getUser()
-        return { user }
+    computed: {
+        ...mapGetters('auth', ['user']),
     },
 }
 </script>

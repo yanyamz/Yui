@@ -40,28 +40,35 @@
 </template>
 
 <script>
-import { computed, ref } from '@vue/reactivity'
-import useSignup from '@/composables/useSignup'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
     emits: ['showLogin'],
-    setup(props, context) {
-        const { error, signup } = useSignup()
-        const displayName = ref('')
-        const email = ref('')
-        const password = ref('')
-
-        const handleSubmit = async () => {
-            await signup(email.value, password.value, displayName.value)
-            if (!error.value) {
-                context.emit('signup')
-            }
+    data() {
+        return {
+            displayName: '',
+            email: '',
+            password: '',
         }
-
-        const errorMessage = computed(() => {
-            return error.value == null ? '' : error.value.substring(10, error.length)
-        })
-        return { email, displayName, password, handleSubmit, errorMessage }
+    },
+    computed: {
+        ...mapGetters('auth', ['error']),
+        errorMessage() {
+            return this.error == null ? '' : this.error.substring(10, this.error.length)
+        },
+    },
+    methods: {
+        ...mapActions('auth', ['signup']),
+        async handleSubmit() {
+            await this.signup({
+                email: this.email,
+                password: this.password,
+                displayName: this.displayName,
+            })
+            if (!this.error) {
+                this.$emit('signup')
+            }
+        },
     },
 }
 </script>
