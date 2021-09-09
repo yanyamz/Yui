@@ -1,4 +1,7 @@
 <template>
+    <error-message v-if="hasError">
+        Signup went wrong, account may already exist or please try again later.
+    </error-message>
     <form @submit.prevent="handleSubmit">
         <div class="container">
             <div class="title">Signup</div>
@@ -49,6 +52,7 @@ export default {
             displayName: '',
             email: '',
             password: '',
+            hasError: false,
         }
     },
     computed: {
@@ -67,6 +71,11 @@ export default {
             })
             if (!this.error) {
                 this.$emit('signup')
+            } else {
+                this.hasError = true
+                setTimeout(() => {
+                    this.hasError = false
+                }, 4000)
             }
         },
     },

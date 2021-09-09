@@ -6,7 +6,7 @@ import store from './store'
 
 import scss from '@/assets/scss/main.scss'
 
-import Logo from '@/components/UI/Logo'
+import ErrorMessage from '@/components/UI/ErrorMessage'
 
 import { projectAuth } from './firebase/config'
 
@@ -18,7 +18,7 @@ projectAuth.onAuthStateChanged(() => {
             .use(store)
             .use(router)
             .use(scss)
-            .component('Logo', Logo)
+            .component('error-message', ErrorMessage)
             .mount('#app')
     }
 })

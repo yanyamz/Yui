@@ -1,4 +1,7 @@
 <template>
+    <error-message v-if="hasError">
+        Login doesn't exist, check your information carefully
+    </error-message>
     <form @submit.prevent="handleSubmit">
         <div class="container">
             <div class="title">Login</div>
@@ -39,6 +42,7 @@ export default {
         return {
             email: '',
             password: '',
+            hasError: false,
         }
     },
     computed: {
@@ -50,6 +54,11 @@ export default {
             await this.login({ email: this.email, password: this.password })
             if (!this.error) {
                 this.$emit('login')
+            } else {
+                this.hasError = true
+                setTimeout(() => {
+                    this.hasError = false
+                }, 4000)
             }
         },
     },
