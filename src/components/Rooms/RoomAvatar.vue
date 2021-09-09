@@ -7,7 +7,7 @@
                 </p>
             </div>
             <div class="card-image has-text-centered">
-                <img src="https://avatars.githubusercontent.com/u/89555647?v=4" alt="image" />
+                <img :src="require(`@/assets/images/avatars/${avatar}_neutral.png`)" alt="image" />
             </div>
             <div class="card-content has-text-centered">
                 <router-link :to="{ name: 'Avatar' }">
@@ -19,7 +19,13 @@
 </template>
 
 <script>
-export default {}
+import { mapGetters } from 'vuex'
+
+export default {
+    computed: {
+        ...mapGetters('user', ['avatar']),
+    },
+}
 </script>
 
 <style lang="scss" scoped>
