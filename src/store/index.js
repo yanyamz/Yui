@@ -5,7 +5,7 @@ import user from './user.js'
 export default createStore({
     modules: { user },
     state: {
-        avatars: ['yui', 'bunny', 'rumia', 'michi', 'akari'],
+        avatars: ['yui', 'bunny', 'rumia', 'michi', 'akari', 'jin', 'atarah', 'freya', 'lance'],
         currentAvatarIndex: 0,
         tempAvatarIndex: 0,
     },
