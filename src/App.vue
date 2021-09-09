@@ -9,7 +9,7 @@ import { mapMutations } from 'vuex'
 import { projectAuth } from '@/firebase/config'
 
 export default {
-    mounted() {
+    async mounted() {
         projectAuth.onAuthStateChanged((_user) => {
             this.updateUser(_user)
         })

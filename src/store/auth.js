@@ -3,7 +3,6 @@ const { projectAuth } = require('../firebase/config')
 export default {
     namespaced: true,
     state: {
-        user: projectAuth.currentUser,
         error: null,
     },
     getters: {
@@ -18,7 +17,10 @@ export default {
         async login(context, { email, password }) {
             context.state.error = null
             try {
-                const res = await projectAuth.signInWithEmailAndPassword(email, password)
+                const res = await projectAuth.signInWithEmailAndPassword(
+                    email,
+                    password
+                )
                 context.state.error = null
                 return res
             } catch (err) {
@@ -36,7 +38,10 @@ export default {
         async signup(context, { email, password, displayName }) {
             context.state.error = null
             try {
-                const res = await projectAuth.createUserWithEmailAndPassword(email, password)
+                const res = await projectAuth.createUserWithEmailAndPassword(
+                    email,
+                    password
+                )
                 if (!res) throw new Error('Could not complete the signup')
                 await res.user.updateProfile({ displayName })
                 context.state.error = null

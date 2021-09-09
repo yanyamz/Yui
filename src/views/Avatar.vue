@@ -10,13 +10,17 @@
             <div class="column is-3">
                 <div class="card">
                     <div class="card-header">
-                        <p class="card-header-title is-centered has-background-primary-light">
+                        <p
+                            class="card-header-title is-centered has-background-primary-light"
+                        >
                             Current Avatar
                         </p>
                     </div>
                     <div class="card-image has-text-centered">
                         <img
-                            :src="require(`@/assets/images/avatars/${tempAvatar}_neutral.png`)"
+                            :src="
+                                require(`@/assets/images/avatars/${tempAvatar}_neutral.png`)
+                            "
                             alt="image"
                         />
                     </div>
@@ -38,13 +42,17 @@
             <div class="column">
                 <div class="card">
                     <div class="card-header">
-                        <p class="card-header-title is-centered has-background-primary-light">
+                        <p
+                            class="card-header-title is-centered has-background-primary-light"
+                        >
                             Neutral
                         </p>
                     </div>
                     <div class="card-image has-text-centered">
                         <img
-                            :src="require(`@/assets/images/avatars/${tempAvatar}_neutral.png`)"
+                            :src="
+                                require(`@/assets/images/avatars/${tempAvatar}_neutral.png`)
+                            "
                             alt="image"
                         />
                     </div>
@@ -53,13 +61,17 @@
             <div class="column">
                 <div class="card">
                     <div class="card-header">
-                        <p class="card-header-title is-centered has-background-primary-light">
+                        <p
+                            class="card-header-title is-centered has-background-primary-light"
+                        >
                             Positive
                         </p>
                     </div>
                     <div class="card-image has-text-centered">
                         <img
-                            :src="require(`@/assets/images/avatars/${tempAvatar}_positive.png`)"
+                            :src="
+                                require(`@/assets/images/avatars/${tempAvatar}_positive.png`)
+                            "
                             alt="image"
                         />
                     </div>
@@ -68,13 +80,17 @@
             <div class="column">
                 <div class="card">
                     <div class="card-header">
-                        <p class="card-header-title is-centered has-background-primary-light">
+                        <p
+                            class="card-header-title is-centered has-background-primary-light"
+                        >
                             Negative
                         </p>
                     </div>
                     <div class="card-image has-text-centered">
                         <img
-                            :src="require(`@/assets/images/avatars/${tempAvatar}_negative.png`)"
+                            :src="
+                                require(`@/assets/images/avatars/${tempAvatar}_negative.png`)
+                            "
                             alt="image"
                         />
                     </div>
@@ -83,7 +99,7 @@
         </div>
 
         <button
-            @click="saveAvatarState(), $router.push({ name: 'Rooms' }), setAvatarInFirebase()"
+            @click="saveAvatarState(), $router.push({ name: 'Rooms' })"
             class="button is-primary"
         >
             Save and Close
@@ -107,6 +123,7 @@ export default {
     },
     methods: {
         ...mapActions(['modifyIndex']),
+        ...mapActions('firestore', ['loadDocument']),
         ...mapMutations(['resetTempAvatarIndex', 'saveAvatarState']),
     },
 }
