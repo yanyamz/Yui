@@ -17,7 +17,7 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
     components: { NavbarLoggedIn, RoomAvatar, RoomsList, Footer },
-    async mounted() {
+    async created() {
         await this.getUserPreferences()
     },
     computed: {

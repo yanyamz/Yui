@@ -2,12 +2,21 @@
     <div class="column is-one-quarter">
         <div class="card">
             <div class="card-header">
-                <p class="card-header-title is-centered has-background-primary-light">
+                <p
+                    class="card-header-title is-centered has-background-primary-light"
+                >
                     Current Avatar
                 </p>
             </div>
             <div class="card-image has-text-centered">
-                <img :src="require(`@/assets/images/avatars/${avatar}_neutral.png`)" alt="image" />
+                <img
+                    :src="
+                        require(`@/assets/images/avatars/${avatars[
+                            avatarIndex % avatars.length
+                        ] ?? 'yui'}_neutral.png`)
+                    "
+                    alt="image"
+                />
             </div>
             <div class="card-content has-text-centered">
                 <router-link :to="{ name: 'Avatar' }">
@@ -23,7 +32,8 @@ import { mapGetters } from 'vuex'
 
 export default {
     computed: {
-        ...mapGetters(['avatar']),
+        ...mapGetters('avatar', ['avatars']),
+        ...mapGetters('userPreferences', ['avatarIndex']),
     },
 }
 </script>

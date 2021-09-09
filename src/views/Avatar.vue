@@ -109,22 +109,28 @@
 
 <script>
 import NavbarLoggedIn from '@/components/Layout/NavbarLoggedIn'
-import { mapGetters, mapActions, mapMutations } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
     unmounted() {
+        this.resetTempAvatarIndex()
+    },
+    mounted() {
         this.resetTempAvatarIndex()
     },
     components: {
         NavbarLoggedIn,
     },
     computed: {
-        ...mapGetters(['tempAvatar', 'avatar']),
+        ...mapGetters('avatar', ['tempAvatar']),
     },
     methods: {
-        ...mapActions(['modifyIndex']),
-        ...mapActions('firestore', ['loadDocument']),
-        ...mapMutations(['resetTempAvatarIndex', 'saveAvatarState']),
+        ...mapActions('avatar', [
+            'modifyIndex',
+            'saveAvatarState',
+            'resetTempAvatarIndex',
+        ]),
+        ...mapActions('firestore', ['loadDocument', 'updateDocument']),
     },
 }
 </script>

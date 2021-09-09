@@ -9,8 +9,14 @@ export default {
         },
     },
     getters: {
+        userPreferences(state) {
+            return state.userPreferences
+        },
         displayName(state) {
             return state.userPreferences.displayName
+        },
+        avatarIndex(state) {
+            return state.userPreferences.avatar
         },
     },
     actions: {
@@ -29,7 +35,6 @@ export default {
             context.state.userPreferences.displayName =
                 projectAuth.currentUser.displayName
             context.state.userPreferences.avatar = data.avatar
-            console.log(context.state.userPreferences)
         },
     },
 }

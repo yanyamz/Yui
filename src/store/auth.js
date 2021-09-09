@@ -17,12 +17,15 @@ export default {
         async login(context, { email, password }) {
             context.state.error = null
             try {
-                const res = await projectAuth.signInWithEmailAndPassword(
-                    email,
-                    password
-                )
+                await projectAuth.signInWithEmailAndPassword(email, password)
                 context.state.error = null
-                return res
+                await context.dispatch(
+                    'userPreferences/getUserPreferences',
+                    {},
+                    {
+                        root: true,
+                    }
+                )
             } catch (err) {
                 context.state.error = 'Incorrect login credentials'
             }

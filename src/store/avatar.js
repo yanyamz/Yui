@@ -1,15 +1,29 @@
+import { projectAuth } from '../firebase/config'
+
 export default {
+    namespaced: true,
     state: {
-        avatars: ['yui', 'bunny', 'rumia', 'michi', 'akari', 'jin', 'atarah', 'freya', 'lance'],
-        currentAvatarIndex: 0,
+        avatars: [
+            'yui',
+            'bunny',
+            'rumia',
+            'michi',
+            'akari',
+            'jin',
+            'atarah',
+            'freya',
+            'lance',
+        ],
         tempAvatarIndex: 0,
     },
     getters: {
-        avatar(state) {
-            return state.avatars[Math.abs(state.currentAvatarIndex % state.avatars.length)]
-        },
         tempAvatar(state) {
-            return state.avatars[Math.abs(state.tempAvatarIndex % state.avatars.length)]
+            return state.avatars[
+                Math.abs(state.tempAvatarIndex % state.avatars.length)
+            ]
+        },
+        avatars(state) {
+            return state.avatars
         },
     },
     actions: {
@@ -18,16 +32,25 @@ export default {
                 ? (context.state.tempAvatarIndex -= 1)
                 : (context.state.tempAvatarIndex += 1)
         },
-    },
-    mutations: {
-        resetTempAvatarIndex(state) {
-            state.tempAvatarIndex = state.currentAvatarIndex
+        async saveAvatarState(context) {
+            await context.dispatch(
+                'firestore/updateDocument',
+                {
+                    collection: 'user_preferences',
+                    document: projectAuth.currentUser.displayName,
+                    newData: {
+                        ...context.rootGetters[
+                            'userPreferences/userPreferences'
+                        ],
+                        avatar: context.state.tempAvatarIndex,
+                    },
+                },
+                { root: true }
+            )
         },
-        saveAvatarState(state) {
-            state.currentAvatarIndex = state.tempAvatarIndex
-        },
-        setAvatarState(state, data) {
-            state.currentAvatarIndex = data
+        resetTempAvatarIndex(context) {
+            context.state.tempAvatarIndex =
+                context.rootGetters['userPreferences/avatarIndex']
         },
     },
 }

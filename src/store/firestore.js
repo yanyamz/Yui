@@ -15,6 +15,12 @@ export default {
                 console.log(err)
             }
         },
+        async updateDocument(context, { collection, document, newData }) {
+            await projectFirestore
+                .collection(collection)
+                .doc(document)
+                .set(newData)
+        },
         async loadCollection(context, collection) {
             try {
                 const res = await projectFirestore.collection(collection).get()
