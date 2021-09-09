@@ -1,5 +1,7 @@
 # Yui
 
+<img src='https://files.catbox.moe/v4frui.png'>
+
 ## Project setup
 
 ```
