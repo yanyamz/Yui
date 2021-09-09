@@ -1,6 +1,6 @@
 # Yui
 
-<img src='https://aniopeningsonline.netlify.app/rooms'>
+<img src='https://files.catbox.moe/v4frui.png'>
 
 ## Project setup
 
