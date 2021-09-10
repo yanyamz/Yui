@@ -1,6 +1,6 @@
 <template>
     <error-message v-if="hasError">
-        Signup went wrong, account may already exist or please try again later.
+        Email already exists, or isn't valid
     </error-message>
     <form @submit.prevent="handleSubmit">
         <div class="container">
@@ -13,6 +13,7 @@
                         class="input is-primary"
                         type="text"
                         placeholder="Goku"
+                        ref="displayName"
                     />
                 </div>
             </div>
@@ -30,13 +31,21 @@
             <div class="field">
                 <div class="label">Password</div>
                 <div class="control">
-                    <input v-model="password" class="input is-primary" type="password" />
+                    <input
+                        v-model="password"
+                        class="input is-primary"
+                        type="password"
+                    />
                 </div>
             </div>
             <button class="button is-primary my-2">Signup</button>
             <p class="is-size-8">
                 Already have an account?
-                <span @click="$emit('showLogin')" class="has-text-link is-clickable">Login</span>
+                <span
+                    @click="$emit('showLogin')"
+                    class="has-text-link is-clickable"
+                    >Login</span
+                >
             </p>
         </div>
     </form>
@@ -46,7 +55,7 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-    emits: ['showLogin'],
+    emits: ['showLogin', 'signup'],
     data() {
         return {
             displayName: '',
@@ -58,12 +67,22 @@ export default {
     computed: {
         ...mapGetters('auth', ['error']),
         errorMessage() {
-            return this.error == null ? '' : this.error.substring(10, this.error.length)
+            return this.error == null
+                ? ''
+                : this.error.substring(10, this.error.length)
         },
     },
     methods: {
         ...mapActions('auth', ['signup']),
+        ...mapActions(['isUniqueDisplayName']),
         async handleSubmit() {
+            const isValid = await this.isUniqueDisplayName(this.displayName)
+            if (!isValid) {
+                this.$refs.displayName.classList.add('is-danger')
+                return
+            } else {
+                this.$refs.displayName.classList.remove('is-danger')
+            }
             await this.signup({
                 email: this.email,
                 password: this.password,

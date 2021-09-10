@@ -18,11 +18,10 @@ import { projectFirestore } from '@/firebase/config'
 
 export default {
     components: { NavbarLoggedIn, RoomAvatar, RoomsList, Footer },
-    async created() {
+    async mounted() {
         await this.getUserPreferences()
         await this.createUserPreferences()
         await this.loadRooms()
-
         projectFirestore.collection('rooms').onSnapshot(() => {
             this.loadRooms()
         })
