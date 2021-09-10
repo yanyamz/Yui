@@ -1,3 +1,5 @@
+import { projectAuth } from '../firebase/config'
+
 export default {
     namespaced: true,
     state: {
@@ -9,6 +11,19 @@ export default {
         },
     },
     actions: {
+        async deleteRoom(context) {
+            console.log(context.rootGetters['userPreferences/displayName'])
+            await context.dispatch(
+                'firestore/deleteDocument',
+                {
+                    collection: 'rooms',
+                    document: projectAuth.currentUser.displayName,
+                },
+                {
+                    root: true,
+                }
+            )
+        },
         async loadRooms(context) {
             let rooms = await context.dispatch(
                 'firestore/loadCollection',
