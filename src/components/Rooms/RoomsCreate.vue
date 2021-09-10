@@ -11,7 +11,7 @@
                         v-model.trim="roomName"
                         id="room-name"
                         type="text"
-                        maxlength="12"
+                        maxlength="16"
                         class="input is-primary block"
                     />
                 </div>
