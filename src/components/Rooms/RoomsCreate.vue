@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
     emits: ['toggleActive'],
     data() {
@@ -55,13 +56,22 @@ export default {
             isValid: true,
         }
     },
+    computed: {
+        ...mapGetters('userPreferences', ['displayName']),
+    },
     methods: {
+        ...mapActions('rooms', ['createRoom']),
         async validate() {
             if (this.difficulty == null || this.roomName == '') {
                 this.isValid = false
             }
             if (this.isValid) {
                 this.$emit('toggleActive')
+                this.createRoom({
+                    name: this.roomName,
+                    difficulty: this.difficulty,
+                    host: this.displayName,
+                })
             }
             setTimeout(() => {
                 this.isValid = true

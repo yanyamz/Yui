@@ -8,4 +8,9 @@ export default {
             return state.rooms
         },
     },
+    actions: {
+        async createRoom(context, { name, difficulty, host }) {
+            context.state.rooms.push({ name, difficulty, host })
+        },
+    },
 }
