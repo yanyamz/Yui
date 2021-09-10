@@ -18,7 +18,7 @@
 
     export default {
         components: { NavbarLoggedIn, RoomAvatar, RoomsList, Footer },
-        async created() {
+        async mounted() {
             await this.getUserPreferences()
             await this.loadRooms()
             await this.createUserPreferences()

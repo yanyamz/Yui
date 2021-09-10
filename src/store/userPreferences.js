@@ -22,7 +22,6 @@ export default {
     actions: {
         async createUserPreferences(context) {
             if (context.state.userPreferences.displayName != '') return
-            console.log('creating user preferences')
             await context.dispatch(
                 'firestore/updateDocument',
                 {
