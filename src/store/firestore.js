@@ -16,10 +16,14 @@ export default {
             }
         },
         async updateDocument(context, { collection, document, newData }) {
-            await projectFirestore
-                .collection(collection)
-                .doc(document)
-                .set(newData)
+            try {
+                await projectFirestore
+                    .collection(collection)
+                    .doc(document)
+                    .set(newData)
+            } catch (err) {
+                console.log('failed to create or update doc')
+            }
         },
         async loadCollection(context, collection) {
             try {
