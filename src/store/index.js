@@ -4,7 +4,8 @@ import auth from './auth.js'
 import avatar from './avatar.js'
 import firestore from './firestore.js'
 import userPreferences from './userPreferences.js'
+import rooms from './rooms.js'
 
 export default createStore({
-    modules: { auth, avatar, firestore, userPreferences },
+    modules: { auth, avatar, firestore, userPreferences, rooms },
 })

@@ -20,13 +20,21 @@
             <div class="field">
                 <div class="label">Password</div>
                 <div class="control">
-                    <input v-model="password" class="input is-primary" type="password" />
+                    <input
+                        v-model="password"
+                        class="input is-primary"
+                        type="password"
+                    />
                 </div>
             </div>
             <button class="button is-primary my-2">Login</button>
             <p class="is-size-8">
                 Need an account?
-                <span @click="$emit('showSignup')" class="has-text-link is-clickable">Signup</span>
+                <span
+                    @click="$emit('showSignup')"
+                    class="has-text-link is-clickable"
+                    >Signup</span
+                >
             </p>
         </div>
     </form>
@@ -36,8 +44,7 @@
 import { mapActions, mapGetters } from 'vuex'
 
 export default {
-    emits: ['showSignup'],
-
+    emits: ['showSignup', 'login'],
     data() {
         return {
             email: '',

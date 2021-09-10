@@ -1,5 +1,5 @@
 <template>
-    <div class="notification is-primary" ref="notification">
+    <div class="notification is-danger" ref="notification">
         <button @click="closeNotification" class="delete"></button>
         <slot></slot>
     </div>

@@ -1,48 +1,80 @@
 <template>
+    <teleport to="#app">
+        <div class="modal" :class="{ 'is-active': isActive }">
+            <div @click="toggleIsActive" class="modal-background"></div>
+            <div class="modal-content">
+                <RoomsCreate @toggleActive="toggleIsActive" />
+            </div>
+            <button
+                @click="toggleIsActive"
+                class="modal-close is-large"
+                aria-label="close"
+            ></button>
+        </div>
+    </teleport>
     <div class="column">
         <div class="card">
             <table class="table block">
                 <thead>
                     <th>Room</th>
                     <th>Host</th>
-                    <th>Settings</th>
+                    <th>Difficulty</th>
                     <th></th>
                 </thead>
                 <tbody>
                     <tr v-for="room in rooms" :key="room.id">
-                        <th>{{ room.number }}</th>
+                        <td>{{ room.name }}</td>
                         <td>{{ room.host }}</td>
-                        <th>{{ room.settings }}</th>
+                        <td>{{ room.difficulty }}</td>
                         <th><a class="has-text-link">Join</a></th>
                     </tr>
                 </tbody>
             </table>
-            <div class="button is-primary block">Create Room</div>
+            <div @click="toggleIsActive" class="button is-primary block">
+                Create Room
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
+import { mapGetters } from 'vuex'
+import RoomsCreate from '@/components/Rooms/RoomsCreate'
+
 export default {
-    setup() {
-        const rooms = ref([
-            { number: 1, host: 'bleh', settings: 'normal' },
-            { number: 2, host: 'Ant', settings: 'custom' },
-            { number: 3, host: 'Lewlew', settings: 'normal' },
-            { number: 4, host: 'bleh', settings: 'normal' },
-        ])
-        return { rooms }
+    components: {
+        RoomsCreate,
+    },
+    data() {
+        return {
+            isActive: false,
+        }
+    },
+    computed: {
+        ...mapGetters('rooms', ['rooms']),
+    },
+    methods: {
+        toggleIsActive() {
+            this.isActive = !this.isActive
+        },
     },
 }
 </script>
 
 <style lang="scss" scoped>
-.card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
+.column {
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+}
+
+.delete {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 </style>
