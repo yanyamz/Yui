@@ -14,6 +14,11 @@ export default {
             this.updateUser(_user)
         })
     },
+    async unmounted() {
+        projectAuth.onAuthStateChanged((_user) => {
+            this.updateUser(_user)
+        })
+    },
     methods: {
         ...mapMutations('auth', ['updateUser']),
     },

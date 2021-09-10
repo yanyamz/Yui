@@ -20,6 +20,7 @@ export default {
     components: { NavbarLoggedIn, RoomAvatar, RoomsList, Footer },
     async created() {
         await this.getUserPreferences()
+        await this.createUserPreferences()
         await this.loadRooms()
 
         projectFirestore.collection('rooms').onSnapshot(() => {
@@ -30,7 +31,10 @@ export default {
         ...mapGetters('userPreferences', ['displayName']),
     },
     methods: {
-        ...mapActions('userPreferences', ['getUserPreferences']),
+        ...mapActions('userPreferences', [
+            'getUserPreferences',
+            'createUserPreferences',
+        ]),
         ...mapActions('rooms', ['loadRooms']),
     },
 }

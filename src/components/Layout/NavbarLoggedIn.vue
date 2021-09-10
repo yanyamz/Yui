@@ -15,11 +15,18 @@
             </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': isOpen }">
+        <div
+            id="navbarBasicExample"
+            class="navbar-menu"
+            :class="{ 'is-active': isOpen }"
+        >
             <div class="navbar-start"></div>
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <div class="buttons" :class="{ 'is-justify-content-flex-end': isOpen }">
+                    <div
+                        class="buttons"
+                        :class="{ 'is-justify-content-flex-end': isOpen }"
+                    >
                         <a @click="handleClick" class="button is-primary">
                             <strong>Logout</strong>
                         </a>
@@ -31,7 +38,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 
 export default {
     data() {
@@ -44,12 +51,14 @@ export default {
     },
     methods: {
         ...mapActions('auth', ['logout']),
+        ...mapMutations('userPreferences', ['wipeUserPreferences']),
         async toggleMenuState() {
             this.isOpen = !this.isOpen
             this.$refs.mobileMenu.classList.toggle('is-active')
         },
         async handleClick() {
             await this.logout()
+            this.wipeUserPreferences()
             this.$router.push({ name: 'Home' })
             if (!this.error) {
                 //

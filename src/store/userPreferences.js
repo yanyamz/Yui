@@ -20,6 +20,17 @@ export default {
         },
     },
     actions: {
+        async createUserPreferences(context) {
+            if (context.state.userPreferences.displayName != '') return
+            await context.dispatch('firestore/updateDocument', {
+                collection: 'user_preferences',
+                document: projectAuth.currentUser.displayName,
+                newData: {
+                    avatar: Math.floor(Math.random() * 15 + 1),
+                    displayName: projectAuth.currentUser.displayName,
+                },
+            })
+        },
         async getUserPreferences(context) {
             const data = await context.dispatch(
                 'firestore/loadDocument',
@@ -35,6 +46,14 @@ export default {
             context.state.userPreferences.displayName =
                 projectAuth.currentUser.displayName
             context.state.userPreferences.avatar = data.avatar
+        },
+    },
+    mutations: {
+        wipeUserPreferences(state) {
+            state.userPreferences = {
+                displayName: '',
+                avatar: null,
+            }
         },
     },
 }
