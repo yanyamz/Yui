@@ -5,7 +5,6 @@ import Home from '@/views/Home.vue'
 import Rooms from '@/views/Rooms'
 import Avatar from '@/views/Avatar'
 import Lobby from '@/views/Lobby'
-import NotFound from '@/views/NotFound'
 
 const requireAuth = (to, from, next) => {
     let user = projectAuth.currentUser
@@ -51,7 +50,7 @@ const routes = [
         component: Lobby,
         beforeEnter: requireAuth,
     },
-    { path: '/:notFound(.*)', name: 'NotFound', component: NotFound },
+    { path: '/:notFound(.*)', redirect: '/' },
 ]
 
 const router = createRouter({
