@@ -4,6 +4,16 @@ export default {
     namespaced: true,
     state: {},
     actions: {
+        async deleteDocument(context, { collection, document }) {
+            try {
+                await projectFirestore
+                    .collection(collection)
+                    .doc(document)
+                    .delete()
+            } catch (err) {
+                console.log('error removing document')
+            }
+        },
         async loadDocument(context, { collection, document }) {
             try {
                 const res = await projectFirestore
