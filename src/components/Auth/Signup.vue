@@ -1,6 +1,6 @@
 <template>
     <error-message v-if="hasError">
-        Email already exists, or isn't valid
+        Email is taken or invade. OR Password is less than 6 characters
     </error-message>
     <form @submit.prevent="handleSubmit">
         <div class="container">
@@ -52,64 +52,64 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
+    import { mapActions, mapGetters } from 'vuex'
 
-export default {
-    emits: ['showLogin', 'signup'],
-    data() {
-        return {
-            displayName: '',
-            email: '',
-            password: '',
-            hasError: false,
-        }
-    },
-    computed: {
-        ...mapGetters('auth', ['error']),
-        errorMessage() {
-            return this.error == null
-                ? ''
-                : this.error.substring(10, this.error.length)
-        },
-    },
-    methods: {
-        ...mapActions('auth', ['signup']),
-        ...mapActions(['isUniqueDisplayName']),
-        async handleSubmit() {
-            const isValid = await this.isUniqueDisplayName(this.displayName)
-            if (!isValid) {
-                this.$refs.displayName.classList.add('is-danger')
-                return
-            } else {
-                this.$refs.displayName.classList.remove('is-danger')
-            }
-            await this.signup({
-                email: this.email,
-                password: this.password,
-                displayName: this.displayName,
-            })
-            if (!this.error) {
-                this.$emit('signup')
-            } else {
-                this.hasError = true
-                setTimeout(() => {
-                    this.hasError = false
-                }, 4000)
+    export default {
+        emits: ['showLogin', 'signup'],
+        data() {
+            return {
+                displayName: '',
+                email: '',
+                password: '',
+                hasError: false,
             }
         },
-    },
-}
+        computed: {
+            ...mapGetters('auth', ['error']),
+            errorMessage() {
+                return this.error == null
+                    ? ''
+                    : this.error.substring(10, this.error.length)
+            },
+        },
+        methods: {
+            ...mapActions('auth', ['signup']),
+            ...mapActions(['isUniqueDisplayName']),
+            async handleSubmit() {
+                const isValid = await this.isUniqueDisplayName(this.displayName)
+                if (!isValid) {
+                    this.$refs.displayName.classList.add('is-danger')
+                    return
+                } else {
+                    this.$refs.displayName.classList.remove('is-danger')
+                }
+                await this.signup({
+                    email: this.email,
+                    password: this.password,
+                    displayName: this.displayName,
+                })
+                if (!this.error) {
+                    this.$emit('signup')
+                } else {
+                    this.hasError = true
+                    setTimeout(() => {
+                        this.hasError = false
+                    }, 4000)
+                }
+            },
+        },
+    }
 </script>
 
 <style lang="scss" scoped>
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    .field,
-    button {
-        width: clamp(22rem, 30%, 100%);
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        .field,
+        button {
+            width: clamp(22rem, 30%, 100%);
+        }
     }
-}
 </style>

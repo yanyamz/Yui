@@ -22,14 +22,19 @@ export default {
     actions: {
         async createUserPreferences(context) {
             if (context.state.userPreferences.displayName != '') return
-            await context.dispatch('firestore/updateDocument', {
-                collection: 'user_preferences',
-                document: projectAuth.currentUser.displayName,
-                newData: {
-                    avatar: Math.floor(Math.random() * 15 + 1),
-                    displayName: projectAuth.currentUser.displayName,
+            console.log('creating user preferences')
+            await context.dispatch(
+                'firestore/updateDocument',
+                {
+                    collection: 'user_preferences',
+                    document: projectAuth.currentUser.displayName,
+                    newData: {
+                        avatar: Math.floor(Math.random() * 15 + 1),
+                        displayName: projectAuth.currentUser.displayName,
+                    },
                 },
-            })
+                { root: true }
+            )
         },
         async getUserPreferences(context) {
             const data = await context.dispatch(
