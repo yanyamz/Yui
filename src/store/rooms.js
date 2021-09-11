@@ -46,6 +46,24 @@ export default {
                 { root: true }
             )
         },
+        async removeUserFromRoom(context, host) {
+            const oldData = await context.dispatch('loadRoom', host)
+            const oldUserList = oldData.users
+            const newUserList = oldUserList.filter((entry) => {
+                if (entry.username != projectAuth.currentUser.displayName) {
+                    return entry
+                }
+            })
+            await context.dispatch(
+                'firestore/updateDocument',
+                {
+                    collection: 'rooms',
+                    document: host,
+                    newData: { ...oldData, users: newUserList },
+                },
+                { root: true }
+            )
+        },
         async loadRoom(context, host) {
             let room = await context.dispatch(
                 'firestore/loadDocument',
@@ -81,6 +99,7 @@ export default {
                         name,
                         host,
                         users: [],
+                        isInSession: false,
                     },
                 },
                 { root: true }

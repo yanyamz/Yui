@@ -13,8 +13,9 @@
     import RoomsList from '@/components/Rooms/RoomsList'
     import RoomAvatar from '@/components/Rooms/RoomAvatar.vue'
     import Footer from '@/components/Layout/Footer'
-    import { mapGetters, mapActions } from 'vuex'
+    import { mapGetters, mapActions, useStore } from 'vuex'
     import { projectFirestore } from '@/firebase/config'
+    import { watchEffect } from '@vue/runtime-core'
 
     export default {
         components: { NavbarLoggedIn, RoomAvatar, RoomsList, Footer },
@@ -22,9 +23,18 @@
             await this.getUserPreferences()
             await this.loadRooms()
             await this.createUserPreferences()
+        },
+        setup() {
+            const store = useStore()
 
-            projectFirestore.collection('rooms').onSnapshot(() => {
-                this.loadRooms()
+            const unsub = projectFirestore
+                .collection('rooms')
+                .onSnapshot(() => {
+                    console.log('snapshot')
+                    store.dispatch('rooms/loadRooms')
+                })
+            watchEffect((onInvalidate) => {
+                onInvalidate(() => unsub())
             })
         },
         computed: {
