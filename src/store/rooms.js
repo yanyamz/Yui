@@ -26,6 +26,22 @@ export default {
                 }
             )
         },
+        async setRoomInSession(context, host) {
+            try {
+                await context.dispatch(
+                    'firestore/updateField',
+                    {
+                        collection: 'rooms',
+                        document: host,
+                        field: 'isInSession',
+                        newData: true,
+                    },
+                    { root: true }
+                )
+            } catch (err) {
+                console.log('failed to set in session')
+            }
+        },
         async addUserToRoom(context, host) {
             const oldData = await context.dispatch('loadRoom', host)
             const oldUserList = oldData.users

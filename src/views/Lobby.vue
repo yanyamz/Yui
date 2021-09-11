@@ -32,7 +32,10 @@
                 />
             </div>
         </div>
-        <button class="block my-button button is-centered is-success">
+        <button
+            @click="setRoomInSession(host)"
+            class="block my-button button is-centered is-success"
+        >
             Start Game
         </button>
     </div>
@@ -49,6 +52,7 @@
             return {
                 roomData: ['blah'],
                 users: [],
+                unsub: null,
             }
         },
         created() {
@@ -56,7 +60,6 @@
 
             window.addEventListener('beforeunload', (event) => {
                 // Cancel the event as stated by the standard.
-                this.removeUserFromRoom(this.host)
                 this.deleteRoom(this.host)
                 event.preventDefault()
                 // Chrome requires returnValue to be set.
@@ -64,16 +67,22 @@
             })
         },
         async mounted() {
+            //REMEMBER THIS< VERY IMPORTANT
+            this.unsub = projectFirestore
+                .collection('rooms')
+                .onSnapshot(async () => {
+                    this.roomData = await this.loadRoom(this.host)
+                    console.log(this.roomData)
+
+                    if (!this.roomData) {
+                        this.$router.push('/rooms')
+                    }
+                    this.users = this.roomData.users
+                })
             await this.addUserToRoom(this.host)
-            this.roomData = await this.loadRoom(this.host)
-            this.users = this.roomData.users
-            projectFirestore.collection('rooms').onSnapshot(async () => {
-                this.roomData = await this.loadRoom(this.host)
-                if (!this.roomData) {
-                    this.$router.push('/rooms')
-                }
-                this.users = this.roomData.users
-            })
+        },
+        async unmounted() {
+            this.unsub?.()
         },
         computed: {
             ...mapGetters('avatar', ['avatars']),
@@ -94,6 +103,7 @@
                 'addUserToRoom',
                 'removeUserFromRoom',
                 'deleteRoom',
+                'setRoomInSession',
             ]),
             getAvatar(number) {
                 return this.avatars[number % this.avatars.length]
