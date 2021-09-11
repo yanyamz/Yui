@@ -5,13 +5,11 @@ export default {
     state: {},
     actions: {
         async deleteDocument(context, { collection, document }) {
-            console.log(collection, document)
             try {
                 await projectFirestore
                     .collection(collection)
                     .doc(document)
                     .delete()
-                console.log('Document successfully deleted!')
             } catch (err) {
                 console.log('error removing document')
             }

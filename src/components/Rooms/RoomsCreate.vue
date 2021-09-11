@@ -57,7 +57,7 @@
             }
         },
         computed: {
-            ...mapGetters('userPreferences', ['displayName']),
+            ...mapGetters('userPreferences', ['displayName', 'avatarIndex']),
         },
         methods: {
             ...mapActions('rooms', ['createRoom']),
@@ -70,7 +70,10 @@
                     await this.createRoom({
                         name: this.roomName,
                         difficulty: this.difficulty,
-                        host: this.displayName,
+                        host: {
+                            displayName: this.displayName,
+                            avatar: this.avatarIndex,
+                        },
                     })
                     this.$router.push(
                         `/lobby/${this.roomName}+${this.displayName}`
