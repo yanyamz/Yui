@@ -34,6 +34,9 @@
             Navbar,
             Footer,
         },
+        created() {
+            document.title = 'Yui - Home'
+        },
         setup() {
             const hasLogin = ref(true)
             const showLogin = () => (hasLogin.value = true)

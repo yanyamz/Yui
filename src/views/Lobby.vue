@@ -24,6 +24,12 @@
                     />
                 </figure>
                 <p class="user__name is-size-5">{{ user.username }}</p>
+                <img
+                    v-if="user.username == host"
+                    class="user__crown"
+                    :src="require(`@/assets/svg/crown.png`)"
+                    alt=""
+                />
             </div>
         </div>
         <button class="block my-button button is-centered is-success">
@@ -38,21 +44,36 @@
 
     export default {
         props: ['id'],
+
+        data() {
+            return {
+                roomData: ['blah'],
+                users: [],
+            }
+        },
+        created() {
+            document.title = 'Yui - Lobby'
+
+            window.addEventListener('beforeunload', (event) => {
+                // Cancel the event as stated by the standard.
+                this.removeUserFromRoom(this.host)
+                this.deleteRoom(this.host)
+                event.preventDefault()
+                // Chrome requires returnValue to be set.
+                event.returnValue = ''
+            })
+        },
         async mounted() {
             await this.addUserToRoom(this.host)
             this.roomData = await this.loadRoom(this.host)
             this.users = this.roomData.users
             projectFirestore.collection('rooms').onSnapshot(async () => {
-                console.log('snapshot 2')
                 this.roomData = await this.loadRoom(this.host)
+                if (!this.roomData) {
+                    this.$router.push('/rooms')
+                }
                 this.users = this.roomData.users
             })
-        },
-        data() {
-            return {
-                roomData: [],
-                users: [],
-            }
         },
         computed: {
             ...mapGetters('avatar', ['avatars']),
@@ -106,6 +127,9 @@
                 object-fit: cover;
                 object-position: center;
             }
+        }
+        &__crown {
+            width: 2rem;
         }
         &__name {
             align-self: center;

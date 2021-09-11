@@ -108,43 +108,44 @@
 </template>
 
 <script>
-import NavbarLoggedIn from '@/components/Layout/NavbarLoggedIn'
-import { mapGetters, mapActions } from 'vuex'
+    import NavbarLoggedIn from '@/components/Layout/NavbarLoggedIn'
+    import { mapGetters, mapActions } from 'vuex'
 
-export default {
-    unmounted() {
-        this.resetTempAvatarIndex()
-    },
-    mounted() {
-        this.resetTempAvatarIndex()
-    },
-    components: {
-        NavbarLoggedIn,
-    },
-    computed: {
-        ...mapGetters('avatar', ['tempAvatar']),
-    },
-    methods: {
-        ...mapActions('avatar', [
-            'modifyIndex',
-            'saveAvatarState',
-            'resetTempAvatarIndex',
-        ]),
-        ...mapActions('firestore', ['loadDocument', 'updateDocument']),
-    },
-}
+    export default {
+        unmounted() {
+            this.resetTempAvatarIndex()
+        },
+        mounted() {
+            this.resetTempAvatarIndex()
+            document.title = 'Yui - Avatar Customization'
+        },
+        components: {
+            NavbarLoggedIn,
+        },
+        computed: {
+            ...mapGetters('avatar', ['tempAvatar']),
+        },
+        methods: {
+            ...mapActions('avatar', [
+                'modifyIndex',
+                'saveAvatarState',
+                'resetTempAvatarIndex',
+            ]),
+            ...mapActions('firestore', ['loadDocument', 'updateDocument']),
+        },
+    }
 </script>
 
 <style lang="scss" scoped>
-.card {
-    &-image {
-        height: 12rem;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
+    .card {
+        &-image {
+            height: 12rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
     }
-}
 </style>

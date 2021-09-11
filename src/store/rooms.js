@@ -12,6 +12,9 @@ export default {
     },
     actions: {
         async deleteRoom(context, host) {
+            if (projectAuth.currentUser.displayName != host) {
+                return
+            }
             await context.dispatch(
                 'firestore/deleteDocument',
                 {

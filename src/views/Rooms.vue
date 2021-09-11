@@ -24,6 +24,9 @@
             await this.loadRooms()
             await this.createUserPreferences()
         },
+        created() {
+            document.title = 'Yui - Main'
+        },
         setup() {
             const store = useStore()
 
