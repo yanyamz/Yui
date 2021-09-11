@@ -13,6 +13,7 @@ export default {
             'atarah',
             'freya',
             'lance',
+            'lauren',
         ],
         tempAvatarIndex: 0,
     },
