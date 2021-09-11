@@ -42,18 +42,16 @@ export default {
                 console.log('failed to set in session')
             }
         },
-        async addUserToRoom(context, host) {
+        async addUserToRoom(context, user) {
             await context.dispatch(
                 'firestore/updateDocument',
                 {
                     collection: 'rooms',
-                    document: host.displayName,
+                    document: user.displayName,
                     field: 'users',
                     newData: firebase.firestore.FieldValue.arrayUnion({
-                        avatar: this.context.rootGetters[
-                            'userPreferences/avatarIndex'
-                        ],
-                        displayName: host.displayName,
+                        avatar: user.avatar,
+                        displayName: user.displayName,
                     }),
                 },
                 { root: true }
@@ -107,7 +105,7 @@ export default {
                     newData: {
                         difficulty,
                         name,
-                        host,
+                        host: host.displayName,
                         users: [host],
                         isInSession: false,
                     },
