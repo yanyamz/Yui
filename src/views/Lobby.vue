@@ -38,19 +38,10 @@
 
     export default {
         props: ['id'],
-        async mounted() {
-            await this.addUserToRoom(this.host)
-            this.roomData = await this.loadRoom(this.host)
-            this.users = this.roomData.users
-            projectFirestore.collection('rooms').onSnapshot(async () => {
-                console.log('snapshot 2')
-                this.roomData = await this.loadRoom(this.host)
-                this.users = this.roomData.users
-            })
-        },
+
         data() {
             return {
-                roomData: [],
+                roomData: ['blah'],
                 users: [],
             }
         },
@@ -62,6 +53,18 @@
                 event.preventDefault()
                 // Chrome requires returnValue to be set.
                 event.returnValue = ''
+            })
+        },
+        async mounted() {
+            await this.addUserToRoom(this.host)
+            this.roomData = await this.loadRoom(this.host)
+            this.users = this.roomData.users
+            projectFirestore.collection('rooms').onSnapshot(async () => {
+                this.roomData = await this.loadRoom(this.host)
+                if (!this.roomData) {
+                    this.$router.push('/rooms')
+                }
+                this.users = this.roomData.users
             })
         },
         computed: {
