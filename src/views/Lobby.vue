@@ -54,6 +54,16 @@
                 users: [],
             }
         },
+        created() {
+            window.addEventListener('beforeunload', (event) => {
+                // Cancel the event as stated by the standard.
+                this.removeUserFromRoom(this.host)
+                this.deleteRoom(this.host)
+                event.preventDefault()
+                // Chrome requires returnValue to be set.
+                event.returnValue = ''
+            })
+        },
         computed: {
             ...mapGetters('avatar', ['avatars']),
             ...mapGetters('userPreferences', ['avatarIndex']),
