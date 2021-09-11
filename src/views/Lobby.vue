@@ -24,6 +24,12 @@
                     />
                 </figure>
                 <p class="user__name is-size-5">{{ user.username }}</p>
+                <img
+                    v-if="user.username == host"
+                    class="user__crown"
+                    :src="require(`@/assets/svg/crown.png`)"
+                    alt=""
+                />
             </div>
         </div>
         <button class="block my-button button is-centered is-success">
@@ -119,6 +125,9 @@
                 object-fit: cover;
                 object-position: center;
             }
+        }
+        &__crown {
+            width: 2rem;
         }
         &__name {
             align-self: center;
