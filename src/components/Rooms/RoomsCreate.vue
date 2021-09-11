@@ -67,11 +67,14 @@
                 }
                 if (this.isValid) {
                     this.$emit('toggleActive')
-                    this.createRoom({
+                    await this.createRoom({
                         name: this.roomName,
                         difficulty: this.difficulty,
                         host: this.displayName,
                     })
+                    this.$router.push(
+                        `/lobby/${this.roomName}+${this.displayName}`
+                    )
                 }
                 setTimeout(() => {
                     this.isValid = true
