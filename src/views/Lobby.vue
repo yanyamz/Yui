@@ -69,10 +69,9 @@
             //REMEMBER THIS< VERY IMPORTANT
             this.unsub = projectFirestore
                 .collection('rooms')
-                .onSnapshot(async () => {
-                    this.roomData = await this.loadRoom(this.host)
-                    console.log(this.roomData)
-
+                .doc(this.host)
+                .onSnapshot(async (snapshot) => {
+                    this.roomData = snapshot.data()
                     if (!this.roomData) {
                         this.$router.push('/rooms')
                     }
