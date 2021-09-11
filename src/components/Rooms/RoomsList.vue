@@ -26,7 +26,13 @@
                         <td>{{ room.name }}</td>
                         <td>{{ room.host }}</td>
                         <td>{{ room.difficulty }}</td>
-                        <th><a class="has-text-link">Join</a></th>
+                        <th>
+                            <router-link
+                                :to="`/lobby/${room.name}+${room.host}`"
+                                class="has-text-link"
+                                >Join</router-link
+                            >
+                        </th>
                     </tr>
                 </tbody>
             </table>
@@ -38,43 +44,43 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import RoomsCreate from '@/components/Rooms/RoomsCreate'
+    import { mapGetters } from 'vuex'
+    import RoomsCreate from '@/components/Rooms/RoomsCreate'
 
-export default {
-    components: {
-        RoomsCreate,
-    },
-    data() {
-        return {
-            isActive: false,
-        }
-    },
-    computed: {
-        ...mapGetters('rooms', ['rooms']),
-    },
-    methods: {
-        toggleIsActive() {
-            this.isActive = !this.isActive
+    export default {
+        components: {
+            RoomsCreate,
         },
-    },
-}
+        data() {
+            return {
+                isActive: false,
+            }
+        },
+        computed: {
+            ...mapGetters('rooms', ['rooms']),
+        },
+        methods: {
+            toggleIsActive() {
+                this.isActive = !this.isActive
+            },
+        },
+    }
 </script>
 
 <style lang="scss" scoped>
-.column {
-    .card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1.5rem;
+    .column {
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1.5rem;
+        }
     }
-}
 
-.delete {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
+    .delete {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
 </style>
