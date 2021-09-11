@@ -18,6 +18,9 @@ export default {
         avatarIndex(state) {
             return state.userPreferences.avatar
         },
+        avatar(state) {
+            return state.userPreferences.avatar
+        },
     },
     actions: {
         async createUserPreferences(context) {

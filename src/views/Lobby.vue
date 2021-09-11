@@ -1,18 +1,14 @@
 <template>
     <div class="card p-3 has-background-white">
         <div class="block is-flex is-justify-content-space-between">
-            <router-link
-                @click="removeUserFromRoom(host), deleteRoom(host)"
-                class
-                to="/rooms"
-            >
+            <router-link @click="checkIfHost" class to="/rooms">
                 <div class="button is-danger">Leave</div>
             </router-link>
             <p class="title">{{ roomName }}</p>
         </div>
 
         <div class="grid block">
-            <div v-for="user in users" :key="user.username" class="user">
+            <div v-for="user in users" :key="user.displayName" class="user">
                 <figure class="user__image image">
                     <img
                         class="is-rounded"
@@ -23,16 +19,19 @@
                         "
                     />
                 </figure>
-                <p class="user__name is-size-5">{{ user.username }}</p>
+                <p class="user__name is-size-5">{{ user.displayName }}</p>
                 <img
-                    v-if="user.username == host"
+                    v-if="user.displayName == host"
                     class="user__crown"
                     :src="require(`@/assets/svg/crown.png`)"
                     alt=""
                 />
             </div>
         </div>
-        <button class="block my-button button is-centered is-success">
+        <button
+            @click="setRoomInSession(host)"
+            class="block my-button button is-centered is-success"
+        >
             Start Game
         </button>
     </div>
@@ -40,7 +39,7 @@
 
 <script>
     import { mapActions, mapGetters } from 'vuex'
-    import { projectFirestore } from '@/firebase/config'
+    import { projectFirestore, projectAuth } from '@/firebase/config'
 
     export default {
         props: ['id'],
@@ -49,14 +48,17 @@
             return {
                 roomData: ['blah'],
                 users: [],
+                unsub: null,
             }
         },
-        created() {
+        async created() {
             document.title = 'Yui - Lobby'
+
+            if (projectAuth.currentUser.displayName !== this.host)
+                await this.addUserToRoom(projectAuth.currentUser)
 
             window.addEventListener('beforeunload', (event) => {
                 // Cancel the event as stated by the standard.
-                this.removeUserFromRoom(this.host)
                 this.deleteRoom(this.host)
                 event.preventDefault()
                 // Chrome requires returnValue to be set.
@@ -64,20 +66,28 @@
             })
         },
         async mounted() {
-            await this.addUserToRoom(this.host)
-            this.roomData = await this.loadRoom(this.host)
-            this.users = this.roomData.users
-            projectFirestore.collection('rooms').onSnapshot(async () => {
-                this.roomData = await this.loadRoom(this.host)
-                if (!this.roomData) {
-                    this.$router.push('/rooms')
-                }
-                this.users = this.roomData.users
-            })
+            //REMEMBER THIS< VERY IMPORTANT
+            this.unsub = projectFirestore
+                .collection('rooms')
+                .onSnapshot(async () => {
+                    this.roomData = await this.loadRoom(this.host)
+                    console.log(this.roomData)
+
+                    if (!this.roomData) {
+                        this.$router.push('/rooms')
+                    }
+                    this.users = this.roomData.users
+                })
+        },
+        async unmounted() {
+            this.unsub?.()
         },
         computed: {
             ...mapGetters('avatar', ['avatars']),
-            ...mapGetters('userPreferences', ['avatarIndex']),
+            ...mapGetters('userPreferences', [
+                'avatarIndex',
+                'userPreferences',
+            ]),
             roomName() {
                 return this.id.substring(0, this.id.indexOf('+'))
             },
@@ -94,9 +104,17 @@
                 'addUserToRoom',
                 'removeUserFromRoom',
                 'deleteRoom',
+                'setRoomInSession',
             ]),
             getAvatar(number) {
                 return this.avatars[number % this.avatars.length]
+            },
+            async checkIfHost() {
+                if (this.host === this.userPreferences.displayName) {
+                    await this.deleteRoom(this.host)
+                    return
+                }
+                await this.removeUserFromRoom(this.userPreferences)
             },
         },
     }

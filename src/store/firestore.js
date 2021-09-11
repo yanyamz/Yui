@@ -5,13 +5,11 @@ export default {
     state: {},
     actions: {
         async deleteDocument(context, { collection, document }) {
-            console.log(collection, document)
             try {
                 await projectFirestore
                     .collection(collection)
                     .doc(document)
                     .delete()
-                console.log('Document successfully deleted!')
             } catch (err) {
                 console.log('error removing document')
             }
@@ -35,6 +33,16 @@ export default {
                     .set(newData)
             } catch (err) {
                 console.log('failed to create or update doc')
+            }
+        },
+        async updateField(context, { collection, document, field, newData }) {
+            try {
+                await projectFirestore
+                    .collection(collection)
+                    .doc(document)
+                    .update({ [field]: newData })
+            } catch (err) {
+                console.log('failed to update field')
             }
         },
         async loadCollection(context, collection) {

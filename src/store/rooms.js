@@ -1,4 +1,4 @@
-import { projectAuth } from '../firebase/config'
+import { projectAuth, firebase } from '../firebase/config'
 
 export default {
     namespaced: true,
@@ -12,7 +12,7 @@ export default {
     },
     actions: {
         async deleteRoom(context, host) {
-            if (projectAuth.currentUser.displayName != host) {
+            if (projectAuth.currentUser.displayName !== host) {
                 return
             }
             await context.dispatch(
@@ -26,45 +26,50 @@ export default {
                 }
             )
         },
+        async setRoomInSession(context, host) {
+            try {
+                await context.dispatch(
+                    'firestore/updateField',
+                    {
+                        collection: 'rooms',
+                        document: host.displayName,
+                        field: 'isInSession',
+                        newData: true,
+                    },
+                    { root: true }
+                )
+            } catch (err) {
+                console.log('failed to set in session')
+            }
+        },
         async addUserToRoom(context, host) {
-            const oldData = await context.dispatch('loadRoom', host)
-            const oldUserList = oldData.users
-            const newUserList = oldUserList.filter((entry) => {
-                if (entry.username != projectAuth.currentUser.displayName) {
-                    return entry
-                }
-            })
-            newUserList.push({
-                avatar: context.rootGetters['userPreferences/avatarIndex'],
-                username: projectAuth.currentUser.displayName,
-            })
             await context.dispatch(
                 'firestore/updateDocument',
                 {
                     collection: 'rooms',
-                    document: host,
-                    newData: { ...oldData, users: newUserList },
+                    document: host.displayName,
+                    field: 'users',
+                    newData: firebase.firestore.FieldValue.arrayUnion({
+                        avatar: this.context.rootGetters[
+                            'userPreferences/avatarIndex'
+                        ],
+                        displayName: host.displayName,
+                    }),
                 },
                 { root: true }
             )
         },
-        async removeUserFromRoom(context, host) {
-            const oldData = await context.dispatch('loadRoom', host)
-            const oldUserList = oldData.users
-            const newUserList = oldUserList.filter((entry) => {
-                if (entry.username != projectAuth.currentUser.displayName) {
-                    return entry
-                }
-            })
-            if (newUserList.length == 0) {
-                context.dispatch('deleteRoom', host)
-            }
+        async removeUserFromRoom(context, user) {
             await context.dispatch(
                 'firestore/updateDocument',
                 {
                     collection: 'rooms',
-                    document: host,
-                    newData: { ...oldData, users: newUserList },
+                    document: user.displayName,
+                    field: 'users',
+                    newData: firebase.firestore.FieldValue.arrayRemove({
+                        avatar: user.avatarIndex,
+                        displayName: user.displayName,
+                    }),
                 },
                 { root: true }
             )
@@ -98,12 +103,12 @@ export default {
                 'firestore/updateDocument',
                 {
                     collection: 'rooms',
-                    document: host,
+                    document: host.displayName,
                     newData: {
                         difficulty,
                         name,
                         host,
-                        users: [],
+                        users: [host],
                         isInSession: false,
                     },
                 },

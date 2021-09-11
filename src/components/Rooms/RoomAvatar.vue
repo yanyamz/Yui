@@ -28,26 +28,26 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+    import { mapGetters } from 'vuex'
 
-export default {
-    computed: {
-        ...mapGetters('avatar', ['avatars']),
-        ...mapGetters('userPreferences', ['avatarIndex']),
-    },
-}
+    export default {
+        computed: {
+            ...mapGetters('avatar', ['avatars']),
+            ...mapGetters('userPreferences', ['avatarIndex']),
+        },
+    }
 </script>
 
 <style lang="scss" scoped>
-.card {
-    &-image {
-        height: 12rem;
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
+    .card {
+        &-image {
+            height: 12rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
     }
-}
 </style>

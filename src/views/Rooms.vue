@@ -33,7 +33,6 @@
             const unsub = projectFirestore
                 .collection('rooms')
                 .onSnapshot(() => {
-                    console.log('snapshot')
                     store.dispatch('rooms/loadRooms')
                 })
             watchEffect((onInvalidate) => {
