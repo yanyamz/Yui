@@ -44,7 +44,7 @@ const routes = [
         beforeEnter: requireAuth,
     },
     {
-        path: '/lobby/:host',
+        path: '/lobby/:id',
         name: 'Lobby',
         props: true,
         component: Lobby,

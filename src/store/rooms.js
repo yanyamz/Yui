@@ -24,6 +24,41 @@ export default {
                 }
             )
         },
+        async addUserToRoom(context, host) {
+            const oldData = await context.dispatch('loadRoom', host)
+            const oldUserList = oldData.users
+            const newUserList = oldUserList.filter((entry) => {
+                if (entry.username != projectAuth.currentUser.displayName) {
+                    return entry
+                }
+            })
+            newUserList.push({
+                avatar: context.rootGetters['userPreferences/avatarIndex'],
+                username: projectAuth.currentUser.displayName,
+            })
+            await context.dispatch(
+                'firestore/updateDocument',
+                {
+                    collection: 'rooms',
+                    document: host,
+                    newData: { ...oldData, users: newUserList },
+                },
+                { root: true }
+            )
+        },
+        async loadRoom(context, host) {
+            let room = await context.dispatch(
+                'firestore/loadDocument',
+                {
+                    collection: 'rooms',
+                    document: host,
+                },
+                {
+                    root: true,
+                }
+            )
+            return room
+        },
         async loadRooms(context) {
             let rooms = await context.dispatch(
                 'firestore/loadCollection',
@@ -45,6 +80,7 @@ export default {
                         difficulty,
                         name,
                         host,
+                        users: [],
                     },
                 },
                 { root: true }
