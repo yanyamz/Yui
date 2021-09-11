@@ -1,7 +1,11 @@
 <template>
     <div class="card p-3 has-background-white">
         <div class="block is-flex is-justify-content-space-between">
-            <router-link @click="removeUserFromRoom(host)" class to="/rooms">
+            <router-link
+                @click="removeUserFromRoom(host), deleteRoom(host)"
+                class
+                to="/rooms"
+            >
                 <div class="button is-danger">Leave</div>
             </router-link>
             <p class="title">{{ roomName }}</p>
@@ -34,15 +38,6 @@
 
     export default {
         props: ['id'],
-        async created() {
-            // window.addEventListener('beforeunload', (event) => {
-            //     this.removeUserFromRoom(this.host)
-            //     // Cancel the event as stated by the standard.
-            //     event.preventDefault()
-            //     // Chrome requires returnValue to be set.
-            //     event.returnValue = ''
-            // })
-        },
         async mounted() {
             await this.addUserToRoom(this.host)
             this.roomData = await this.loadRoom(this.host)
@@ -77,6 +72,7 @@
                 'loadRoom',
                 'addUserToRoom',
                 'removeUserFromRoom',
+                'deleteRoom',
             ]),
             getAvatar(number) {
                 return this.avatars[number % this.avatars.length]
