@@ -11,13 +11,12 @@ export default {
         },
     },
     actions: {
-        async deleteRoom(context) {
-            console.log(context.rootGetters['userPreferences/displayName'])
+        async deleteRoom(context, host) {
             await context.dispatch(
                 'firestore/deleteDocument',
                 {
                     collection: 'rooms',
-                    document: projectAuth.currentUser.displayName,
+                    document: host,
                 },
                 {
                     root: true,
@@ -54,6 +53,9 @@ export default {
                     return entry
                 }
             })
+            if (newUserList.length == 0) {
+                context.dispatch('deleteRoom', host)
+            }
             await context.dispatch(
                 'firestore/updateDocument',
                 {

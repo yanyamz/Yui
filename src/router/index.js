@@ -15,7 +15,7 @@ const requireAuth = (to, from, next) => {
     }
 }
 
-const redirectToRoomsIfLoggedIn = (to, from, next) => {
+const requireNoAuth = (to, from, next) => {
     let user = projectAuth.currentUser
     if (user) {
         next({ name: 'Rooms' })
@@ -29,7 +29,7 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home,
-        beforeEnter: redirectToRoomsIfLoggedIn,
+        beforeEnter: requireNoAuth,
     },
     {
         path: '/rooms',

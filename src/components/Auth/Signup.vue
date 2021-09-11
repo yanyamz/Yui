@@ -14,6 +14,7 @@
                         type="text"
                         placeholder="Goku"
                         ref="displayName"
+                        maxlength="16"
                     />
                 </div>
             </div>
