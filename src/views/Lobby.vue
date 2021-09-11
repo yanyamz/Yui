@@ -52,6 +52,8 @@
             }
         },
         created() {
+            document.title = 'Yui - Lobby'
+
             window.addEventListener('beforeunload', (event) => {
                 // Cancel the event as stated by the standard.
                 this.removeUserFromRoom(this.host)
