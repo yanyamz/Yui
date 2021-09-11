@@ -17,7 +17,7 @@ export default {
                 'firestore/updateDocument',
                 {
                     collection: 'games',
-                    document: host.displayName,
+                    document: host,
                     newData: {
                         timePerQuestion,
                     },
