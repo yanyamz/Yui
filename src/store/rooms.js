@@ -42,12 +42,13 @@ export default {
                 console.log('failed to set in session')
             }
         },
-        async addUserToRoom(context, user) {
+        async addUserToRoom(context, { user, host }) {
+            console.log(user, host)
             await context.dispatch(
-                'firestore/updateDocument',
+                'firestore/updateField',
                 {
                     collection: 'rooms',
-                    document: user.displayName,
+                    document: host,
                     field: 'users',
                     newData: firebase.firestore.FieldValue.arrayUnion({
                         avatar: user.avatar,
@@ -57,15 +58,15 @@ export default {
                 { root: true }
             )
         },
-        async removeUserFromRoom(context, user) {
+        async removeUserFromRoom(context, { user, host }) {
             await context.dispatch(
-                'firestore/updateDocument',
+                'firestore/updateField',
                 {
                     collection: 'rooms',
-                    document: user.displayName,
+                    document: host,
                     field: 'users',
                     newData: firebase.firestore.FieldValue.arrayRemove({
-                        avatar: user.avatarIndex,
+                        avatar: user.avatar,
                         displayName: user.displayName,
                     }),
                 },
