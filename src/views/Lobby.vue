@@ -39,7 +39,7 @@
 
 <script>
     import { mapActions, mapGetters } from 'vuex'
-    import { projectFirestore, projectAuth } from '@/firebase/config'
+    import { projectFirestore } from '@/firebase/config'
 
     export default {
         props: ['id'],
@@ -54,9 +54,6 @@
         async created() {
             document.title = 'Yui - Lobby'
 
-            if (projectAuth.currentUser.displayName !== this.host)
-                await this.addUserToRoom(projectAuth.currentUser)
-
             window.addEventListener('beforeunload', (event) => {
                 // Cancel the event as stated by the standard.
                 this.deleteRoom(this.host)
@@ -66,18 +63,24 @@
             })
         },
         async mounted() {
+            await this.addUserToRoom({
+                user: this.userPreferences,
+                host: this.host,
+            })
             //REMEMBER THIS< VERY IMPORTANT
             this.unsub = projectFirestore
                 .collection('rooms')
                 .doc(this.host)
                 .onSnapshot(async (snapshot) => {
-                    this.roomData = snapshot.data()
+                    this.roomData = await snapshot.data()
+                    console.log(this.roomData)
                     if (!this.roomData) {
                         this.$router.push('/rooms')
                     }
                     this.users = this.roomData.users
                 })
         },
+        async updated() {},
         async unmounted() {
             this.unsub?.()
         },
@@ -113,7 +116,10 @@
                     await this.deleteRoom(this.host)
                     return
                 }
-                await this.removeUserFromRoom(this.userPreferences)
+                await this.removeUserFromRoom({
+                    user: this.userPreferences,
+                    host: this.host,
+                })
             },
         },
     }

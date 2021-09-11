@@ -24,7 +24,7 @@
                 <tbody>
                     <tr v-for="room in rooms" :key="room.id">
                         <td>{{ room.name }}</td>
-                        <td>{{ room.host.displayName }}</td>
+                        <td>{{ room.host }}</td>
                         <td>{{ room.difficulty }}</td>
                         <th>
                             <router-link
