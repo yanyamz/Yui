@@ -5,7 +5,11 @@
             <router-link @click="checkIfHost" class to="/rooms">
                 <div class="button is-danger">Leave</div>
             </router-link>
-            <p class="title">{{ roomName }}</p>
+        </div>
+        <h3 class="block">{{ time }}</h3>
+        <div class="buttons">
+            <button class="button">start</button>
+            <button class="button">stop</button>
         </div>
         <div class="game block">
             <input type="range" class="game__volume is-primary" />
@@ -55,13 +59,6 @@
 </template>
 
 <script>
-/*
-        Standings
-        Song Info
-        Song Number
-        Anime Title
-        Player Area
-    */
 import { mapGetters, mapActions } from 'vuex'
 import { projectFirestore } from '@/firebase/config.js'
 
@@ -71,6 +68,7 @@ export default {
         return {
             users: [],
             unsubRoomChanges: null,
+            time: 0,
             isCorrect: false,
             isWrong: false,
         }

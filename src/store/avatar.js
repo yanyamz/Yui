@@ -14,6 +14,7 @@ export default {
             'freya',
             'lance',
             'lauren',
+            'roselyn',
         ],
         tempAvatarIndex: 0,
     },
