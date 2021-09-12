@@ -76,10 +76,10 @@ export default {
                 if (!this.roomData) {
                     this.$router.push('/rooms')
                 }
-                if (this.roomData.isInSession === true) {
+                if (this.roomData?.isInSession === true) {
                     this.$router.push(`/game/${this.roomName}+${this.host}`)
                 }
-                this.users = this.roomData.users
+                this.users = this.roomData?.users
             })
     },
     async updated() {},
@@ -111,7 +111,6 @@ export default {
         async startGame() {
             await this.setRoomInSession({ host: this.host, newData: true })
             await this.createGame({ timePerQuestion: 10, host: this.host })
-            await this.startGame()
         },
         async checkIfHost() {
             if (this.host === this.userPreferences.displayName) {

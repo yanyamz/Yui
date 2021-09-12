@@ -1,4 +1,4 @@
-import { projectAuth, firebase } from '../firebase/config'
+import { firebase } from '../firebase/config'
 
 export default {
     namespaced: true,
@@ -12,9 +12,6 @@ export default {
     },
     actions: {
         async deleteRoom(context, host) {
-            if (projectAuth.currentUser.displayName !== host) {
-                return
-            }
             await context.dispatch(
                 'firestore/deleteDocument',
                 {
@@ -27,6 +24,7 @@ export default {
             )
         },
         async setRoomInSession(context, { host, newData = true }) {
+            console.log('set room in session')
             try {
                 await context.dispatch(
                     'firestore/updateField',
@@ -43,7 +41,7 @@ export default {
             }
         },
         async addUserToRoom(context, { user, host }) {
-            console.log(user, host)
+            console.log('adding user to room')
             await context.dispatch(
                 'firestore/updateField',
                 {
@@ -59,6 +57,7 @@ export default {
             )
         },
         async removeUserFromRoom(context, { user, host }) {
+            console.log('removing user from room')
             await context.dispatch(
                 'firestore/updateField',
                 {

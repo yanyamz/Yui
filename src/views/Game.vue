@@ -119,11 +119,10 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        getAvatar(number) {
-            return this.avatars[number % this.avatars.length]
-        },
+        ...mapActions('game', ['createGame', 'deleteGame']),
         async checkIfHost() {
             if (this.host === this.userPreferences.displayName) {
+                await this.deleteGame(this.host)
                 await this.deleteRoom(this.host)
                 return
             }
@@ -132,7 +131,9 @@ export default {
                 host: this.host,
             })
         },
-        answerCorrect() {},
+        getAvatar(number) {
+            return this.avatars[number % this.avatars.length]
+        },
     },
 }
 </script>
