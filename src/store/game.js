@@ -8,7 +8,6 @@ export default {
     actions: {
         // async StartGame(context) {},
         async createGame(context, { host, timePerQuestion }) {
-            console.log('host', host)
             context.state.game = {
                 timePerQuestion,
             }

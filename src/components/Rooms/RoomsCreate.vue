@@ -16,7 +16,19 @@
                     />
                 </div>
             </div>
-
+            <div class="field">
+                <div class="control">
+                    <div class="label">Guessing Time</div>
+                    <input
+                        v-model.number="guessingTime"
+                        id="room-name"
+                        type="number"
+                        max="30"
+                        min="10"
+                        class="input is-primary block"
+                    />
+                </div>
+            </div>
             <div class="field">
                 <div class="control">
                     <div class="label">Difficulty</div>
@@ -29,6 +41,8 @@
             </div>
             <error-message v-if="!isValid">
                 Invalid options, please check that you have valid settings.
+                <br />
+                Guessing time must be between 10-30
             </error-message>
             <div class="buttons">
                 <button @click="validate" class="button is-primary">
@@ -46,43 +60,55 @@
 </template>
 
 <script>
-    import { mapActions, mapGetters } from 'vuex'
-    export default {
-        emits: ['toggleActive'],
-        data() {
-            return {
-                roomName: '',
-                difficulty: null,
-                isValid: true,
+import { mapActions, mapGetters } from 'vuex'
+export default {
+    emits: ['toggleActive'],
+    data() {
+        return {
+            roomName: '',
+            difficulty: null,
+            isValid: true,
+            guessingTime: 25,
+        }
+    },
+    computed: {
+        ...mapGetters('userPreferences', ['displayName', 'avatarIndex']),
+    },
+    methods: {
+        ...mapActions('rooms', ['createRoom']),
+        async validate() {
+            if (!this.guessingTime) {
+                console.log('invalid string', this.guessingTime)
+                this.isValid = false
             }
+            if (this.difficulty == null || this.roomName == '') {
+                this.isValid = false
+            }
+            if (isNaN(parseInt(this.guessingTime))) {
+                this.isValid = false
+            }
+            if (
+                parseInt(this.guessingTime) < 10 &&
+                parseInt(this.guessingTime) > 30
+            ) {
+                this.isValid = false
+            }
+            if (this.isValid) {
+                this.$emit('toggleActive')
+                await this.createRoom({
+                    name: this.roomName,
+                    difficulty: this.difficulty,
+                    host: {
+                        displayName: this.displayName,
+                        avatar: this.avatarIndex,
+                    },
+                })
+                this.$router.push(`/lobby/${this.roomName}+${this.displayName}`)
+            }
+            setTimeout(() => {
+                this.isValid = true
+            }, 3000)
         },
-        computed: {
-            ...mapGetters('userPreferences', ['displayName', 'avatarIndex']),
-        },
-        methods: {
-            ...mapActions('rooms', ['createRoom']),
-            async validate() {
-                if (this.difficulty == null || this.roomName == '') {
-                    this.isValid = false
-                }
-                if (this.isValid) {
-                    this.$emit('toggleActive')
-                    await this.createRoom({
-                        name: this.roomName,
-                        difficulty: this.difficulty,
-                        host: {
-                            displayName: this.displayName,
-                            avatar: this.avatarIndex,
-                        },
-                    })
-                    this.$router.push(
-                        `/lobby/${this.roomName}+${this.displayName}`
-                    )
-                }
-                setTimeout(() => {
-                    this.isValid = true
-                }, 3000)
-            },
-        },
-    }
+    },
+}
 </script>
