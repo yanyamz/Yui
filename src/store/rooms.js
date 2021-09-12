@@ -24,7 +24,7 @@ export default {
             )
         },
         async setRoomInSession(context, { host, newData = true }) {
-            console.log('set room in session')
+            console.log('setRoomInSession')
             try {
                 await context.dispatch(
                     'firestore/updateField',
@@ -41,7 +41,7 @@ export default {
             }
         },
         async addUserToRoom(context, { user, host }) {
-            console.log('adding user to room')
+            console.log('addUserToRoom')
             await context.dispatch(
                 'firestore/updateField',
                 {
@@ -57,7 +57,7 @@ export default {
             )
         },
         async removeUserFromRoom(context, { user, host }) {
-            console.log('removing user from room')
+            console.log('removeUserFromRoom')
             await context.dispatch(
                 'firestore/updateField',
                 {
@@ -73,6 +73,7 @@ export default {
             )
         },
         async loadRoom(context, host) {
+            console.log('loadRoom')
             let room = await context.dispatch(
                 'firestore/loadDocument',
                 {
@@ -86,6 +87,7 @@ export default {
             return room
         },
         async loadRooms(context) {
+            console.log('loadRooms')
             let rooms = await context.dispatch(
                 'firestore/loadCollection',
                 'rooms',
@@ -96,6 +98,7 @@ export default {
             })
         },
         async createRoom(context, { name, difficulty, host }) {
+            console.log('createRoom')
             context.state.rooms.push({ name, difficulty, host })
             await context.dispatch(
                 'firestore/updateDocument',

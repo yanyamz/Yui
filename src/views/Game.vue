@@ -1,12 +1,10 @@
 <template>
-    <h1>Game</h1>
     <div class="card p-3 has-background-white">
         <div class="block is-flex is-justify-content-space-between">
             <router-link @click="checkIfHost" class to="/rooms">
                 <div class="button is-danger">Leave</div>
             </router-link>
         </div>
-        <h3 class="block">{{ time }}</h3>
         <div class="buttons">
             <button class="button">start</button>
             <button class="button">stop</button>
@@ -68,17 +66,14 @@ export default {
         return {
             users: [],
             unsubRoomChanges: null,
-            time: 0,
             isCorrect: false,
             isWrong: false,
         }
     },
     async created() {
         window.addEventListener('beforeunload', (event) => {
-            // Cancel the event as stated by the standard.
             this.checkIfHost()
             event.preventDefault()
-            // Chrome requires returnValue to be set.
             event.returnValue = ''
         })
     },
@@ -93,10 +88,10 @@ export default {
                 if (!this.roomData) {
                     this.$router.push('/rooms')
                 }
-                if (this.roomData.isInSession === true) {
+                if (this.roomData?.isInSession === true) {
                     this.$router.push(`/game/${this.roomName}+${this.host}`)
                 }
-                this.users = this.roomData.users
+                this.users = this.roomData?.users
             })
     },
     async unmounted() {

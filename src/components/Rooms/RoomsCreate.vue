@@ -45,7 +45,7 @@
                 Guessing time must be between 10-30
             </error-message>
             <div class="buttons">
-                <button @click="validate" class="button is-primary">
+                <button @click="submitForm" class="button is-primary">
                     Create
                 </button>
                 <button
@@ -76,25 +76,25 @@ export default {
     },
     methods: {
         ...mapActions('rooms', ['createRoom']),
-        async validate() {
-            if (!this.guessingTime) {
-                console.log('invalid string', this.guessingTime)
-                this.isValid = false
-            }
+
+        toggleModal() {
+            this.$emit('toggleActive')
+        },
+        async submitForm() {
             if (this.difficulty == null || this.roomName == '') {
                 this.isValid = false
-            }
-            if (isNaN(parseInt(this.guessingTime))) {
+            } else if (!this.guessingTime) {
                 this.isValid = false
-            }
-            if (
+            } else if (isNaN(parseInt(this.guessingTime))) {
+                this.isValid = false
+            } else if (
                 parseInt(this.guessingTime) < 10 &&
                 parseInt(this.guessingTime) > 30
             ) {
                 this.isValid = false
             }
             if (this.isValid) {
-                this.$emit('toggleActive')
+                this.toggleModal()
                 await this.createRoom({
                     name: this.roomName,
                     difficulty: this.difficulty,

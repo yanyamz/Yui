@@ -6,10 +6,8 @@ export default {
         },
     },
     actions: {
-        async StartGame() {
-            console.log('starting')
-        },
         async createGame(context, { host, timePerQuestion }) {
+            console.log('createGame')
             context.state.game = {
                 timePerQuestion,
             }
@@ -26,6 +24,7 @@ export default {
             )
         },
         async deleteGame(context, host) {
+            console.log('deleteGame')
             await context.dispatch(
                 'firestore/deleteDocument',
                 {

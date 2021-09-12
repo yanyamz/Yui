@@ -1,7 +1,7 @@
 <template>
     <div class="card p-3 has-background-white">
         <div class="block is-flex is-justify-content-space-between">
-            <router-link @click="checkIfHost" class to="/rooms">
+            <router-link @click="removeUserFromFirebase" class to="/rooms">
                 <div class="button is-danger">Leave</div>
             </router-link>
             <p class="title">{{ roomName }}</p>
@@ -44,10 +44,9 @@ import { projectFirestore } from '@/firebase/config'
 
 export default {
     props: ['id'],
-
     data() {
         return {
-            roomData: ['blah'],
+            roomData: ['nothing to see here man'],
             users: [],
             unsubRoomChanges: null,
         }
@@ -56,10 +55,8 @@ export default {
         document.title = 'Yui - Lobby'
 
         window.addEventListener('beforeunload', (event) => {
-            // Cancel the event as stated by the standard.
-            this.checkIfHost()
+            this.removeUserFromFirebase()
             event.preventDefault()
-            // Chrome requires returnValue to be set.
             event.returnValue = ''
         })
     },
@@ -82,7 +79,6 @@ export default {
                 this.users = this.roomData?.users
             })
     },
-    async updated() {},
     async unmounted() {
         this.unsubRoomChanges?.()
     },
@@ -104,7 +100,7 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', ['createGame', 'startGame']),
+        ...mapActions('game', ['createGame']),
         getAvatar(number) {
             return this.avatars[number % this.avatars.length]
         },
@@ -112,7 +108,7 @@ export default {
             await this.setRoomInSession({ host: this.host, newData: true })
             await this.createGame({ timePerQuestion: 10, host: this.host })
         },
-        async checkIfHost() {
+        async removeUserFromFirebase() {
             if (this.host === this.userPreferences.displayName) {
                 await this.deleteRoom(this.host)
                 return
