@@ -106,7 +106,7 @@ export default {
         },
         async startGame() {
             await this.setRoomInSession({ host: this.host, newData: true })
-            await this.createGame({ timePerQuestion: 10, host: this.host })
+            await this.createGame({ timePerQuestion: 30, host: this.host })
         },
         async removeUserFromFirebase() {
             if (this.host === this.userPreferences.displayName) {
