@@ -1,4 +1,5 @@
 <template>
+    <h1>Game</h1>
     <div class="card p-3 has-background-white">
         <div class="block is-flex is-justify-content-space-between">
             <router-link @click="checkIfHost" class to="/rooms">
@@ -6,9 +7,31 @@
             </router-link>
             <p class="title">{{ roomName }}</p>
         </div>
-
+        <div class="game block">
+            <input type="range" class="game__volume is-primary" />
+            <div class="game__videoplayer block">
+                <h1>blah</h1>
+            </div>
+            <input
+                class="input is-primary"
+                :class="{
+                    'is-success': isCorrect,
+                    'is-danger': isWrong,
+                }"
+                type="text"
+                placeholder="Primary input"
+            />
+        </div>
         <div class="grid block">
-            <div v-for="user in users" :key="user.displayName" class="user">
+            <div
+                v-for="user in users"
+                :key="user.displayName"
+                class="user"
+                :class="{
+                    'has-background-success': isCorrect,
+                    'has-background-danger': isWrong,
+                }"
+            >
                 <figure class="user__image image">
                     <img
                         class="is-rounded"
@@ -28,33 +51,31 @@
                 />
             </div>
         </div>
-        <button
-            v-if="userPreferences.displayName == host"
-            @click="startGame"
-            class="block my-button button is-centered is-success"
-        >
-            Start Game
-        </button>
     </div>
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex'
-import { projectFirestore } from '@/firebase/config'
+/*
+        Standings
+        Song Info
+        Song Number
+        Anime Title
+        Player Area
+    */
+import { mapGetters, mapActions } from 'vuex'
+import { projectFirestore } from '@/firebase/config.js'
 
 export default {
     props: ['id'],
-
     data() {
         return {
-            roomData: ['blah'],
             users: [],
             unsubRoomChanges: null,
+            isCorrect: false,
+            isWrong: false,
         }
     },
     async created() {
-        document.title = 'Yui - Lobby'
-
         window.addEventListener('beforeunload', (event) => {
             // Cancel the event as stated by the standard.
             this.checkIfHost()
@@ -64,10 +85,8 @@ export default {
         })
     },
     async mounted() {
-        await this.addUserToRoom({
-            user: this.userPreferences,
-            host: this.host,
-        })
+        document.title = 'Yui - Game'
+
         this.unsubRoomChanges = projectFirestore
             .collection('rooms')
             .doc(this.host)
@@ -82,7 +101,6 @@ export default {
                 this.users = this.roomData.users
             })
     },
-    async updated() {},
     async unmounted() {
         this.unsubRoomChanges?.()
     },
@@ -99,18 +117,12 @@ export default {
     methods: {
         ...mapActions('rooms', [
             'loadRoom',
-            'addUserToRoom',
             'removeUserFromRoom',
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', ['createGame']),
         getAvatar(number) {
             return this.avatars[number % this.avatars.length]
-        },
-        startGame() {
-            this.setRoomInSession({ host: this.host, newData: true })
-            this.createGame({ timePerQuestion: 10, host: this.host })
         },
         async checkIfHost() {
             if (this.host === this.userPreferences.displayName) {
@@ -122,15 +134,26 @@ export default {
                 host: this.host,
             })
         },
+        answerCorrect() {},
     },
 }
 </script>
 
 <style lang="scss" scoped>
+.game {
+    &__videoplayer {
+        width: 100%;
+        height: 25rem;
+        background: grey;
+    }
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    overflow: auto;
+    max-height: 10rem;
 }
 .user {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

@@ -5,9 +5,10 @@ import avatar from './avatar.js'
 import firestore from './firestore.js'
 import userPreferences from './userPreferences.js'
 import rooms from './rooms.js'
+import game from './game.js'
 
 export default createStore({
-    modules: { auth, avatar, firestore, userPreferences, rooms },
+    modules: { auth, avatar, firestore, userPreferences, rooms, game },
     actions: {
         async isUniqueDisplayName(context, displayName) {
             const data = await context.dispatch(

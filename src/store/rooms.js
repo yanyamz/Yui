@@ -26,15 +26,15 @@ export default {
                 }
             )
         },
-        async setRoomInSession(context, host) {
+        async setRoomInSession(context, { host, newData = true }) {
             try {
                 await context.dispatch(
                     'firestore/updateField',
                     {
                         collection: 'rooms',
-                        document: host.displayName,
+                        document: host,
                         field: 'isInSession',
-                        newData: true,
+                        newData: newData,
                     },
                     { root: true }
                 )

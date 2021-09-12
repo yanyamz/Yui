@@ -22,7 +22,7 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr v-for="room in rooms" :key="room.id">
+                    <tr v-for="room in validRooms" :key="room.id">
                         <td>{{ room.name }}</td>
                         <td>{{ room.host }}</td>
                         <td>{{ room.difficulty }}</td>
@@ -44,43 +44,46 @@
 </template>
 
 <script>
-    import { mapGetters } from 'vuex'
-    import RoomsCreate from '@/components/Rooms/RoomsCreate'
+import { mapGetters } from 'vuex'
+import RoomsCreate from '@/components/Rooms/RoomsCreate'
 
-    export default {
-        components: {
-            RoomsCreate,
+export default {
+    components: {
+        RoomsCreate,
+    },
+    data() {
+        return {
+            isActive: false,
+        }
+    },
+    computed: {
+        ...mapGetters('rooms', ['rooms']),
+        validRooms() {
+            return this.rooms.filter((room) => !room.isInSession)
         },
-        data() {
-            return {
-                isActive: false,
-            }
+    },
+    methods: {
+        toggleIsActive() {
+            this.isActive = !this.isActive
         },
-        computed: {
-            ...mapGetters('rooms', ['rooms']),
-        },
-        methods: {
-            toggleIsActive() {
-                this.isActive = !this.isActive
-            },
-        },
-    }
+    },
+}
 </script>
 
 <style lang="scss" scoped>
-    .column {
-        .card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1.5rem;
-        }
+.column {
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.5rem;
     }
+}
 
-    .delete {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-    }
+.delete {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
 </style>
