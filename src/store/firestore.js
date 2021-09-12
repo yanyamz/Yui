@@ -35,6 +35,16 @@ export default {
                 console.log('failed to create or update doc')
             }
         },
+        async createDocument(context, { collection, document, newData }) {
+            try {
+                await projectFirestore
+                    .collection(collection)
+                    .doc(document)
+                    .set(newData)
+            } catch (err) {
+                console.log('failed to create or update doc')
+            }
+        },
         async updateField(context, { collection, document, field, newData }) {
             try {
                 await projectFirestore

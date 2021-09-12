@@ -1,5 +1,3 @@
-// import { projectFirestore } from '../firebase/config'
-
 export default {
     namespaced: true,
     state: {
@@ -8,8 +6,9 @@ export default {
         },
     },
     actions: {
+        // async StartGame(context) {},
         async createGame(context, { host, timePerQuestion }) {
-            console.log('creating game')
+            console.log('host', host)
             context.state.game = {
                 timePerQuestion,
             }

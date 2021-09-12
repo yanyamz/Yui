@@ -104,13 +104,14 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', ['createGame']),
+        ...mapActions('game', ['createGame', 'startGame']),
         getAvatar(number) {
             return this.avatars[number % this.avatars.length]
         },
-        startGame() {
-            this.setRoomInSession({ host: this.host, newData: true })
-            this.createGame({ timePerQuestion: 10, host: this.host })
+        async startGame() {
+            await this.setRoomInSession({ host: this.host, newData: true })
+            await this.createGame({ timePerQuestion: 10, host: this.host })
+            await this.startGame()
         },
         async checkIfHost() {
             if (this.host === this.userPreferences.displayName) {
