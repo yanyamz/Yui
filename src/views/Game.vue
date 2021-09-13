@@ -80,19 +80,29 @@ export default {
     async mounted() {
         document.title = 'Yui - Game'
 
+        this.getGameInfo(this.host)
+
         this.unsubRoomChanges = projectFirestore
             .collection('rooms')
             .doc(this.host)
             .onSnapshot(async (snapshot) => {
-                this.roomData = await snapshot.data()
-                if (!this.roomData) {
+                const roomData = await snapshot.data()
+                if (!roomData) {
                     this.$router.push('/rooms')
                 }
-                if (this.roomData?.isInSession === true) {
+                if (roomData?.isInSession === true) {
                     this.$router.push(`/game/${this.roomName}+${this.host}`)
                 }
-                this.users = this.roomData?.users
+                this.users = roomData?.users
             })
+
+        // this.unsubGameChanges = projectFirestore
+        //     .collection('games')
+        //     .doc(this.host)
+        //     .onSnapshot(async (snapshot) => {
+        //         this.gameData = await snapshot.data()
+        //         console.log(this.gameData)
+        //     })
     },
     async unmounted() {
         this.unsubRoomChanges?.()
@@ -114,7 +124,8 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', ['createGame', 'deleteGame']),
+        ...mapActions('game', ['deleteGame', 'getGameInfo']),
+
         async checkIfHost() {
             if (this.host === this.userPreferences.displayName) {
                 await this.deleteGame(this.host)

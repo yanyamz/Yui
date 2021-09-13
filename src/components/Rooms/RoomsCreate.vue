@@ -18,7 +18,7 @@
             </div>
             <div class="field">
                 <div class="control">
-                    <div class="label">Guessing Time</div>
+                    <div class="label">Guessing Time (sec)</div>
                     <input
                         v-model.number="guessingTime"
                         id="room-name"
