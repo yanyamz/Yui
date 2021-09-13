@@ -80,8 +80,7 @@ export default {
     async mounted() {
         document.title = 'Yui - Game'
 
-        await this.setDatabase()
-        await this.createPlaylist()
+        this.getGameInfo(this.host)
 
         this.unsubRoomChanges = projectFirestore
             .collection('rooms')
@@ -125,12 +124,7 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', [
-            'createGame',
-            'deleteGame',
-            'setDatabase',
-            'createPlaylist',
-        ]),
+        ...mapActions('game', ['deleteGame', 'getGameInfo']),
 
         async checkIfHost() {
             if (this.host === this.userPreferences.displayName) {
