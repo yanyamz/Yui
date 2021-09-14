@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 
-import auth from './auth.js'
+import auth from './auth/index.js'
 import avatar from './avatar.js'
 import firestore from './firestore.js'
 import userPreferences from './userPreferences.js'
