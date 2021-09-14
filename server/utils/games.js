@@ -1,8 +1,13 @@
+//Array of Objects that keeps track of all live game
 const games = []
 
 /**
  * Creates a new property in Room OBJ with the host as a key
- * @param {object} param0
+ * @param {Object} payload
+ * @param {string} payload.host
+ * @param {number} payload.guessingTime
+ * @param {string} payload.difficulty
+ * @param {Object} payload.playList
  */
 const createGame = ({ host, guessingTime, difficulty, playList }) => {
     games.push({
@@ -19,7 +24,7 @@ const createGame = ({ host, guessingTime, difficulty, playList }) => {
 /**
  * Gets the Object with the appropiate game data
  * @param {string} host
- * @returns game {} inside games []
+ * @returns {number}
  */
 const getGameIndex = (host) => games.findIndex((game) => game.host == host)
 
@@ -44,7 +49,9 @@ const incrementSongTime = (host) => {
 
 /**
  * Compares user answer to the song title playing
- * @param {object} param0
+ * @param {Object} payload
+ * @param {string} payload.host
+ * @param {string} payload.answer
  * @returns {boolean}
  */
 const isCorrect = ({ host, answer }) => {
