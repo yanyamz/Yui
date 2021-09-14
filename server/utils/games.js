@@ -1,4 +1,4 @@
-let games = []
+const games = []
 
 /**
  * Creates a new property in Room OBJ with the host as a key
@@ -19,9 +19,9 @@ const createGame = ({ host, guessingTime, difficulty, playList }) => {
 /**
  * Gets the Object with the appropiate game data
  * @param {string} host
- * @returns game object inside games
+ * @returns game {} inside games []
  */
-const getGame = (host) => games.filter((game) => game.host == host)[0]
+const getGameIndex = (host) => games.findIndex((game) => game.host == host)
 
 /**
  * Deletes the room from rooms list at the end of the game
@@ -29,7 +29,17 @@ const getGame = (host) => games.filter((game) => game.host == host)[0]
  * @param {String} host
  */
 const deleteGame = (host) => {
-    games = games.filter((game) => game.host != host)
+    const index = getGameIndex(host)
+    games.splice(index, 1)
+}
+
+/**
+ * Ticks the currentSongTime property
+ * @param {string} host
+ */
+const incrementSongTime = (host) => {
+    let index = getGameIndex(host)
+    games[index].currentSongTime++
 }
 
 /**
@@ -38,26 +48,28 @@ const deleteGame = (host) => {
  * @returns {boolean}
  */
 const isCorrect = ({ host, answer }) => {
-    const game = getGame(host)
+    const game = games[getGameIndex(host)]
     return game.playList[game.currentSongNum].animeTitle.toLowerCase() ===
         answer.toLowerCase()
         ? true
         : false
 }
 
-createGame({
-    host: 'lulu',
-    guessingTime: 30,
-    difficulty: 'easy',
-    playList: [{ animeTitle: 'Boku No Hero' }],
-})
-
-// console.log(getGame('lulu'))
+// createGame({
+//     host: 'lulu',
+//     guessingTime: 30,
+//     difficulty: 'easy',
+//     playList: [{ animeTitle: 'Boku No Hero' }],
+// })
+// console.log(getGameIndex('lulu'))
 // console.log(isCorrect({ host: 'lulu', answer: 'Boku No Hero' }))
+// console.log(incrementSongTime('lulu'))
+// console.log(games[getGameIndex('lulu')])
 
 module.exports = {
     createGame,
     deleteGame,
-    getGame,
+    getGameIndex,
+    incrementSongTime,
     isCorrect,
 }
