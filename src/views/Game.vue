@@ -1,7 +1,7 @@
 <template>
     <div class="card p-3 has-background-white">
         <div class="block is-flex is-justify-content-space-between">
-            <router-link @click="checkIfHost" class to="/rooms">
+            <router-link @click="checkIfHostLeft" class to="/rooms">
                 <div class="button is-danger">Leave</div>
             </router-link>
         </div>
@@ -72,7 +72,7 @@ export default {
     },
     async created() {
         window.addEventListener('beforeunload', (event) => {
-            this.checkIfHost()
+            this.checkIfHostLeft()
             event.preventDefault()
             event.returnValue = ''
         })
@@ -124,6 +124,7 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
+
         ...mapActions('game', ['deleteGame', 'getGameInfo']),
 
         async checkIfHost() {
