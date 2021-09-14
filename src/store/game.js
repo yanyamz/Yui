@@ -2,11 +2,14 @@ export default {
     namespaced: true,
     state: {
         game: {
-            timePerQuestion: 10,
+            timePerQuestion: null,
+            playList: [],
+            playListSize: 10,
         },
+        database: [],
     },
     actions: {
-        async createGame(context, { host, timePerQuestion }) {
+        async createGame(context, { host, timePerQuestion, playList }) {
             console.log('createGame')
             context.state.game = {
                 timePerQuestion,
@@ -18,6 +21,7 @@ export default {
                     document: host,
                     newData: {
                         timePerQuestion,
+                        playList,
                     },
                 },
                 { root: true }
