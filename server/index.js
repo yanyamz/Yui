@@ -13,8 +13,8 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.use(express.static(publicDirectoryPath))
 
-io.on('connection', (socket) => {
-    socket.on('join', ({username="ooooo", room = 'blah'}, callback) => {
-        socket.join(user.room)
-    })
-}
+// io.on('connection', (socket) => {
+//     socket.on('join', ({username="ooooo", room = 'blah'}, callback) => {
+//         socket.join(user.room)
+//     })
+// }
