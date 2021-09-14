@@ -2,7 +2,6 @@ import { projectFirestore } from '../firebase/config'
 
 export default {
     namespaced: true,
-    state: {},
     actions: {
         async deleteDocument(context, { collection, document }) {
             try {
