@@ -10,15 +10,18 @@ const games = []
  * @param {Object} payload.playList
  */
 const createGame = ({ host, guessingTime, difficulty, playList }) => {
-    games.push({
-        host,
-        guessingTime,
-        difficulty,
-        currentSongNum: 0,
-        currentSongTime: 0,
-        phase: 0,
-        playList,
-    })
+	games.push({
+		host,
+		guessingTime,
+		difficulty,
+		currentSongNum: 0,
+		currentSongTime: 0,
+		phase: 0,
+		endPhase: playList.length * 3 - 1,
+		playList,
+		isCorrect: false,
+		isWrong: false,
+	})
 }
 
 /**
@@ -34,8 +37,8 @@ const getGameIndex = (host) => games.findIndex((game) => game.host == host)
  * @param {String} host
  */
 const deleteGame = (host) => {
-    const index = getGameIndex(host)
-    games.splice(index, 1)
+	const index = getGameIndex(host)
+	games.splice(index, 1)
 }
 
 /**
@@ -43,8 +46,26 @@ const deleteGame = (host) => {
  * @param {string} host
  */
 const incrementSongTime = (host) => {
-    let index = getGameIndex(host)
-    games[index].currentSongTime++
+	let index = getGameIndex(host)
+	games[index].currentSongTime++
+}
+
+/**
+ * Targets the next song on the playlist object
+ * @param {string} host
+ */
+const getNextSong = (host) => {
+	const game = games[getGameIndex(host)]
+	game.currentSongNum++
+}
+
+/**
+ * Increments phase when the guessingTime = currentTime
+ * @param {string} host
+ */
+const incrementPhase = (host) => {
+	let index = getGameIndex(host)
+	games[index].phase++
 }
 
 /**
@@ -55,11 +76,21 @@ const incrementSongTime = (host) => {
  * @returns {boolean}
  */
 const isCorrect = ({ host, answer }) => {
-    const game = games[getGameIndex(host)]
-    return game.playList[game.currentSongNum].animeTitle.toLowerCase() ===
-        answer.toLowerCase()
-        ? true
-        : false
+	const game = games[getGameIndex(host)]
+	return game.playList[game.currentSongNum].animeTitle.toLowerCase() ===
+		answer.toLowerCase()
+		? true
+		: false
+}
+
+/**
+ * Checks whether the last phase has been reached
+ * @param {string} host
+ * @returns {boolean}
+ */
+const gameOver = (host) => {
+	const game = games[getGameIndex(host)]
+	return game.endPhase === game.phase ? true : false
 }
 
 // createGame({
@@ -74,10 +105,13 @@ const isCorrect = ({ host, answer }) => {
 // console.log(games[getGameIndex('lulu')])
 
 module.exports = {
-    games,
-    createGame,
-    deleteGame,
-    getGameIndex,
-    incrementSongTime,
-    isCorrect,
+	games,
+	createGame,
+	deleteGame,
+	gameOver,
+	getGameIndex,
+	incrementSongTime,
+	isCorrect,
+	incrementPhase,
+	getNextSong,
 }
