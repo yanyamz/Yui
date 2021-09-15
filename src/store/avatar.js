@@ -30,7 +30,7 @@ export default {
     },
     actions: {
         modifyIndex(context, operation) {
-            operation == 'subtract'
+            operation === 'subtract'
                 ? (context.state.tempAvatarIndex -= 1)
                 : (context.state.tempAvatarIndex += 1)
         },

@@ -1,86 +1,30 @@
 export default {
     namespaced: true,
-    state: {
-        game: {
-            timePerQuestion: null,
-            playList: [],
-            playListSize: 10,
-        },
-        database: [],
+    state() {
+        return {
+            game: {},
+        }
     },
     actions: {
-        async createGame(context, { host, timePerQuestion, playList }) {
-            console.log('createGame')
-            context.state.game = {
-                timePerQuestion,
-            }
-            await context.dispatch(
-                'firestore/updateDocument',
-                {
-                    collection: 'games',
-                    document: host,
-                    newData: {
-                        timePerQuestion,
-                        playList,
-                    },
-                },
-                { root: true }
-            )
-        },
-        async deleteGame(context, host) {
-            console.log('deleteGame')
-            await context.dispatch(
-                'firestore/deleteDocument',
-                {
-                    collection: 'games',
-                    document: host,
-                },
-                {
-                    root: true,
-                }
-            )
-        },
-        async setDatabase(context) {
-            console.log('setDatabase')
+        async createPlaylist(context, playlistSize) {
+            console.log('createPlaylist')
+            const playlist = []
             const data = await fetch(
                 `https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
             )
-            const res = await data.json()
-            context.state.database = res
-        },
-        async createPlaylist(context) {
-            console.log('createPlaylist')
-            context.state.game.playList = []
+            const database = await data.json()
+
             const songsChosen = () => {
                 const songs = new Set()
-                while (songs.size < context.state.game.playListSize) {
-                    songs.add(
-                        Math.floor(
-                            Math.random() * context.state.database.length
-                        )
-                    )
+                while (songs.size < playlistSize) {
+                    songs.add(Math.floor(Math.random() * database.length))
                 }
                 return [...songs]
             }
             for (const songIndex of songsChosen()) {
-                context.state.game.playList.push(
-                    context.state.database[songIndex]
-                )
+                playlist.push(database[songIndex])
             }
-            return context.state.game.playList
-        },
-        async getGameInfo(context, host) {
-            console.log('getGameInfo')
-            const gameInfo = await context.dispatch(
-                'firestore/loadDocument',
-                {
-                    collection: 'games',
-                    document: host,
-                },
-                { root: true }
-            )
-            context.state.game = gameInfo
-            console.log(context.state.game)
+            return playlist
         },
     },
 }

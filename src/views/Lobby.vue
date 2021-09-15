@@ -15,7 +15,7 @@
                         :src="
                             require(`@/assets/images/avatars/${getAvatar(
                                 user.avatar
-                            ) ?? 'yui'}_neutral.png`)
+                            ) ?? ''}_neutral.png`)
                         "
                     />
                 </figure>
@@ -106,13 +106,6 @@ export default {
         },
         async startGame() {
             await this.setRoomInSession({ host: this.host, newData: true })
-            const gameSongPlaylist = await this.createPlaylist()
-            await this.createGame({
-                host: this.host,
-                timePerQuestion: 30,
-                playList: gameSongPlaylist,
-                playListSize: 10,
-            })
         },
         async removeUserFromFirebase() {
             if (this.host === this.userPreferences.displayName) {

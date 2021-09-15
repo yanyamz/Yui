@@ -61,6 +61,8 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
+import { io } from 'socket.io-client'
+
 export default {
     emits: ['toggleActive'],
     data() {
@@ -76,6 +78,7 @@ export default {
     },
     methods: {
         ...mapActions('rooms', ['createRoom']),
+        ...mapActions('game', ['createPlaylist']),
 
         toggleModal() {
             this.$emit('toggleActive')
@@ -98,12 +101,31 @@ export default {
                 await this.createRoom({
                     name: this.roomName,
                     difficulty: this.difficulty,
+                    guessingTime: this.guessingTime,
                     host: {
                         displayName: this.displayName,
                         avatar: this.avatarIndex,
                     },
                 })
                 this.$router.push(`/lobby/${this.roomName}+${this.displayName}`)
+
+                const playList = await this.createPlaylist(10)
+                const socket = io('http://localhost:3000')
+
+                socket.emit(
+                    'createGame',
+                    {
+                        difficulty: this.difficulty,
+                        guessingTime: this.guessingTime,
+                        host: this.displayName,
+                        playList,
+                    },
+                    (error) => {
+                        if (error) {
+                            console.log(error)
+                        }
+                    }
+                )
             }
             setTimeout(() => {
                 this.isValid = true

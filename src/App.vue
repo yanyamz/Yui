@@ -5,12 +5,11 @@
 </template>
 
 <script>
-import { mapMutations, mapActions } from 'vuex'
+import { mapMutations } from 'vuex'
 import { projectAuth } from '@/firebase/config'
 
 export default {
     async mounted() {
-        this.setDatabase()
         projectAuth.onAuthStateChanged((_user) => {
             this.updateUser(_user)
         })
@@ -22,7 +21,6 @@ export default {
     },
     methods: {
         ...mapMutations('auth', ['updateUser']),
-        ...mapActions('game', ['setDatabase']),
     },
 }
 </script>
