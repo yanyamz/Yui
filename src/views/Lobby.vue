@@ -100,25 +100,12 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-<<<<<<< HEAD
-=======
         ...mapActions('game', ['createGame', 'createPlaylist']),
->>>>>>> b539a38761ad68005150b3e7f08dcbfc527f666f
         getAvatar(number) {
             return this.avatars[number % this.avatars.length]
         },
         async startGame() {
             await this.setRoomInSession({ host: this.host, newData: true })
-<<<<<<< HEAD
-=======
-            const gameSongPlaylist = await this.createPlaylist()
-            await this.createGame({
-                host: this.host,
-                timePerQuestion: 30,
-                playList: gameSongPlaylist,
-                playListSize: 10,
-            })
->>>>>>> b539a38761ad68005150b3e7f08dcbfc527f666f
         },
         async removeUserFromFirebase() {
             if (this.host === this.userPreferences.displayName) {
