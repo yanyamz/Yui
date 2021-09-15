@@ -15,7 +15,7 @@ export default {
         },
     },
     actions: {
-        async createGame(context, { host, timePerQuestion }) {
+        async createGame(context, { host, timePerQuestion, playList }) {
             console.log('createGame')
             context.state.game = {
                 timePerQuestion,
@@ -27,6 +27,7 @@ export default {
                     document: host,
                     newData: {
                         timePerQuestion,
+                        playList,
                     },
                 },
                 { root: true }

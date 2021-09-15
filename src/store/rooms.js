@@ -12,6 +12,7 @@ export default {
     },
     actions: {
         async deleteRoom(context, host) {
+            console.log('deleteRoom')
             await context.dispatch(
                 'firestore/deleteDocument',
                 {
