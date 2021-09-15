@@ -81,24 +81,27 @@ export default {
     async mounted() {
         document.title = 'Yui - Game'
 
-        const { difficulty, guessingTime, host } = await this.loadRoom(
-            this.host
-        )
+        try {
+            const { difficulty, guessingTime, host } = await this.loadRoom(
+                this.host
+            )
 
-        const playList = await this.createPlaylist()
+            const playList = await this.createPlaylist(10)
 
-        const socket = io('http://localhost:3000')
+            const socket = io('http://localhost:3000')
 
-        socket.emit(
-            'createGame',
-            { difficulty, guessingTime, host, playList },
-            (error) => {
-                if (error) {
-                    console.log(error)
+            socket.emit(
+                'createGame',
+                { difficulty, guessingTime, host, playList },
+                (error) => {
+                    if (error) {
+                        console.log(error)
+                    }
                 }
-            }
-        )
-
+            )
+        } catch (e) {
+            this.$router.push('/rooms')
+        }
         this.unsubRoomChanges = projectFirestore
             .collection('rooms')
             .doc(this.host)
@@ -112,14 +115,6 @@ export default {
                 }
                 this.users = roomData?.users
             })
-
-        // this.unsubGameChanges = projectFirestore
-        //     .collection('games')
-        //     .doc(this.host)
-        //     .onSnapshot(async (snapshot) => {
-        //         this.gameData = await snapshot.data()
-        //         console.log(this.gameData)
-        //     })
     },
     async unmounted() {
         this.unsubRoomChanges?.()
@@ -142,15 +137,9 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', [
-            'createGame',
-            'deleteGame',
-            'getGameInfo',
-            'createPlaylist',
-        ]),
+        ...mapActions('game', ['createPlaylist']),
         async checkIfHostLeft() {
             if (this.host === this.userPreferences.displayName) {
-                await this.deleteGame(this.host)
                 await this.deleteRoom(this.host)
                 return
             }

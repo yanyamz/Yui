@@ -15,7 +15,7 @@
                         :src="
                             require(`@/assets/images/avatars/${getAvatar(
                                 user.avatar
-                            ) ?? 'yui'}_neutral.png`)
+                            ) ?? ''}_neutral.png`)
                         "
                     />
                 </figure>
