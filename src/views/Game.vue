@@ -81,19 +81,13 @@ export default {
     async mounted() {
         document.title = 'Yui - Game'
 
-        const socket = io('http://localhost:3000')
-
-        socket.io.on('error', (error) => {
-            console.log('error connecting')
-            console.log(error)
-        })
-
         const { difficulty, guessingTime, host } = await this.loadRoom(
             this.host
         )
-        await this.createPlaylist()
-        console.log(this.playList)
-        const playList = this.playList
+
+        const playList = await this.createPlaylist()
+
+        const socket = io('http://localhost:3000')
 
         socket.emit(
             'createGame',

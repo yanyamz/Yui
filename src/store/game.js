@@ -45,32 +45,24 @@ export default {
                 }
             )
         },
-        async setDatabase(context) {
-            console.log('setDatabase')
-            const data = await fetch(
-                `https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
-            )
-            const res = await data.json()
-            context.state.database = res
-        },
         async createPlaylist(context) {
             console.log('createPlaylist')
             context.state.game.playList = []
+
+            const data = await fetch(
+                `https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
+            )
+            const database = await data.json()
+
             const songsChosen = () => {
                 const songs = new Set()
                 while (songs.size < context.state.game.playListSize) {
-                    songs.add(
-                        Math.floor(
-                            Math.random() * context.state.database.length
-                        )
-                    )
+                    songs.add(Math.floor(Math.random() * database.length))
                 }
                 return [...songs]
             }
             for (const songIndex of songsChosen()) {
-                context.state.game.playList.push(
-                    context.state.database[songIndex]
-                )
+                context.state.game.playList.push(database[songIndex])
             }
             return context.state.game.playList
         },
