@@ -2,8 +2,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Yanyamz/Yui">
-    <img src="https://files.catbox.moe/pu8pfm.svg
-" alt="Logo" width="80" height="80">
+    <img src="https://files.catbox.moe/pu8pfm.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Yui</h3>
