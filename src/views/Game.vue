@@ -59,6 +59,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import { projectFirestore } from '@/firebase/config.js'
+import { io } from 'socket.io-client'
 
 export default {
     props: ['id'],
@@ -80,6 +81,30 @@ export default {
     async mounted() {
         document.title = 'Yui - Game'
 
+        const socket = io('http://localhost:3000')
+
+        socket.io.on('error', (error) => {
+            console.log('error connecting')
+            console.log(error)
+        })
+
+        const { difficulty, guessingTime, host } = await this.loadRoom(
+            this.host
+        )
+        await this.createPlaylist()
+        console.log(this.playList)
+        const playList = this.playList
+
+        socket.emit(
+            'createGame',
+            { difficulty, guessingTime, host, playList },
+            (error) => {
+                if (error) {
+                    console.log(error)
+                }
+            }
+        )
+
         this.unsubRoomChanges = projectFirestore
             .collection('rooms')
             .doc(this.host)
@@ -100,6 +125,7 @@ export default {
     computed: {
         ...mapGetters('avatar', ['avatars']),
         ...mapGetters('userPreferences', ['avatarIndex', 'userPreferences']),
+        ...mapGetters('game', ['playList']),
         roomName() {
             return this.id.substring(0, this.id.indexOf('+'))
         },
@@ -114,7 +140,12 @@ export default {
             'deleteRoom',
             'setRoomInSession',
         ]),
-        ...mapActions('game', ['createGame', 'deleteGame']),
+        ...mapActions('game', [
+            'createGame',
+            'deleteGame',
+            'getGameInfo',
+            'createPlaylist',
+        ]),
         async checkIfHostLeft() {
             if (this.host === this.userPreferences.displayName) {
                 await this.deleteGame(this.host)

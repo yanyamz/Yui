@@ -97,7 +97,7 @@ export default {
                 return { ...doc.data(), id: doc.id }
             })
         },
-        async createRoom(context, { name, difficulty, host }) {
+        async createRoom(context, { name, difficulty, host, guessingTime }) {
             console.log('createRoom')
             context.state.rooms.push({ name, difficulty, host })
             await context.dispatch(
@@ -108,6 +108,7 @@ export default {
                     newData: {
                         difficulty,
                         name,
+                        guessingTime,
                         host: host.displayName,
                         users: [host],
                         isInSession: false,

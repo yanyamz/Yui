@@ -74,6 +74,7 @@ const isCorrect = ({ host, answer }) => {
 // console.log(games[getGameIndex('lulu')])
 
 module.exports = {
+    games,
     createGame,
     deleteGame,
     getGameIndex,

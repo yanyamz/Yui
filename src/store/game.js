@@ -1,8 +1,17 @@
 export default {
     namespaced: true,
-    state: {
-        game: {
-            timePerQuestion: 10,
+    state() {
+        return {
+            game: {
+                timePerQuestion: 10,
+                playList: [],
+                playListSize: 10,
+            },
+        }
+    },
+    getters: {
+        playList(state) {
+            return state.playList
         },
     },
     actions: {

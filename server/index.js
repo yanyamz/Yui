@@ -1,20 +1,39 @@
-const path = require('path')
 const http = require('http')
 
 const express = require('express')
-const socketio = require('socket.io')
+const cors = require('cors')
+
+const {
+    games,
+    createGame,
+    deleteGame,
+    getGameIndex,
+    incrementSongTime,
+    isCorrect,
+} = require('./utils/games.js')
 
 const app = express()
+app.use(cors())
+
 const server = http.createServer(app)
-const io = socketio(server)
+const io = require('socket.io')(server, {
+    cors: {
+        origin: 'http://localhost:8080',
+        methods: ['GET', 'POST'],
+        allowedHeaders: ['my-custom-header'],
+        credentials: true,
+    },
+})
 
 const port = process.env.PORT || 3000
-const publicDirectoryPath = path.join(__dirname, '../public')
 
-app.use(express.static(publicDirectoryPath))
+io.on('connection', (socket) => {
+    socket.on('createGame', ({ host, guessingTime, difficulty, playList }) => {
+        createGame({ host, guessingTime, difficulty, playList })
+        console.log(games[getGameIndex(host)])
+    })
+})
 
-// io.on('connection', (socket) => {
-//     socket.on('join', ({username="ooooo", room = 'blah'}, callback) => {
-//         socket.join(user.room)
-//     })
-// }
+server.listen(port, () => {
+    console.log(`Server is up on port http://localhost:${port}`)
+})

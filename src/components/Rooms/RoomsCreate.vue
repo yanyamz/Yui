@@ -98,6 +98,7 @@ export default {
                 await this.createRoom({
                     name: this.roomName,
                     difficulty: this.difficulty,
+                    guessingTime: this.guessingTime,
                     host: {
                         displayName: this.displayName,
                         avatar: this.avatarIndex,
