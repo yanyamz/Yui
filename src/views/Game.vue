@@ -5,13 +5,9 @@
 				<div class="button is-danger">Leave</div>
 			</router-link>
 		</div>
-		<h1>{{ game.guessingTime - game.currentSongTime }}</h1>
 		<div class="game block">
-			<input type="range" class="game__volume is-primary" />
-			<div class="game__videoplayer block">
-				<h1>blah</h1>
-			</div>
-			<input
+			<GameVideo :game="game" />
+			<!-- <input
 				class="input is-primary"
 				:class="{
 					'is-success': isCorrect,
@@ -19,7 +15,7 @@
 				}"
 				type="text"
 				placeholder="Primary input"
-			/>
+			/> -->
 		</div>
 		<div class="grid block">
 			<div
@@ -41,8 +37,10 @@
 import { mapGetters, mapActions } from 'vuex'
 import { projectFirestore } from '@/firebase/config.js'
 import { io } from 'socket.io-client'
+import GameVideo from '@/components/Game/GameVideo.vue'
 
 export default {
+	components: { GameVideo },
 	props: ['id'],
 	data() {
 		return {
@@ -142,14 +140,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.game {
-	&__videoplayer {
-		width: 100%;
-		height: 25rem;
-		background: grey;
-	}
-}
-
 .grid {
 	display: flex;
 	flex-wrap: wrap;
