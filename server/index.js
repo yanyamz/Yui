@@ -29,6 +29,7 @@ const port = process.env.PORT || 3000
 
 io.on('connection', (socket) => {
     socket.on('createGame', ({ host, guessingTime, difficulty, playList }) => {
+        deleteGame(host)
         createGame({ host, guessingTime, difficulty, playList })
         console.log(games[getGameIndex(host)])
     })
