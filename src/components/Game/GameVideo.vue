@@ -119,7 +119,7 @@ export default {
 			guess: '',
 			showOptions: false,
 			possibleEntries: [],
-			socket: io('http://localhost:3000'),
+			socket: io('http://https://yellow-snake-39.loca.lt'),
 		}
 	},
 	computed: {
