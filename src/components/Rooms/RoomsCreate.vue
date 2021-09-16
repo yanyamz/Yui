@@ -107,7 +107,7 @@ export default {
 				this.$router.push(`/lobby/${this.roomName}+${this.displayName}`)
 
 				const playList = await this.createPlaylist(10)
-				const socket = io('http://https://yellow-snake-39.loca.lt')
+				const socket = io('https://https://yellow-snake-39.loca.lt')
 
 				socket.emit(
 					'createGame',
