@@ -25,7 +25,7 @@ app.use(cors())
 const server = http.createServer(app)
 const io = require('socket.io')(server, {
 	cors: {
-		origin: 'https://aniopeningsonline.netlify.app/rooms',
+		origin: 'http://localhost:8080',
 		methods: ['GET', 'POST'],
 		allowedHeaders: ['my-custom-header'],
 		credentials: true,
@@ -36,7 +36,7 @@ const port = process.env.PORT || 3000
 
 io.on('connection', (socket) => {
 	socket.on('createGame', ({ host, guessingTime, difficulty, playList }) => {
-		console.log('createGame')
+		// console.log('createGame')
 		deleteGame(host)
 		createGame({ host, guessingTime, difficulty, playList })
 
@@ -96,7 +96,7 @@ io.on('connection', (socket) => {
 		}
 	})
 	socket.on('startGame', ({ host, user }) => {
-		console.log('startGame')
+		// console.log('startGame')
 		try {
 			addUserObjectToGame({ host, user })
 			socket.join(host)
@@ -105,13 +105,13 @@ io.on('connection', (socket) => {
 		}
 	})
 	socket.on('leaving', (host) => {
-		console.log('disconnect')
+		// console.log('disconnect')
 		socket.leave(host)
 	})
 	socket.on('deleteGame', (host) => {
-		console.log('deleteGame')
+		// console.log('deleteGame')
 		deleteGame(host)
-		console.log(games)
+		// console.log(games)
 	})
 })
 
