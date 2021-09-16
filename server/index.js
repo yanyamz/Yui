@@ -47,11 +47,15 @@ io.on('connection', (socket) => {
 				// Clears the interval once the room is deleted or the game is over
 				if (getGameIndex(host) === -1 || gameOver(host)) {
 					clearInterval(tick)
+					io.to(host).emit('sendToRooms')
+					deleteGame(host)
 				}
 				try {
 					let game = games[getGameIndex(host)]
 					if (game == undefined) {
 						clearInterval(tick)
+						io.to(host).emit('sendToRooms')
+						deleteGame(host)
 					}
 					// When timer finishes => Progress to next phase
 					if (game.guessingTime <= game.currentSongTime) {
@@ -67,6 +71,8 @@ io.on('connection', (socket) => {
 					incrementSongTime(host)
 				} catch (err) {
 					clearInterval(tick)
+					io.to(host).emit('sendToRooms')
+					deleteGame(host)
 				}
 			}, 1000)
 		}, 4000)
@@ -80,8 +86,12 @@ io.on('connection', (socket) => {
 				games[getGameIndex(host)].users[user].isWrong = true
 			}
 			setTimeout(() => {
-				games[getGameIndex(host)].users[user].isCorrect = false
-				games[getGameIndex(host)].users[user].isWrong = false
+				try {
+					games[getGameIndex(host)].users[user].isCorrect = false
+					games[getGameIndex(host)].users[user].isWrong = false
+				} catch (e) {
+					return
+				}
 			}, games[getGameIndex(host)].guessingTime * 1000)
 		} catch (e) {
 			console.log(e)

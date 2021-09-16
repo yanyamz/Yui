@@ -57,6 +57,10 @@ export default {
 			this.game = game
 		})
 
+		this.socket.on('sendToRooms', () => {
+			this.$router.push({ name: 'Rooms' })
+		})
+
 		this.unsubRoomChanges = projectFirestore
 			.collection('rooms')
 			.doc(this.host)

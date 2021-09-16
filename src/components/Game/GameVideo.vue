@@ -1,16 +1,19 @@
 <template>
-	<div class="container">
-		<h1>{{ game?.guessingTime - game?.currentSongTime ?? 30 }}</h1>
-		<div class="leaderboard">
-			<p v-for="key in Object.keys(game.users)" :key="key" class="">
-				{{ key }}: {{ game.users[key].points }}
+	<div class="component container">
+		<div class="top">
+			<h1 class="has-text-centered title">
+				{{ game?.guessingTime - game?.currentSongTime ?? 30 }}
+			</h1>
+
+			<p class="songs-left">
+				{{ game.currentSongNum + 1 }} / {{ game.playList.length }}
 			</p>
-		</div>
-		<div class="video-player is-loading">
+			<p v-show="phase == 'results'" class="title show-name">
+				{{ game.playList[game.currentSongNum].animeRomaji }}
+			</p>
 			<input
 				type="range"
 				class="form-range is-block is-primary"
-				id="customRange1"
 				ref="video_volume"
 				min="0"
 				max="100"
@@ -18,7 +21,22 @@
 				@input="SetVolume"
 				@change="SetVolume"
 			/>
-
+		</div>
+		<div class="leaderboard">
+			<p v-for="key in Object.keys(game.users)" :key="key" class="">
+				{{ key }}: {{ game.users[key].points }}
+			</p>
+		</div>
+		<div class="song-info">
+			<p v-show="phase == 'results'" class="song-type">
+				Type: {{ game.playList[game.currentSongNum].type }}
+			</p>
+			<p v-show="phase == 'results'" class="song-name">
+				Song Name: {{ game.playList[game.currentSongNum].songName }}
+			</p>
+		</div>
+		<div class="video-player is-loading">
+			<h1 class="question-mark" v-show="phase == 'guessing'">?</h1>
 			<video
 				v-if="!refreshComponent"
 				@loadeddata="NewVideo"
@@ -27,6 +45,7 @@
 				ref="video"
 				disablePictureInPicture
 				:key="game.currentSongNum"
+				:class="{ 'is-invisible': phase !== 'results' }"
 			>
 				<source
 					:src="game.playList[game.currentSongNum].linkWebm"
@@ -50,9 +69,20 @@
 				v-model.trim="guess"
 				type="text"
 				placeholder="guess"
+				list="datalistOptions"
 			/>
+			<datalist id="datalistOptions">
+				<option
+					@click="UpdateGuess(entry)"
+					@keyup.enter="UpdateGuess(entry)"
+					v-for="entry in possibleEntries"
+					:key="entry"
+					:value="entry"
+					>{{ entry }}
+				</option>
+			</datalist>
 		</div>
-		<div class="grid block">
+		<div class="users grid block">
 			<div
 				v-for="user in users"
 				:key="user.displayName"
@@ -78,7 +108,7 @@
 <script>
 import helpers from '@/mixins/helpers.js'
 import { io } from 'socket.io-client'
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
 	mixins: [helpers],
@@ -87,6 +117,8 @@ export default {
 		return {
 			startingTime: 0,
 			guess: '',
+			showOptions: false,
+			possibleEntries: [],
 			socket: io('http://localhost:3000'),
 		}
 	},
@@ -120,8 +152,17 @@ export default {
 				)
 			}
 		},
+		async guess() {
+			this.possibleEntries = await this.filterSearch(this.guess)
+			this.showOptions = true
+		},
 	},
 	methods: {
+		...mapActions('game', ['filterSearch']),
+		UpdateGuess(input) {
+			this.guess = input
+			this.showOptions = false
+		},
 		NewVideo() {
 			this.SetVolume()
 		},
@@ -130,14 +171,12 @@ export default {
 			this.PlayVideo()
 		},
 		SetIntervalForVideo() {
-			console.log(this.$refs.video.duration, this.game.guessingTime)
 			const startTime = Math.abs(
 				this.RandomInt(
 					0,
 					Math.floor(this.$refs.video.duration) - this.game.guessingTime
 				)
 			)
-			console.log('startTime', startTime)
 			this.$refs.video.currentTime = startTime
 			this.startingTime = startTime
 		},
@@ -174,12 +213,67 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.component {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas:
+		'. top .'
+		'leaderboard videoplayer songinfo'
+		'users users users';
+	gap: 1rem;
+
+	@media (max-width: 1000px) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'top'
+			'songinfo'
+			'videoplayer'
+			'leaderboard'
+			'users';
+		gap: 0;
+		place-items: center;
+	}
+}
+
+.top {
+	grid-area: top;
+}
+
+.leaderboard {
+	grid-area: leaderboard;
+}
+
+.song-info {
+	grid-area: songinfo;
+}
+
+.video-player {
+	grid-area: videoplayer;
+	position: relative;
+}
+
+.users {
+	grid-area: users;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.question-mark {
+	position: absolute;
+	top: 35%;
+	left: 45%;
+	font-size: 4rem;
+}
+
 .user {
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 	border-radius: 5px;
 	flex: 1 1;
 	flex-basis: 30%;
 	min-width: 250px;
+	max-width: 400px;
 	background: white;
 	display: flex;
 	align-items: center;
@@ -200,15 +294,6 @@ export default {
 		align-self: center;
 		margin-left: 1rem;
 	}
-}
-.container {
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	// background: blue;
 }
 
 .video-player {
