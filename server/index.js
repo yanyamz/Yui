@@ -40,8 +40,6 @@ io.on('connection', (socket) => {
 		deleteGame(host)
 		createGame({ host, guessingTime, difficulty, playList })
 
-		console.log(games[getGameIndex(host)])
-
 		setTimeout(() => {
 			const tick = setInterval(() => {
 				// Clears the interval once the room is deleted or the game is over
