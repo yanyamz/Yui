@@ -42,7 +42,7 @@
 				>{{ progressWidth }}%</progress
 			>
 			<input
-				v-model="guess"
+				v-model.trim="guess"
 				type="text"
 				class="is-primary"
 				placeholder="guess"
@@ -54,6 +54,7 @@
 <script>
 import helpers from '@/mixins/helpers.js'
 import { io } from 'socket.io-client'
+import { mapGetters } from 'vuex'
 
 export default {
 	mixins: [helpers],
@@ -66,6 +67,7 @@ export default {
 		}
 	},
 	computed: {
+		...mapGetters('userPreferences', ['userPreferences']),
 		progressWidth() {
 			const percent =
 				((this.game.guessingTime - this.game.currentSongTime) /
@@ -74,20 +76,23 @@ export default {
 			return percent
 		},
 		phase() {
-			// return phase % 2 === 0 ? 'guessing' : 'results'
-			return this.phase
+			return this.game.phase % 2 === 0 ? 'guessing' : 'results'
 		},
 	},
 	watch: {
 		phase() {
 			this.$refs.video.currentTime = this.startingTime
-			// this.socket.emit(
-			// 	'startGame',
-			// 	{ host: this.host, user: this.userPreferences.displayName },
-			// 	(error) => {
-			// 		if (error) console.log(error)
-			// 	}
-			// )
+			this.socket.emit(
+				'checkAnswer',
+				{
+					host: this.host,
+					user: this.userPreferences.displayName,
+					answer: this.guess,
+				},
+				(error) => {
+					if (error) console.log(error)
+				}
+			)
 		},
 	},
 	methods: {

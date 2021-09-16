@@ -71,6 +71,19 @@ io.on('connection', (socket) => {
 			}, 1000)
 		}, 4000)
 	})
+	socket.on('checkAnswer', ({ host, user, answer }) => {
+		const game = games[getGameIndex(host)]
+		if (isCorrect(answer)) {
+			game.users[user].points++
+			game.users[user].isCorrect = true
+		} else {
+			game.users[user].isWrong = true
+		}
+		setTimeout(() => {
+			game.users[user].isCorrect = false
+			game.users[user].isWrong = false
+		}, 4000)
+	})
 	socket.on('startGame', ({ host, user }) => {
 		console.log('startGame')
 		addUserObjectToGame({ host, user })
