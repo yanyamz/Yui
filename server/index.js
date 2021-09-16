@@ -13,6 +13,10 @@ const {
 	isCorrect,
 	incrementPhase,
 	getNextSong,
+	resetCurrentSongTime,
+	giveUserPoint,
+	getPhase,
+	addUserObjectToGame,
 } = require('./utils/games.js')
 
 const app = express()
@@ -35,23 +39,41 @@ io.on('connection', (socket) => {
 		console.log('createGame')
 		deleteGame(host)
 		createGame({ host, guessingTime, difficulty, playList })
+
 		console.log(games[getGameIndex(host)])
 
 		setTimeout(() => {
 			const tick = setInterval(() => {
-				let game = games[getGameIndex(host)]
-				// if (gameOver(host)) clearInterval(tick)
-				if (game.guessingTime <= game.currentSongTime) {
+				// Clears the interval once the room is deleted or the game is over
+				if (getGameIndex(host) === -1 || gameOver(host)) {
 					clearInterval(tick)
 				}
-				// Update the client by sending the whole game object each second
-				io.to(host).emit('updateGame', game)
-				incrementSongTime(host)
+				try {
+					let game = games[getGameIndex(host)]
+					if (game == undefined) {
+						clearInterval(tick)
+					}
+					// When timer finishes => Progress to next phase
+					if (game.guessingTime <= game.currentSongTime) {
+						incrementPhase(host)
+						if (getPhase(host) === 'results') {
+						} else {
+							getNextSong(host)
+						}
+						resetCurrentSongTime(host)
+					}
+					// Update the client by sending the whole game object each second
+					io.to(host).emit('updateGame', game)
+					incrementSongTime(host)
+				} catch (err) {
+					clearInterval(tick)
+				}
 			}, 1000)
 		}, 4000)
 	})
-	socket.on('startGame', (host) => {
+	socket.on('startGame', ({ host, user }) => {
 		console.log('startGame')
+		addUserObjectToGame({ host, user })
 		socket.join(host)
 	})
 	socket.on('leaving', (host) => {

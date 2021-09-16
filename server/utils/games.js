@@ -17,10 +17,12 @@ const createGame = ({ host, guessingTime, difficulty, playList }) => {
 		currentSongNum: 0,
 		currentSongTime: 0,
 		phase: 0,
-		endPhase: playList.length * 3 - 1,
+		endPhase: playList.length * 2 - 1,
 		playList,
 		isCorrect: false,
 		isWrong: false,
+		answers: [],
+		users: {},
 	})
 }
 
@@ -30,6 +32,44 @@ const createGame = ({ host, guessingTime, difficulty, playList }) => {
  * @returns {number}
  */
 const getGameIndex = (host) => games.findIndex((game) => game.host == host)
+
+/**
+ *
+ * @param {string} host
+ * @returns {string} phase
+ */
+const getPhase = (host) => {
+	const phase = games[getGameIndex(host)].phase
+	if (phase % 2 == 0) {
+		return 'guessing'
+	}
+	return 'results'
+}
+
+/**
+ * Adds user object with multiple property
+ * @param {Object} payload
+ * @param {string} payload.host
+ * @param {string} payload.user
+ */
+const addUserObjectToGame = ({ host, user }) => {
+	games[getGameIndex(host)].users[user] = {
+		answer: '',
+		isCorrect: false,
+		isWrong: false,
+		points: 0,
+	}
+}
+
+/**
+ * Gives the user a point if they had the correct answer
+ * @param {object} payload
+ * @param {string} payload.host
+ * @param {string} payload.user
+ */
+const giveUserPoint = ({ host, user }) => {
+	games[getGameIndex(host)].leaderboard[user]++
+}
 
 /**
  * Deletes the room from rooms list at the end of the game
@@ -55,8 +95,7 @@ const incrementSongTime = (host) => {
  * @param {string} host
  */
 const getNextSong = (host) => {
-	const game = games[getGameIndex(host)]
-	game.currentSongNum++
+	games[getGameIndex(host)].currentSongNum++
 }
 
 /**
@@ -81,6 +120,14 @@ const isCorrect = ({ host, answer }) => {
 		answer.toLowerCase()
 		? true
 		: false
+}
+
+/**
+ *
+ * @param {string} host
+ */
+const resetCurrentSongTime = (host) => {
+	games[getGameIndex(host)].currentSongTime = 0
 }
 
 /**
@@ -114,4 +161,8 @@ module.exports = {
 	isCorrect,
 	incrementPhase,
 	getNextSong,
+	resetCurrentSongTime,
+	giveUserPoint,
+	getPhase,
+	addUserObjectToGame,
 }

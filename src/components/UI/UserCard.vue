@@ -20,7 +20,7 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-	props: ['user', 'host'],
+	props: ['user', 'host', 'isCorrect', 'isWrong'],
 	computed: {
 		...mapGetters('avatar', ['avatars']),
 	},

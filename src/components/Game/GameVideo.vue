@@ -1,7 +1,11 @@
 <template>
 	<div class="container">
 		<h1>{{ game?.guessingTime - game?.currentSongTime ?? 30 }}</h1>
-
+		<div class="leaderboard">
+			<p v-for="key in Object.keys(game.users)" :key="key" class="user">
+				{{ key }}: {{ game.users[key].points }}
+			</p>
+		</div>
 		<div class="video-player is-loading">
 			<input
 				type="range"
@@ -22,6 +26,7 @@
 				class="video"
 				ref="video"
 				disablePictureInPicture
+				:key="game.currentSongNum"
 			>
 				<source
 					:src="game.playList[game.currentSongNum].linkWebm"
@@ -36,27 +41,28 @@
 				max="100"
 				>{{ progressWidth }}%</progress
 			>
+			<input
+				v-model="guess"
+				type="text"
+				class="is-primary"
+				placeholder="guess"
+			/>
 		</div>
 	</div>
 </template>
 
 <script>
 import helpers from '@/mixins/helpers.js'
+import { io } from 'socket.io-client'
 
 export default {
 	mixins: [helpers],
 	props: ['game'],
-	phase(phase) {
-		switch (phase) {
-			case 'done':
-				this.NextVideo()
-				break
-			case 'results':
-				this.ShowResults()
-				break
-			case 'guessing':
-				this.HideVideo()
-				break
+	data() {
+		return {
+			startingTime: 0,
+			guess: '',
+			socket: io('http://localhost:3000'),
 		}
 	},
 	computed: {
@@ -66,6 +72,22 @@ export default {
 					this.game.guessingTime) *
 				100
 			return percent
+		},
+		phase() {
+			// return phase % 2 === 0 ? 'guessing' : 'results'
+			return this.phase
+		},
+	},
+	watch: {
+		phase() {
+			this.$refs.video.currentTime = this.startingTime
+			// this.socket.emit(
+			// 	'startGame',
+			// 	{ host: this.host, user: this.userPreferences.displayName },
+			// 	(error) => {
+			// 		if (error) console.log(error)
+			// 	}
+			// )
 		},
 	},
 	methods: {
@@ -86,6 +108,7 @@ export default {
 			)
 			console.log('startTime', startTime)
 			this.$refs.video.currentTime = startTime
+			this.startingTime = startTime
 		},
 		SetVolume() {
 			this.$refs.video.volume = this.$refs.video_volume.value / 100

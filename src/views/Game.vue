@@ -7,6 +7,7 @@
 		</div>
 		<div class="game block">
 			<GameVideo v-if="Object.entries(game).length !== 0" :game="game" />
+			<h2 v-else>Game Loading ...</h2>
 			<!-- <input
 				class="input is-primary"
 				:class="{
@@ -62,11 +63,13 @@ export default {
 	async mounted() {
 		document.title = 'Yui - Game'
 
-		this.socket.emit('startGame', this.host, (error) => {
-			if (error) {
-				console.log(error)
+		this.socket.emit(
+			'startGame',
+			{ host: this.host, user: this.userPreferences.displayName },
+			(error) => {
+				if (error) console.log(error)
 			}
-		})
+		)
 
 		this.socket.on('updateGame', (game) => {
 			this.game = game
