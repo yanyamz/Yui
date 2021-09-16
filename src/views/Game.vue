@@ -32,7 +32,7 @@ export default {
 			isCorrect: false,
 			isWrong: false,
 			game: {},
-			socket: io('https://https://yellow-snake-39.loca.lt'),
+			socket: io('http://localhost:3000'),
 		}
 	},
 	async created() {
