@@ -6,30 +6,12 @@
 			</router-link>
 		</div>
 		<div class="game block">
-			<GameVideo v-if="Object.entries(game).length !== 0" :game="game" />
+			<GameVideo
+				v-if="Object.entries(game).length !== 0"
+				:game="game"
+				:users="users"
+			/>
 			<h2 v-else>Game Loading ...</h2>
-			<!-- <input
-				class="input is-primary"
-				:class="{
-					'is-success': isCorrect,
-					'is-danger': isWrong,
-				}"
-				type="text"
-				placeholder="Primary input"
-			/> -->
-		</div>
-		<div class="grid block">
-			<div
-				v-for="user in users"
-				:key="user.displayName"
-				class="user"
-				:class="{
-					'has-background-success': isCorrect,
-					'has-background-danger': isWrong,
-				}"
-			>
-				<user-card :user="user" :host="host"></user-card>
-			</div>
 		</div>
 	</div>
 </template>
@@ -149,32 +131,5 @@ export default {
 	gap: 1rem;
 	overflow: auto;
 	max-height: 10rem;
-}
-.user {
-	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-	border-radius: 5px;
-	flex: 1 1;
-	flex-basis: 30%;
-	min-width: 250px;
-	background: white;
-	display: flex;
-	align-items: center;
-	padding: 1rem;
-	&__image {
-		width: 100px;
-		height: 100px;
-		border-radius: 50%;
-		img {
-			object-fit: cover;
-			object-position: center;
-		}
-	}
-	&__crown {
-		width: 2rem;
-	}
-	&__name {
-		align-self: center;
-		margin-left: 1rem;
-	}
 }
 </style>

@@ -2,7 +2,7 @@
 	<div class="container">
 		<h1>{{ game?.guessingTime - game?.currentSongTime ?? 30 }}</h1>
 		<div class="leaderboard">
-			<p v-for="key in Object.keys(game.users)" :key="key" class="user">
+			<p v-for="key in Object.keys(game.users)" :key="key" class="">
 				{{ key }}: {{ game.users[key].points }}
 			</p>
 		</div>
@@ -42,11 +42,35 @@
 				>{{ progressWidth }}%</progress
 			>
 			<input
+				class="input is-primary"
+				:class="{
+					'is-success': game.users[userPreferences.displayName].isCorrect,
+					'is-danger': game.users[userPreferences.displayName].isWrong,
+				}"
 				v-model.trim="guess"
 				type="text"
-				class="is-primary"
 				placeholder="guess"
 			/>
+		</div>
+		<div class="grid block">
+			<div
+				v-for="user in users"
+				:key="user.displayName"
+				class="user"
+				:class="{
+					'has-background-success':
+						game.users[user.displayName].isCorrect ?? false,
+					'has-background-danger':
+						game.users[user.displayName].isWrong ?? false,
+				}"
+			>
+				<user-card
+					:user="user"
+					:host="host"
+					:isCorrect="game.users[user.displayName].isCorrect"
+					:isWrong="game.users[user.displayName].isWrong"
+				></user-card>
+			</div>
 		</div>
 	</div>
 </template>
@@ -58,7 +82,7 @@ import { mapGetters } from 'vuex'
 
 export default {
 	mixins: [helpers],
-	props: ['game'],
+	props: ['game', 'users'],
 	data() {
 		return {
 			startingTime: 0,
@@ -82,17 +106,19 @@ export default {
 	watch: {
 		phase() {
 			this.$refs.video.currentTime = this.startingTime
-			this.socket.emit(
-				'checkAnswer',
-				{
-					host: this.host,
-					user: this.userPreferences.displayName,
-					answer: this.guess,
-				},
-				(error) => {
-					if (error) console.log(error)
-				}
-			)
+			if (this.phase === 'results') {
+				this.socket.emit(
+					'checkAnswer',
+					{
+						host: this.game.host,
+						user: this.userPreferences.displayName,
+						answer: this.guess,
+					},
+					(error) => {
+						if (error) console.log(error)
+					}
+				)
+			}
 		},
 	},
 	methods: {
@@ -148,6 +174,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.user {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+	border-radius: 5px;
+	flex: 1 1;
+	flex-basis: 30%;
+	min-width: 250px;
+	background: white;
+	display: flex;
+	align-items: center;
+	padding: 1rem;
+	&__image {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		img {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__crown {
+		width: 2rem;
+	}
+	&__name {
+		align-self: center;
+		margin-left: 1rem;
+	}
+}
 .container {
 	width: 100%;
 	margin: 0 auto;
@@ -170,6 +223,14 @@ export default {
 	height: auto;
 	border: 1px solid #313159;
 	border-radius: 0.5rem;
+}
+
+.grid {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	overflow: auto;
 }
 
 input[type='range'] {

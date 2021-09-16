@@ -116,12 +116,17 @@ const incrementPhase = (host) => {
  */
 const isCorrect = ({ host, answer }) => {
 	const game = games[getGameIndex(host)]
-	return game.playList[game.currentSongNum].animeEnglish.toLowerCase() ||
-		(answer.toLowerCase() ==
-			game.playList[game.currentSongNum].animeRomaji.toLowerCase()) ===
-			answer.toLowerCase()
-		? true
-		: false
+	const answerEnglish = game.playList[
+		game.currentSongNum
+	].animeEnglish.toLowerCase()
+	const answerRomaji = game.playList[game.currentSongNum].animeRomaji.toLowerCase()
+	if (
+		answer.toLowerCase() === answerEnglish ||
+		answer.toLowerCase() === answerRomaji
+	) {
+		return true
+	}
+	return false
 }
 
 /**

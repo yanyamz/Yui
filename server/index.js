@@ -72,22 +72,29 @@ io.on('connection', (socket) => {
 		}, 4000)
 	})
 	socket.on('checkAnswer', ({ host, user, answer }) => {
-		const game = games[getGameIndex(host)]
-		if (isCorrect(answer)) {
-			game.users[user].points++
-			game.users[user].isCorrect = true
-		} else {
-			game.users[user].isWrong = true
+		try {
+			if (isCorrect({ host, answer })) {
+				games[getGameIndex(host)].users[user].points++
+				games[getGameIndex(host)].users[user].isCorrect = true
+			} else {
+				games[getGameIndex(host)].users[user].isWrong = true
+			}
+			setTimeout(() => {
+				games[getGameIndex(host)].users[user].isCorrect = false
+				games[getGameIndex(host)].users[user].isWrong = false
+			}, games[getGameIndex(host)].guessingTime * 1000)
+		} catch (e) {
+			console.log(e)
 		}
-		setTimeout(() => {
-			game.users[user].isCorrect = false
-			game.users[user].isWrong = false
-		}, 4000)
 	})
 	socket.on('startGame', ({ host, user }) => {
 		console.log('startGame')
-		addUserObjectToGame({ host, user })
-		socket.join(host)
+		try {
+			addUserObjectToGame({ host, user })
+			socket.join(host)
+		} catch (error) {
+			console.log(error)
+		}
 	})
 	socket.on('leaving', (host) => {
 		console.log('disconnect')

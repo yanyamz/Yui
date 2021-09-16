@@ -4,7 +4,7 @@
 			class="is-rounded"
 			:src="
 				require(`@/assets/images/avatars/${getAvatar(user.avatar) ??
-					'yui'}_neutral.png`)
+					'yui'}_${emotion}.png`)
 			"
 		/>
 	</figure>
@@ -23,6 +23,11 @@ export default {
 	props: ['user', 'host', 'isCorrect', 'isWrong'],
 	computed: {
 		...mapGetters('avatar', ['avatars']),
+		emotion() {
+			if (this.isCorrect) return 'positive'
+			if (this.isWrong) return 'negative'
+			return 'neutral'
+		},
 	},
 	methods: {
 		getAvatar(number) {
