@@ -1,12 +1,12 @@
 <template>
-	<div class="card p-3 has-background-white">
+	<div class=" p-3 has-background-white">
 		<div class="block is-flex is-justify-content-space-between">
 			<router-link @click="checkIfHostLeft" class to="/rooms">
 				<div class="button is-danger">Leave</div>
 			</router-link>
 		</div>
 		<div class="game block">
-			<GameVideo :game="game" />
+			<GameVideo v-if="Object.entries(game).length !== 0" :game="game" />
 			<!-- <input
 				class="input is-primary"
 				:class="{
