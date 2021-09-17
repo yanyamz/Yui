@@ -34,6 +34,7 @@ export default {
 					`https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
 				)
 				entries = await data.json()
+				context.state.database = entries
 			}
 			const possibleEntries = []
 			for (let i = 0; i < entries.length; i++) {
