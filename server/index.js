@@ -25,7 +25,7 @@ app.use(cors())
 const server = http.createServer(app)
 const io = require('socket.io')(server, {
 	cors: {
-		origin: 'http://localhost:8080',
+		origin: 'https://aniopeningsonline.netlify.app/',
 		methods: ['GET', 'POST'],
 		allowedHeaders: ['my-custom-header'],
 		credentials: true,
