@@ -10,6 +10,7 @@
 				v-if="Object.entries(game).length !== 0"
 				:game="game"
 				:users="users"
+				:host="host"
 			/>
 			<h2 v-else>Game Loading ...</h2>
 		</div>
@@ -38,6 +39,8 @@ export default {
 	async created() {
 		window.addEventListener('beforeunload', (event) => {
 			this.checkIfHostLeft()
+			this.socket.emit('deleteGame', this.userPreferences.displayName)
+
 			event.preventDefault()
 			event.returnValue = ''
 		})
