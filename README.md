@@ -11,8 +11,6 @@
     A multiplayer guess the anime opening quiz.
     <br/>
     <br/>
-    <a href="https://github.com/Yanyamz/Yui"><strong>Explore the docs »</strong></a>
-    <br/>
     <br/>
     <a href="https://github.com/Yanyamz/Yui">View Demo</a>
     .
