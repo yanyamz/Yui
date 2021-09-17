@@ -22,15 +22,18 @@ const {
 const app = express()
 app.use(cors())
 
-const server = http.createServer(app)
-const io = require('socket.io')(server, {
-	cors: {
-		origin: 'https://aniopeningsonline.netlify.app/',
-		methods: ['GET', 'POST'],
-		allowedHeaders: ['my-custom-header'],
-		credentials: true,
-	},
+// enable CORS without external module
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*')
+	res.header(
+		'Access-Control-Allow-Headers',
+		'Origin, X-Requested-With, Content-Type, Accept'
+	)
+	next()
 })
+
+const server = http.createServer(app)
+const io = require('socket.io')
 
 const port = process.env.PORT || 3000
 
