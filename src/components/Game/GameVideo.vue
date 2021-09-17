@@ -1,14 +1,10 @@
 <template>
 	<div class="component container">
 		<div class="top">
-			<h1 class="has-text-centered title">
-				{{ game?.guessingTime - game?.currentSongTime ?? 30 }}
-			</h1>
-
 			<p class="songs-left">
 				{{ game.currentSongNum + 1 }} / {{ game.playList.length }}
 			</p>
-			<p v-show="phase == 'results'" class="title show-name">
+			<p v-show="phase == 'results'" class="title is-size-4 show-name">
 				{{ game.playList[game.currentSongNum].animeRomaji }}
 			</p>
 			<input
@@ -28,12 +24,14 @@
 			</p>
 		</div>
 		<div class="song-info">
-			<p v-show="phase == 'results'" class="song-type">
-				Type: {{ game.playList[game.currentSongNum].type }}
-			</p>
-			<p v-show="phase == 'results'" class="song-name">
-				Song Name: {{ game.playList[game.currentSongNum].songName }}
-			</p>
+			<div class="box">
+				<p v-show="phase == 'results'" class="song-type">
+					Type: {{ game.playList[game.currentSongNum].type }}
+				</p>
+				<p v-show="phase == 'results'" class="song-name">
+					Song Name: {{ game.playList[game.currentSongNum].songName }}
+				</p>
+			</div>
 		</div>
 		<div class="video-player is-loading">
 			<h1 class="question-mark" v-show="phase == 'guessing'">?</h1>
@@ -213,6 +211,7 @@ export default {
 
 <style lang="scss" scoped>
 .component {
+	margin-top: -2.5rem;
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-areas:
@@ -262,7 +261,7 @@ export default {
 .question-mark {
 	position: absolute;
 	top: 35%;
-	left: 45%;
+	left: 50%;
 	font-size: 4rem;
 }
 
@@ -340,7 +339,7 @@ input[type='range']::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	height: 15px;
 	width: 15px;
-	background: white;
+	background: #bccee8;
 	margin-top: -5px;
 	border-radius: 50%;
 }
@@ -348,7 +347,7 @@ input[type='range']::-webkit-slider-thumb {
 input[type='range']::-moz-range-thumb {
 	height: 15px;
 	width: 15px;
-	background: white;
+	background: #bccee8;
 	margin-top: -5px;
 	border-radius: 50%;
 }
