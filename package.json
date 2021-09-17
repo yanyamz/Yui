@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"server": "nodemon server/index.js"
+		"start": "nodem server/index.js"
 	},
 	"dependencies": {
 		"bulma": "^0.9.3",
