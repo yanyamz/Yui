@@ -118,7 +118,7 @@ export default {
 			guess: '',
 			showOptions: false,
 			possibleEntries: [],
-			socket: io('https://guesstheop.herokuapp.com'),
+			socket: io('https://animeopbackend.herokuapp.com/'),
 		}
 	},
 	computed: {

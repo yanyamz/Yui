@@ -27,7 +27,7 @@ export default {
 	},
 	data() {
 		return {
-			socket: io('https://guesstheop.herokuapp.com'),
+			socket: io('https://animeopbackend.herokuapp.com/'),
 		}
 	},
 	created() {
