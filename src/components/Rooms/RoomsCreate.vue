@@ -34,7 +34,7 @@
 					<div class="label">Difficulty</div>
 					<div class="select is-primary">
 						<select v-model="difficulty">
-							<option value="easy">Easy</option>
+							<option value="Casual">Casual</option>
 						</select>
 					</div>
 				</div>
