@@ -2,9 +2,9 @@
 	"name": "yui",
 	"version": "0.1.0",
 	"private": true,
-    "main": "server/index.js",
+	"main": "server/index.js",
 	"scripts": {
-		"start": "nodem server/index.js"
+		"start": "node server/index.js"
 	},
 	"dependencies": {
 		"bulma": "^0.9.3",
