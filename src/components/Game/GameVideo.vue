@@ -5,7 +5,7 @@
 				{{ game.currentSongNum + 1 }} / {{ game.playList.length }}
 			</p>
 			<p v-show="phase == 'results'" class="title is-size-4 show-name">
-				{{ game.playList[game.currentSongNum].animeRomaji }}
+				{{ game.playList[game.currentSongNum].animeEnglish }}
 			</p>
 			<input
 				type="range"
@@ -147,6 +147,8 @@ export default {
 						if (error) console.log(error)
 					}
 				)
+			} else {
+				this.guess = ' '
 			}
 		},
 		async guess() {
