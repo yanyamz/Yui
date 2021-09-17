@@ -41,10 +41,10 @@ export default {
 				if (
 					entries[i].animeEnglish
 						.toLowerCase()
-						.indexOf(input.toLowerCase()) > -1 ||
+						.indexOf(input.toLowerCase()) != -1 ||
 					entries[i].animeRomaji
 						.toLowerCase()
-						.indexOf(input.toLowerCase()) > -1
+						.indexOf(input.toLowerCase()) != -1
 				) {
 					possibleEntries.push(entries[i].animeEnglish)
 					possibleEntries.push(entries[i].animeRomaji)
