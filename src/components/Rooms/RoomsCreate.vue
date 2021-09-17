@@ -107,7 +107,7 @@ export default {
 				this.$router.push(`/lobby/${this.roomName}+${this.displayName}`)
 
 				const playList = await this.createPlaylist(10)
-				const socket = io('http://localhost:3000')
+				const socket = io('https://guesstheop.herokuapp.com')
 
 				socket.emit(
 					'createGame',

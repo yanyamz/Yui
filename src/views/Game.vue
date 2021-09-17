@@ -33,7 +33,7 @@ export default {
 			isCorrect: false,
 			isWrong: false,
 			game: {},
-			socket: io('http://localhost:3000'),
+			socket: io('https://guesstheop.herokuapp.com'),
 		}
 	},
 	async created() {
