@@ -44,7 +44,6 @@ io.on('connection', (socket) => {
 			const tick = setInterval(() => {
 				// Clears the interval once the room is deleted or the game is over
 				if (getGameIndex(host) === -1 || gameOver(host)) {
-					console.log('clearing interval')
 					clearInterval(tick)
 					io.to(host).emit('sendToRooms')
 					deleteGame(host)
@@ -53,8 +52,6 @@ io.on('connection', (socket) => {
 				try {
 					let game = games[getGameIndex(host)]
 					if (game == undefined) {
-						console.log('clearing interval')
-
 						clearInterval(tick)
 						io.to(host).emit('sendToRooms')
 						deleteGame(host)
@@ -73,7 +70,6 @@ io.on('connection', (socket) => {
 					io.to(host).emit('updateGame', game)
 					incrementSongTime(host)
 				} catch (err) {
-					console.log('clearing interval')
 					clearInterval(tick)
 					io.to(host).emit('sendToRooms')
 					deleteGame(host)
