@@ -1,875 +1,1811 @@
 [
-    {
-        "annId": 16661,
-        "animeEnglish": "A Silent Voice",
-        "animeRomaji": "Koe no Katachi",
-        "songName": "MY GENERATION",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/5l0hk4.webm",
-        "linkMP3": "https://files.catbox.moe/p8acbr.mp3"
-    },
-    {
-        "annId": 10885,
-        "animeEnglish": "Angel Beats!",
-        "animeRomaji": "Angel Beats!",
-        "songName": "My Soul,Your Beats!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/avvdm5.webm",
-        "linkMP3": "https://files.catbox.moe/ocbvdf.mp3"
-    },
-    {
-        "annId": 14950,
-        "animeEnglish": "Attack on Titan",
-        "animeRomaji": "Shingeki no Kyojin",
-        "songName": "Jiyuu no Tsubasa",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/oaaxgi.webm",
-        "linkMP3": "https://files.catbox.moe/8yujfh.mp3"
-    },
-    {
-        "annId": 22277,
-        "animeEnglish": "Attack on Titan Final Season",
-        "animeRomaji": "Shingeki no Kyojin: The Final Season",
-        "songName": "Boku no Sensou",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/hn7dbf.webm",
-        "linkMP3": "https://files.catbox.moe/ny9v3o.mp3"
-    },
-    {
-        "annId": 19819,
-        "animeEnglish": "Attack on Titan Season 3",
-        "animeRomaji": "Shingeki no Kyojin Season 3",
-        "songName": "Red Swan",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ze5gw7.webm",
-        "linkMP3": "https://files.catbox.moe/8o5s83.mp3"
-    },
-    {
-        "annId": 7492,
-        "animeEnglish": "Baccano!",
-        "animeRomaji": "Baccano!",
-        "songName": "Gun's&Roses",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/cf0028.webm",
-        "linkMP3": "https://files.catbox.moe/mnc0no.mp3"
-    },
-    {
-        "annId": 10196,
-        "animeEnglish": "Bakemonogatari",
-        "animeRomaji": "Bakemonogatari",
-        "songName": "Renai Circulation",
-        "type": "Opening 4",
-        "linkWebm": "https://files.catbox.moe/aayyhe.webm",
-        "linkMP3": "https://files.catbox.moe/ch7996.mp3"
-    },
-    {
-        "annId": 21880,
-        "animeEnglish": "Beastars",
-        "animeRomaji": "Beastars",
-        "songName": "Wild Side",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/gfllcw.webm",
-        "linkMP3": "https://files.catbox.moe/f71cx8.mp3"
-    },
-    {
-        "annId": 931,
-        "animeEnglish": "Beyblade",
-        "animeRomaji": "Bakuten Shoot Beyblade",
-        "songName": "Let's Beyblade",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/u3nle4.webm",
-        "linkMP3": "https://files.catbox.moe/ckm177.mp3"
-    },
-    {
-        "annId": 19743,
-        "animeEnglish": "Black Clover",
-        "animeRomaji": "Black Clover",
-        "songName": "Black Catcher",
-        "type": "Opening 10",
-        "linkWebm": "https://files.catbox.moe/4ike31.webm",
-        "linkMP3": "https://files.catbox.moe/9ia0nj.mp3"
-    },
-    {
-        "annId": 19743,
-        "animeEnglish": "Black Clover",
-        "animeRomaji": "Black Clover",
-        "songName": "Black Rover",
-        "type": "Opening 3",
-        "linkWebm": "https://files.catbox.moe/l35w0g.webm",
-        "linkMP3": "https://files.catbox.moe/ugjsua.mp3"
-    },
-    {
-        "annId": 19669,
-        "animeEnglish": "Blend-S",
-        "animeRomaji": "Blend-S",
-        "songName": "Bon Appétit ♡ S",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/4ybgf6.webm",
-        "linkMP3": "https://files.catbox.moe/8s9p68.mp3"
-    },
-    {
-        "annId": 22924,
-        "animeEnglish": "Brand New Animal",
-        "animeRomaji": "BNA",
-        "songName": "Ready to",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/l31bti.webm",
-        "linkMP3": "https://files.catbox.moe/3rvq5p.mp3"
-    },
-    {
-        "annId": 20564,
-        "animeEnglish": "Cells at Work!",
-        "animeRomaji": "Hataraku Saibō",
-        "songName": "Mission! Ken・Kou・Dai・Ichi",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/m5icuc.webm",
-        "linkMP3": "https://files.catbox.moe/p9hyfr.mp3"
-    },
-    {
-        "annId": 13489,
-        "animeEnglish": "Chibi Devi!",
-        "animeRomaji": "Chibi Devi!",
-        "songName": "Chibi☆Devi! Aif!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/x61k9p.webm",
-        "linkMP3": "https://files.catbox.moe/2m0fkh.mp3"
-    },
-    {
-        "annId": 357,
-        "animeEnglish": "Chobits",
-        "animeRomaji": "Chobits",
-        "songName": "Let Me Be With You",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/0dz49k.webm",
-        "linkMP3": "https://files.catbox.moe/waw6o3.mp3"
-    },
-    {
-        "annId": 13,
-        "animeEnglish": "Cowboy Bebop",
-        "animeRomaji": "Cowboy Bebop",
-        "songName": "Tank!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/byvisp.webm",
-        "linkMP3": "https://files.catbox.moe/qi299l.mp3"
-    },
-    {
-        "annId": 6744,
-        "animeEnglish": "Crayon Shin-chan: Henderland no Daibōken",
-        "animeRomaji": "Crayon Shin-chan: Henderland no Daibōken",
-        "songName": "Pakappo de GO!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/2dwbul.webm",
-        "linkMP3": "https://files.catbox.moe/qtjhok.mp3"
-    },
-    {
-        "annId": 19850,
-        "animeEnglish": "DARLING in the FRANXX",
-        "animeRomaji": "DARLING in the FRANXX",
-        "songName": "KISS OF DEATH (Produced by HYDE)",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/t3pa2m.webm",
-        "linkMP3": "https://files.catbox.moe/9j0il7.mp3"
-    },
-    {
-        "annId": 6592,
-        "animeEnglish": "Death Note",
-        "animeRomaji": "Death Note",
-        "songName": "the WORLD",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/cwwytu.webm",
-        "linkMP3": "https://files.catbox.moe/a6h06o.mp3"
-    },
-    {
-        "annId": 6592,
-        "animeEnglish": "Death Note",
-        "animeRomaji": "Death Note",
-        "songName": "What's Up People?!",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/0szh0o.webm",
-        "linkMP3": "https://files.catbox.moe/hdcfsr.mp3"
-    },
-    {
-        "annId": 16375,
-        "animeEnglish": "Death Parade",
-        "animeRomaji": "Death Parade",
-        "songName": "Flyers",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/t9g3xl.webm",
-        "linkMP3": "https://files.catbox.moe/3rr4oz.mp3"
-    },
-    {
-        "annId": 21101,
-        "animeEnglish": "Demon Slayer: Kimetsu no Yaiba",
-        "animeRomaji": "Kimetsu no Yaiba",
-        "songName": "Gurenge",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ef2ntg.webm",
-        "linkMP3": "https://files.catbox.moe/1uhrww.mp3"
-    },
-    {
-        "annId": 21205,
-        "animeEnglish": "Domestic Girlfriend",
-        "animeRomaji": "Domestic na Kanojo",
-        "songName": "Kawaki wo Ameku",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/390lkc.webm",
-        "linkMP3": null
-    },
-    {
-        "annId": 20779,
-        "animeEnglish": "Dororo",
-        "animeRomaji": "Dororo",
-        "songName": "Kaen",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/nguams.webm",
-        "linkMP3": "https://files.catbox.moe/87v6oi.mp3"
-    },
-    {
-        "annId": 21703,
-        "animeEnglish": "Dr. STONE",
-        "animeRomaji": "Dr. STONE",
-        "songName": "Good Morning World!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/jjrvpb.webm",
-        "linkMP3": "https://files.catbox.moe/k5s86w.mp3"
-    },
-    {
-        "annId": 17217,
-        "animeEnglish": "ERASED",
-        "animeRomaji": "Boku dake ga Inai Machi",
-        "songName": "Re:Re:",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/gury3c.webm",
-        "linkMP3": "https://files.catbox.moe/zoq0ul.mp3"
-    },
-    {
-        "annId": 4148,
-        "animeEnglish": "Elfen Lied",
-        "animeRomaji": "Elfen Lied",
-        "songName": "LILIUM",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/t0vii7.webm",
-        "linkMP3": "https://files.catbox.moe/q255eo.mp3"
-    },
-    {
-        "annId": 18142,
-        "animeEnglish": "Eromanga Sensei",
-        "animeRomaji": "Eromanga Sensei",
-        "songName": "Hitorigoto",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/tfcecs.webm",
-        "linkMP3": "https://files.catbox.moe/312u7g.mp3"
-    },
-    {
-        "annId": 21852,
-        "animeEnglish": "Fire Force",
-        "animeRomaji": "Enen no Shōbōtai",
-        "songName": "Inferno",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/0ckuav.webm",
-        "linkMP3": "https://files.catbox.moe/8u4b2w.mp3"
-    },
-    {
-        "annId": 10216,
-        "animeEnglish": "Fullmetal Alchemist: Brotherhood",
-        "animeRomaji": "Hagane no Renkinjutsushi: Brotherhood",
-        "songName": "again",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/0rxibv.webm",
-        "linkMP3": "https://files.catbox.moe/8f21w2.mp3"
-    },
-    {
-        "annId": 20562,
-        "animeEnglish": "Gegege no Kitarō",
-        "animeRomaji": "Gegege no Kitarō",
-        "songName": "Gegege no Kitarō",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/im1eyy.webm",
-        "linkMP3": "https://files.catbox.moe/y0hol8.mp3"
-    },
-    {
-        "annId": 20709,
-        "animeEnglish": "Grand Blue",
-        "animeRomaji": "Grand Blue",
-        "songName": "Grand Blue",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/3jmpf3.webm",
-        "linkMP3": "https://files.catbox.moe/ykevsc.mp3"
-    },
-    {
-        "annId": 6698,
-        "animeEnglish": "Gurren Lagann",
-        "animeRomaji": "Tengen Toppa Gurren Lagann",
-        "songName": "Sora-iro Days",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/11yjkz.webm",
-        "linkMP3": "https://files.catbox.moe/lg16op.mp3"
-    },
-    {
-        "annId": 21764,
-        "animeEnglish": "How Heavy Are the Dumbbells You Lift?",
-        "animeRomaji": "Dumbbell Nan-Kilo Moteru?",
-        "songName": "Onegai Muscle",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/izj713.webm",
-        "linkMP3": "https://files.catbox.moe/3sef32.mp3"
-    },
-    {
-        "annId": 13262,
-        "animeEnglish": "Hunter x Hunter",
-        "animeRomaji": "Hunter x Hunter",
-        "songName": "departure!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/9nf5k2.webm",
-        "linkMP3": "https://files.catbox.moe/nnuuj0.mp3"
-    },
-    {
-        "annId": 13262,
-        "animeEnglish": "Hunter x Hunter",
-        "animeRomaji": "Hunter x Hunter",
-        "songName": "departure! -second version-",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/a8ulv9.webm",
-        "linkMP3": "https://files.catbox.moe/6pns5z.mp3"
-    },
-    {
-        "annId": 22612,
-        "animeEnglish": "Interspecies Reviewers",
-        "animeRomaji": "Ishuzoku Reviewers",
-        "songName": "Ikōze☆Paradise",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/8d12lc.webm",
-        "linkMP3": "https://files.catbox.moe/y1www2.mp3"
-    },
-    {
-        "annId": 21992,
-        "animeEnglish": "Isekai Quartet",
-        "animeRomaji": "Isekai Quartet",
-        "songName": "Isekai Quartet",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/tylwfd.webm",
-        "linkMP3": "https://files.catbox.moe/x4hnjm.mp3"
-    },
-    {
-        "annId": 14445,
-        "animeEnglish": "JoJo's Bizarre Adventure",
-        "animeRomaji": "JoJo no Kimyō na Bōken",
-        "songName": "JoJo ~Sono Chi no Sadame~",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/g9fq1a.webm",
-        "linkMP3": "https://files.catbox.moe/2fvazd.mp3"
-    },
-    {
-        "annId": 21131,
-        "animeEnglish": "JoJo's Bizarre Adventure: Golden Wind",
-        "animeRomaji": "JoJo no Kimyō na Bōken: Ōgon no Kaze",
-        "songName": "Fighting Gold",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/tadu65.webm",
-        "linkMP3": "https://files.catbox.moe/iu8sec.mp3"
-    },
-    {
-        "annId": 16303,
-        "animeEnglish": "JoJo's Bizarre Adventure: Stardust Crusaders",
-        "animeRomaji": "JoJo no Kimyō na Bōken: Stardust Crusaders",
-        "songName": "JoJo Sono Chi no Kioku ~end of THE WORLD~",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/75c5tr.webm",
-        "linkMP3": "https://files.catbox.moe/axieu5.mp3"
-    },
-    {
-        "annId": 22944,
-        "animeEnglish": "Jujutsu Kaisen",
-        "animeRomaji": "Jujutsu Kaisen",
-        "songName": "Kaikai Kitan",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/l99nhq.webm",
-        "linkMP3": "https://files.catbox.moe/xxpl3r.mp3"
-    },
-    {
-        "annId": 10562,
-        "animeEnglish": "K-On!",
-        "animeRomaji": "K-On!",
-        "songName": "Cagayake! GIRLS",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ugu8wv.webm",
-        "linkMP3": "https://files.catbox.moe/945c88.mp3"
-    },
-    {
-        "annId": 10562,
-        "animeEnglish": "K-On!",
-        "animeRomaji": "K-On!",
-        "songName": "Cagayake! GIRLS (5-nin Ver.)",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/sy1iii.webm",
-        "linkMP3": "https://files.catbox.moe/g6gy1m.mp3"
-    },
-    {
-        "annId": 21401,
-        "animeEnglish": "Kaguya-sama: Love is War",
-        "animeRomaji": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunōsen",
-        "songName": "Love Dramatic",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/2f1f2y.webm",
-        "linkMP3": "https://files.catbox.moe/9czxwm.mp3"
-    },
-    {
-        "annId": 22587,
-        "animeEnglish": "Kaguya-sama: Love is War Season 2",
-        "animeRomaji": "Kaguya-sama wa Kokurasetai?: Tensai-tachi no Renai Zunōsen",
-        "songName": "DADDY! DADDY! DO!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/peucdp.webm",
-        "linkMP3": "https://files.catbox.moe/zhhdh4.mp3"
-    },
-    {
-        "annId": 19102,
-        "animeEnglish": "Kakegurui",
-        "animeRomaji": "Kakegurui",
-        "songName": "Deal with the devil",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/d8sqk8.webm",
-        "linkMP3": "https://files.catbox.moe/90t6bx.mp3"
-    },
-    {
-        "annId": 22561,
-        "animeEnglish": "Keep Your Hands Off Eizouken!",
-        "animeRomaji": "Eizōken ni wa Te o Dasu na!",
-        "songName": "Easy Breezy",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/niqpzz.webm",
-        "linkMP3": "https://files.catbox.moe/s9owuv.mp3"
-    },
-    {
-        "annId": 13289,
-        "animeEnglish": "Kill Me Baby",
-        "animeRomaji": "Kill Me Baby",
-        "songName": "Kill Me Baby!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ubf5gn.webm",
-        "linkMP3": "https://files.catbox.moe/k3fsgp.mp3"
-    },
-    {
-        "annId": 1394,
-        "animeEnglish": "Kirby: Right Back At Ya!",
-        "animeRomaji": "Hoshi no Kirby",
-        "songName": "Kirby Theme",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/cu9590.webm",
-        "linkMP3": "https://files.catbox.moe/2e2sz4.mp3"
-    },
-    {
-        "annId": 16134,
-        "animeEnglish": "Log Horizon",
-        "animeRomaji": "Log Horizon",
-        "songName": "database",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/1so6be.webm",
-        "linkMP3": "https://files.catbox.moe/07xj2r.mp3"
-    },
-    {
-        "annId": 7222,
-        "animeEnglish": "Lucky Star",
-        "animeRomaji": "Lucky Star",
-        "songName": "Motteke! Sailor Fuku",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/hq87c7.webm",
-        "linkMP3": "https://files.catbox.moe/3ka154.mp3"
-    },
-    {
-        "annId": 18807,
-        "animeEnglish": "Miss Kobayashi's Dragon Maid",
-        "animeRomaji": "Kobayashi-san Chi no Maid Dragon",
-        "songName": "Aozora no Rhapsody",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/thsitv.webm",
-        "linkMP3": "https://files.catbox.moe/7bqtto.mp3"
-    },
-    {
-        "annId": 18064,
-        "animeEnglish": "Mob Psycho 100",
-        "animeRomaji": "Mob Psycho 100",
-        "songName": "99",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/axn8xg.webm",
-        "linkMP3": "https://files.catbox.moe/zeh0v8.mp3"
-    },
-    {
-        "annId": 17786,
-        "animeEnglish": "My Hero Academia",
-        "animeRomaji": "Boku no Hero Academia",
-        "songName": "THE DAY",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/qropjh.webm",
-        "linkMP3": "https://files.catbox.moe/jzrvwn.mp3"
-    },
-    {
-        "annId": 1825,
-        "animeEnglish": "Naruto",
-        "animeRomaji": "Naruto",
-        "songName": "GO!!!",
-        "type": "Opening 4",
-        "linkWebm": "https://files.catbox.moe/0v7oq4.webm",
-        "linkMP3": "https://files.catbox.moe/eatyo9.mp3"
-    },
-    {
-        "annId": 1825,
-        "animeEnglish": "Naruto",
-        "animeRomaji": "Naruto",
-        "songName": "Haruka Kanata",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/4774uh.webm",
-        "linkMP3": "https://files.catbox.moe/84hvw5.mp3"
-    },
-    {
-        "annId": 7293,
-        "animeEnglish": "Naruto Shippuuden",
-        "animeRomaji": "Naruto Shippuuden",
-        "songName": "Blue Bird",
-        "type": "Opening 3",
-        "linkWebm": "https://files.catbox.moe/enrlw0.webm",
-        "linkMP3": "https://files.catbox.moe/uyioek.mp3"
-    },
-    {
-        "annId": 7293,
-        "animeEnglish": "Naruto Shippuuden",
-        "animeRomaji": "Naruto Shippuuden",
-        "songName": "Silhouette",
-        "type": "Opening 16",
-        "linkWebm": "https://files.catbox.moe/obrvnk.webm",
-        "linkMP3": "https://files.catbox.moe/05538v.mp3"
-    },
-    {
-        "annId": 49,
-        "animeEnglish": "Neon Genesis Evangelion",
-        "animeRomaji": "Shinseiki Evangelion",
-        "songName": "Zankoku na Tenshi no Thesis",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/71u5bi.webm",
-        "linkMP3": "https://files.catbox.moe/4pdfza.mp3"
-    },
-    {
-        "annId": 15784,
-        "animeEnglish": "No Game No Life",
-        "animeRomaji": "No Game No Life",
-        "songName": "This game",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ulrtzw.webm",
-        "linkMP3": "https://files.catbox.moe/4ph8y8.mp3"
-    },
-    {
-        "annId": 15585,
-        "animeEnglish": "Noragami",
-        "animeRomaji": "Noragami",
-        "songName": "Goya no Machiawase",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/cnduhh.webm",
-        "linkMP3": "https://files.catbox.moe/4xappz.mp3"
-    },
-    {
-        "annId": 16906,
-        "animeEnglish": "Noragami Aragoto",
-        "animeRomaji": "Noragami Aragoto",
-        "songName": "Kyōran Hey Kids!!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/dlvkgy.webm",
-        "linkMP3": "https://files.catbox.moe/z0hzhp.mp3"
-    },
-    {
-        "annId": 836,
-        "animeEnglish": "One Piece",
-        "animeRomaji": "One Piece",
-        "songName": "We Are!",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/c7pqug.webm",
-        "linkMP3": "https://files.catbox.moe/ukhghw.mp3"
-    },
-    {
-        "annId": 836,
-        "animeEnglish": "One Piece",
-        "animeRomaji": "One Piece",
-        "songName": "We Are!~7-nin no Mugiwara Kaizoku-danpen",
-        "type": "Opening 7",
-        "linkWebm": "https://files.catbox.moe/zjypxh.webm",
-        "linkMP3": "https://files.catbox.moe/xf8skp.mp3"
-    },
-    {
-        "annId": 836,
-        "animeEnglish": "One Piece",
-        "animeRomaji": "One Piece",
-        "songName": "We Go!",
-        "type": "Opening 15",
-        "linkWebm": "https://files.catbox.moe/io0s7q.webm",
-        "linkMP3": "https://files.catbox.moe/ouqlb9.mp3"
-    },
-    {
-        "annId": 16840,
-        "animeEnglish": "One Punch Man",
-        "animeRomaji": "One Punch Man",
-        "songName": "THE HERO !! ~Ikareru Ken ni Honō o Tsukeru~",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/p5bjvw.webm",
-        "linkMP3": "https://files.catbox.moe/cz0ubn.mp3"
-    },
-    {
-        "annId": 16729,
-        "animeEnglish": "Overlord",
-        "animeRomaji": "Overlord",
-        "songName": "Clattanoia",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/gmip23.webm",
-        "linkMP3": "https://files.catbox.moe/3efzdr.mp3"
-    },
-    {
-        "annId": 11605,
-        "animeEnglish": "Panty & Stocking with Garterbelt",
-        "animeRomaji": "Panty & Stocking with Garterbelt",
-        "songName": "Theme for Panty & Stocking",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/x7o8de.webm",
-        "linkMP3": "https://files.catbox.moe/xanvle.mp3"
-    },
-    {
-        "annId": 270,
-        "animeEnglish": "Pokémon",
-        "animeRomaji": "Pocket Monsters",
-        "songName": "Pokémon Theme",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/vyudhr.webm",
-        "linkMP3": "https://files.catbox.moe/yjxs9q.mp3"
-    },
-    {
-        "annId": 270,
-        "animeEnglish": "Pokémon",
-        "animeRomaji": "Pocket Monsters",
-        "songName": "Pokémon World",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/lhr5ol.webm",
-        "linkMP3": "https://files.catbox.moe/z0jcry.mp3"
-    },
-    {
-        "annId": 270,
-        "animeEnglish": "Pokémon",
-        "animeRomaji": "Pocket Monsters",
-        "songName": "Born to be a Winner",
-        "type": "Opening 4",
-        "linkWebm": "https://files.catbox.moe/28b86c.webm",
-        "linkMP3": "https://files.catbox.moe/742umx.mp3"
-    },
-    {
-        "annId": 11685,
-        "animeEnglish": "Pokémon: Black and White",
-        "animeRomaji": "Pocket Monsters: Best Wishes!",
-        "songName": "Black and White",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/p5xdkn.webm",
-        "linkMP3": "https://files.catbox.moe/1eisap.mp3"
-    },
-    {
-        "annId": 16838,
-        "animeEnglish": "Prison School",
-        "animeRomaji": "Prison School",
-        "songName": "Ai no Prison",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/yalaam.webm",
-        "linkMP3": "https://files.catbox.moe/nia1u5.mp3"
-    },
-    {
-        "annId": 17360,
-        "animeEnglish": "Re:ZERO -Starting Life in Another World-",
-        "animeRomaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
-        "songName": "Redo",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/kbniko.webm",
-        "linkMP3": "https://files.catbox.moe/31hh0o.mp3"
-    },
-    {
-        "annId": 17360,
-        "animeEnglish": "Re:ZERO -Starting Life in Another World-",
-        "animeRomaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
-        "songName": "Paradisus-Paradoxum",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/64kj54.webm",
-        "linkMP3": "https://files.catbox.moe/5z8rbu.mp3"
-    },
-    {
-        "annId": 2636,
-        "animeEnglish": "Samurai Champloo",
-        "animeRomaji": "Samurai Champloo",
-        "songName": "battlecry",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/8evcom.webm",
-        "linkMP3": "https://files.catbox.moe/mr2jw1.mp3"
-    },
-    {
-        "annId": 166,
-        "animeEnglish": "Serial Experiments Lain",
-        "animeRomaji": "Serial Experiments Lain",
-        "songName": "DUVET",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/flk2by.webm",
-        "linkMP3": "https://files.catbox.moe/o0cxhv.mp3"
-    },
-    {
-        "annId": 2266,
-        "animeEnglish": "Sonic X",
-        "animeRomaji": "Sonic X",
-        "songName": "Gotta Go Fast",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/zg8xcg.webm",
-        "linkMP3": "https://files.catbox.moe/xamcv6.mp3"
-    },
-    {
-        "annId": 9070,
-        "animeEnglish": "Soul Eater",
-        "animeRomaji": "Soul Eater",
-        "songName": "resonance",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ipjror.webm",
-        "linkMP3": "https://files.catbox.moe/d46hnj.mp3"
-    },
-    {
-        "annId": 2214,
-        "animeEnglish": "Spooky Kitaro",
-        "animeRomaji": "Gegege no Kitarō",
-        "songName": "Gegege no Kitarō",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/yobnqk.webm",
-        "linkMP3": "https://files.catbox.moe/0ioonn.mp3"
-    },
-    {
-        "annId": 7616,
-        "animeEnglish": "Spooky Kitaro",
-        "animeRomaji": "Gegege no Kitarō",
-        "songName": "Gegege no Kitaro",
-        "type": "Opening 2",
-        "linkWebm": "https://files.catbox.moe/qy7cmi.webm",
-        "linkMP3": "https://files.catbox.moe/r45g8r.mp3"
-    },
-    {
-        "annId": 11770,
-        "animeEnglish": "Steins;Gate",
-        "animeRomaji": "Steins;Gate",
-        "songName": "Hacking to the Gate",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/kqcr2z.webm",
-        "linkMP3": "https://files.catbox.moe/8yqtn1.mp3"
-    },
-    {
-        "annId": 13858,
-        "animeEnglish": "Sword Art Online",
-        "animeRomaji": "Sword Art Online",
-        "songName": "crossing field",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/35s57l.webm",
-        "linkMP3": "https://files.catbox.moe/1t8c97.mp3"
-    },
-    {
-        "annId": 23503,
-        "animeEnglish": "TONIKAWA: Over The Moon For You",
-        "animeRomaji": "Tonikaku Kawaii",
-        "songName": "Koi no Uta (feat. Tsukasa Yuzaki)",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/6n2iiy.webm",
-        "linkMP3": "https://files.catbox.moe/bk88am.mp3"
-    },
-    {
-        "annId": 14613,
-        "animeEnglish": "Teekyuu",
-        "animeRomaji": "Teekyuu",
-        "songName": "Botsuraku Kizoku no Tame no Teekyuu",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/qmkksy.webm",
-        "linkMP3": "https://files.catbox.moe/e004i4.mp3"
-    },
-    {
-        "annId": 12896,
-        "animeEnglish": "The Future Diary",
-        "animeRomaji": "Mirai Nikki",
-        "songName": "Kuusō Mesorogiwi",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/u9c7qd.webm",
-        "linkMP3": "https://files.catbox.moe/ai3851.mp3"
-    },
-    {
-        "annId": 23279,
-        "animeEnglish": "The God of High School",
-        "animeRomaji": "The God of High School",
-        "songName": "Contradiction",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/1ogwyb.webm",
-        "linkMP3": "https://files.catbox.moe/m6sbb9.mp3"
-    },
-    {
-        "annId": 21552,
-        "animeEnglish": "The Promised Neverland",
-        "animeRomaji": "Yakusoku no Neverland",
-        "songName": "Touch off",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/dpymb3.webm",
-        "linkMP3": "https://files.catbox.moe/bij29k.mp3"
-    },
-    {
-        "annId": 19826,
-        "animeEnglish": "The Rising of the Shield Hero",
-        "animeRomaji": "Tate no Yuusha no Nariagari",
-        "songName": "RISE",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/ru0tpc.webm",
-        "linkMP3": "https://files.catbox.moe/xxoha6.mp3"
-    },
-    {
-        "annId": 21116,
-        "animeEnglish": "Tokyo Ghoul:re",
-        "animeRomaji": "Tokyo Ghoul:re",
-        "songName": "katharsis",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/g2ldjm.webm",
-        "linkMP3": "https://files.catbox.moe/1lexo5.mp3"
-    },
-    {
-        "annId": 10050,
-        "animeEnglish": "Toradora!",
-        "animeRomaji": "Toradora!",
-        "songName": "Pre-Parade",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/571ev6.webm",
-        "linkMP3": "https://files.catbox.moe/09ies4.mp3"
-    },
-    {
-        "annId": 23068,
-        "animeEnglish": "Tower of God",
-        "animeRomaji": "Kami no Tō",
-        "songName": "TOP -Japanese ver.-",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/v5wu34.webm",
-        "linkMP3": "https://files.catbox.moe/oya4dn.mp3"
-    },
-    {
-        "annId": 6134,
-        "animeEnglish": "When They Cry",
-        "animeRomaji": "Higurashi no Naku Koro ni",
-        "songName": "Higurashi no Naku Koro ni",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/3czpgu.webm",
-        "linkMP3": "https://files.catbox.moe/50gq0p.mp3"
-    },
-    {
-        "annId": 16108,
-        "animeEnglish": "Your Lie in April",
-        "animeRomaji": "KimiUso",
-        "songName": "Hikaru Nara",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/mw0lqu.webm",
-        "linkMP3": "https://files.catbox.moe/d3oasy.mp3"
-    },
-    {
-        "annId": 18191,
-        "animeEnglish": "Yuri!!! on Ice",
-        "animeRomaji": "Yuri!!! on Ice",
-        "songName": "History Maker",
-        "type": "Opening 1",
-        "linkWebm": "https://files.catbox.moe/z2zxcv.webm",
-        "linkMP3": "https://files.catbox.moe/o6i75g.mp3"
-    }
+	{
+		"annId": 16661,
+		"animeEnglish": "A Silent Voice",
+		"animeRomaji": "Koe no Katachi",
+		"songName": "MY GENERATION",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/5l0hk4.webm",
+		"linkMP3": "https://files.catbox.moe/p8acbr.mp3"
+	},
+	{
+		"annId": 16133,
+		"animeEnglish": "Amagi Brilliant Park",
+		"animeRomaji": "Amagi Brilliant Park",
+		"songName": "Extra Magic Hour",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/q6xk0r.webm",
+		"linkMP3": "https://files.catbox.moe/inwzxt.mp3"
+	},
+	{
+		"annId": 10885,
+		"animeEnglish": "Angel Beats!",
+		"animeRomaji": "Angel Beats!",
+		"songName": "My Soul,Your Beats!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/avvdm5.webm",
+		"linkMP3": "https://files.catbox.moe/ocbvdf.mp3"
+	},
+	{
+		"annId": 13258,
+		"animeEnglish": "Another",
+		"animeRomaji": "Another",
+		"songName": "Kyōmu Densen",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/vhp6xd.webm",
+		"linkMP3": "https://files.catbox.moe/q6f3tw.mp3"
+	},
+	{
+		"annId": 16142,
+		"animeEnglish": "Assassination Classroom",
+		"animeRomaji": "Ansatsu Kyōshitsu",
+		"songName": "Seishun Satsubatsuron",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/qviczi.webm",
+		"linkMP3": "https://files.catbox.moe/ufni20.mp3"
+	},
+	{
+		"annId": 14950,
+		"animeEnglish": "Attack on Titan",
+		"animeRomaji": "Shingeki no Kyojin",
+		"songName": "Jiyuu no Tsubasa",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/oaaxgi.webm",
+		"linkMP3": "https://files.catbox.moe/8yujfh.mp3"
+	},
+	{
+		"annId": 14950,
+		"animeEnglish": "Attack on Titan",
+		"animeRomaji": "Shingeki no Kyojin",
+		"songName": "Guren no Yumiya",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/shphbe.webm",
+		"linkMP3": "https://files.catbox.moe/9xr36j.mp3"
+	},
+	{
+		"annId": 22277,
+		"animeEnglish": "Attack on Titan Final Season",
+		"animeRomaji": "Shingeki no Kyojin: The Final Season",
+		"songName": "Boku no Sensou",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/hn7dbf.webm",
+		"linkMP3": "https://files.catbox.moe/ny9v3o.mp3"
+	},
+	{
+		"annId": 16681,
+		"animeEnglish": "Attack on Titan Season 2",
+		"animeRomaji": "Shingeki no Kyojin Season 2",
+		"songName": "Shinzō wo Sasageyo!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cdf1hm.webm",
+		"linkMP3": "https://files.catbox.moe/t5hq9m.mp3"
+	},
+	{
+		"annId": 19819,
+		"animeEnglish": "Attack on Titan Season 3",
+		"animeRomaji": "Shingeki no Kyojin Season 3",
+		"songName": "Red Swan",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ze5gw7.webm",
+		"linkMP3": "https://files.catbox.moe/8o5s83.mp3"
+	},
+	{
+		"annId": 16309,
+		"animeEnglish": "Baby Steps",
+		"animeRomaji": "Baby Steps",
+		"songName": "Believe in yourself",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cis2hm.webm",
+		"linkMP3": "https://files.catbox.moe/hz5fcp.mp3"
+	},
+	{
+		"annId": 7492,
+		"animeEnglish": "Baccano!",
+		"animeRomaji": "Baccano!",
+		"songName": "Gun's&Roses",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cf0028.webm",
+		"linkMP3": "https://files.catbox.moe/mnc0no.mp3"
+	},
+	{
+		"annId": 10196,
+		"animeEnglish": "Bakemonogatari",
+		"animeRomaji": "Bakemonogatari",
+		"songName": "Renai Circulation",
+		"type": "Opening 4",
+		"linkWebm": "https://files.catbox.moe/aayyhe.webm",
+		"linkMP3": "https://files.catbox.moe/ch7996.mp3"
+	},
+	{
+		"annId": 16083,
+		"animeEnglish": "Barakamon",
+		"animeRomaji": "Barakamon",
+		"songName": "Rashisa",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/dyxtxj.webm",
+		"linkMP3": "https://files.catbox.moe/0rkce2.mp3"
+	},
+	{
+		"annId": 21880,
+		"animeEnglish": "Beastars",
+		"animeRomaji": "Beastars",
+		"songName": "Wild Side",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/gfllcw.webm",
+		"linkMP3": "https://files.catbox.moe/f71cx8.mp3"
+	},
+	{
+		"annId": 931,
+		"animeEnglish": "Beyblade",
+		"animeRomaji": "Bakuten Shoot Beyblade",
+		"songName": "Let's Beyblade",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/u3nle4.webm",
+		"linkMP3": "https://files.catbox.moe/ckm177.mp3"
+	},
+	{
+		"annId": 19743,
+		"animeEnglish": "Black Clover",
+		"animeRomaji": "Black Clover",
+		"songName": "Black Catcher",
+		"type": "Opening 10",
+		"linkWebm": "https://files.catbox.moe/4ike31.webm",
+		"linkMP3": "https://files.catbox.moe/9ia0nj.mp3"
+	},
+	{
+		"annId": 19743,
+		"animeEnglish": "Black Clover",
+		"animeRomaji": "Black Clover",
+		"songName": "Black Rover",
+		"type": "Opening 3",
+		"linkWebm": "https://files.catbox.moe/0tmn77.webm",
+		"linkMP3": "https://files.catbox.moe/3j6gw2.mp3"
+	},
+	{
+		"annId": 4240,
+		"animeEnglish": "Bleach",
+		"animeRomaji": "Bleach",
+		"songName": "D-tecnoLife",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/zw95oo.webm",
+		"linkMP3": "https://files.catbox.moe/3erijs.mp3"
+	},
+	{
+		"annId": 19669,
+		"animeEnglish": "Blend-S",
+		"animeRomaji": "Blend-S",
+		"songName": "Bon Appétit ♡ S",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/4ybgf6.webm",
+		"linkMP3": "https://files.catbox.moe/8s9p68.mp3"
+	},
+	{
+		"annId": 16340,
+		"animeEnglish": "Blood Blockade Battlefront",
+		"animeRomaji": "Kekkai Sensen",
+		"songName": "Sugar Song to Bitter Step",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/wi8uwx.webm",
+		"linkMP3": "https://files.catbox.moe/0qhz4q.mp3"
+	},
+	{
+		"annId": 7213,
+		"animeEnglish": "Bokurano",
+		"animeRomaji": "Bokurano",
+		"songName": "Uninstall",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/6tvx3r.webm",
+		"linkMP3": "https://files.catbox.moe/g7p9nf.mp3"
+	},
+	{
+		"annId": 22924,
+		"animeEnglish": "Brand New Animal",
+		"animeRomaji": "BNA",
+		"songName": "Ready to",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/l31bti.webm",
+		"linkMP3": "https://files.catbox.moe/3rvq5p.mp3"
+	},
+	{
+		"annId": 14418,
+		"animeEnglish": "Btooom!",
+		"animeRomaji": "Btooom!",
+		"songName": "No pain, No game",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/qts7kj.webm",
+		"linkMP3": "https://files.catbox.moe/l4t145.mp3"
+	},
+	{
+		"annId": 126,
+		"animeEnglish": "Cardcaptor Sakura",
+		"animeRomaji": "Cardcaptor Sakura",
+		"songName": "Catch You Catch Me",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/v2cubp.webm",
+		"linkMP3": "https://files.catbox.moe/2ltajm.mp3"
+	},
+	{
+		"annId": 20564,
+		"animeEnglish": "Cells at Work!",
+		"animeRomaji": "Hataraku Saibō",
+		"songName": "Mission! Ken・Kou・Dai・Ichi",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/m5icuc.webm",
+		"linkMP3": "https://files.catbox.moe/p9hyfr.mp3"
+	},
+	{
+		"annId": 13489,
+		"animeEnglish": "Chibi Devi!",
+		"animeRomaji": "Chibi Devi!",
+		"songName": "Chibi☆Devi! Aif!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/x61k9p.webm",
+		"linkMP3": "https://files.catbox.moe/2m0fkh.mp3"
+	},
+	{
+		"annId": 12991,
+		"animeEnglish": "Chihayafuru",
+		"animeRomaji": "Chihayafuru",
+		"songName": "YOUTHFUL ~from Studio Yamato~",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/72lk9e.webm",
+		"linkMP3": "https://files.catbox.moe/ow2tp3.mp3"
+	},
+	{
+		"annId": 357,
+		"animeEnglish": "Chobits",
+		"animeRomaji": "Chobits",
+		"songName": "Let Me Be With You",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/0dz49k.webm",
+		"linkMP3": "https://files.catbox.moe/waw6o3.mp3"
+	},
+	{
+		"annId": 7809,
+		"animeEnglish": "Clannad",
+		"animeRomaji": "Clannad",
+		"songName": "Dango Daikazoku",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/pw94j1.webm",
+		"linkMP3": "https://files.catbox.moe/tmsgjy.mp3"
+	},
+	{
+		"annId": 9701,
+		"animeEnglish": "Clannad After Story",
+		"animeRomaji": "Clannad After Story",
+		"songName": "Dango Daikazoku",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/blb1uk.webm",
+		"linkMP3": "https://files.catbox.moe/xd2554.mp3"
+	},
+	{
+		"annId": 6704,
+		"animeEnglish": "Code Geass: Lelouch of the Rebellion",
+		"animeRomaji": "Code Geass: Hangyaku no Lelouch",
+		"songName": "COLORS",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/w9hgpy.webm",
+		"linkMP3": "https://files.catbox.moe/ap6khk.mp3"
+	},
+	{
+		"annId": 13,
+		"animeEnglish": "Cowboy Bebop",
+		"animeRomaji": "Cowboy Bebop",
+		"songName": "Tank!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/byvisp.webm",
+		"linkMP3": "https://files.catbox.moe/qi299l.mp3"
+	},
+	{
+		"annId": 6744,
+		"animeEnglish": "Crayon Shin-chan: Henderland no Daibōken",
+		"animeRomaji": "Crayon Shin-chan: Henderland no Daibōken",
+		"songName": "Pakappo de GO!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/2dwbul.webm",
+		"linkMP3": "https://files.catbox.moe/qtjhok.mp3"
+	},
+	{
+		"annId": 19850,
+		"animeEnglish": "DARLING in the FRANXX",
+		"animeRomaji": "DARLING in the FRANXX",
+		"songName": "KISS OF DEATH (Produced by HYDE)",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/t3pa2m.webm",
+		"linkMP3": "https://files.catbox.moe/9j0il7.mp3"
+	},
+	{
+		"annId": 13743,
+		"animeEnglish": "Daily Lives of High School Boys",
+		"animeRomaji": "Danshi Kōkōsei no Nichijō",
+		"songName": "Ohisama",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/g7hgrs.webm",
+		"linkMP3": "https://files.catbox.moe/gmmdjw.mp3"
+	},
+	{
+		"annId": 11826,
+		"animeEnglish": "Deadman Wonderland",
+		"animeRomaji": "Deadman Wonderland",
+		"songName": "One Reason",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ooe835.webm",
+		"linkMP3": "https://files.catbox.moe/5hz692.mp3"
+	},
+	{
+		"annId": 6592,
+		"animeEnglish": "Death Note",
+		"animeRomaji": "Death Note",
+		"songName": "the WORLD",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cwwytu.webm",
+		"linkMP3": "https://files.catbox.moe/a6h06o.mp3"
+	},
+	{
+		"annId": 6592,
+		"animeEnglish": "Death Note",
+		"animeRomaji": "Death Note",
+		"songName": "What's Up People?!",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/0szh0o.webm",
+		"linkMP3": "https://files.catbox.moe/hdcfsr.mp3"
+	},
+	{
+		"annId": 16375,
+		"animeEnglish": "Death Parade",
+		"animeRomaji": "Death Parade",
+		"songName": "Flyers",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/t9g3xl.webm",
+		"linkMP3": "https://files.catbox.moe/3rr4oz.mp3"
+	},
+	{
+		"annId": 21101,
+		"animeEnglish": "Demon Slayer: Kimetsu no Yaiba",
+		"animeRomaji": "Kimetsu no Yaiba",
+		"songName": "Gurenge",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ef2ntg.webm",
+		"linkMP3": "https://files.catbox.moe/1uhrww.mp3"
+	},
+	{
+		"annId": 21205,
+		"animeEnglish": "Domestic Girlfriend",
+		"animeRomaji": "Domestic na Kanojo",
+		"songName": "Kawaki wo Ameku",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/txcl05.webm",
+		"linkMP3": "https://files.catbox.moe/8sv7so.mp3"
+	},
+	{
+		"annId": 1919,
+		"animeEnglish": "Doraemon: Nobita to Robot Kingdom",
+		"animeRomaji": "Doraemon: Nobita to Robot Kingdom",
+		"songName": "Doraemon no Uta",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/wwcak9.webm",
+		"linkMP3": "https://files.catbox.moe/w0uvu1.mp3"
+	},
+	{
+		"annId": 20779,
+		"animeEnglish": "Dororo",
+		"animeRomaji": "Dororo",
+		"songName": "Kaen",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/nguams.webm",
+		"linkMP3": "https://files.catbox.moe/87v6oi.mp3"
+	},
+	{
+		"annId": 21703,
+		"animeEnglish": "Dr. STONE",
+		"animeRomaji": "Dr. STONE",
+		"songName": "Good Morning World!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/jjrvpb.webm",
+		"linkMP3": "https://files.catbox.moe/k5s86w.mp3"
+	},
+	{
+		"annId": 616,
+		"animeEnglish": "Dragon Ball GT",
+		"animeRomaji": "Dragon Ball GT",
+		"songName": "DAN DAN Kokoro Hikarete ku",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cfl3nm.webm",
+		"linkMP3": "https://files.catbox.moe/4zgyfg.mp3"
+	},
+	{
+		"annId": 10877,
+		"animeEnglish": "Dragon Ball Z Kai",
+		"animeRomaji": "Dragon Ball Kai",
+		"songName": "Dragon Soul",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/unx8lp.webm",
+		"linkMP3": "https://files.catbox.moe/l6l1dy.mp3"
+	},
+	{
+		"annId": 17217,
+		"animeEnglish": "ERASED",
+		"animeRomaji": "Boku dake ga Inai Machi",
+		"songName": "Re:Re:",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/gury3c.webm",
+		"linkMP3": "https://files.catbox.moe/zoq0ul.mp3"
+	},
+	{
+		"annId": 4148,
+		"animeEnglish": "Elfen Lied",
+		"animeRomaji": "Elfen Lied",
+		"songName": "LILIUM",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/t0vii7.webm",
+		"linkMP3": "https://files.catbox.moe/q255eo.mp3"
+	},
+	{
+		"annId": 18142,
+		"animeEnglish": "Eromanga Sensei",
+		"animeRomaji": "Eromanga Sensei",
+		"songName": "Hitorigoto",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/tfcecs.webm",
+		"linkMP3": "https://files.catbox.moe/312u7g.mp3"
+	},
+	{
+		"annId": 14122,
+		"animeEnglish": "Fate/Zero",
+		"animeRomaji": "Fate/Zero",
+		"songName": "to the beginning",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/k6enn9.webm",
+		"linkMP3": "https://files.catbox.moe/gp3kzc.mp3"
+	},
+	{
+		"annId": 21852,
+		"animeEnglish": "Fire Force",
+		"animeRomaji": "Enen no Shōbōtai",
+		"songName": "Inferno",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/0ckuav.webm",
+		"linkMP3": "https://files.catbox.moe/8u4b2w.mp3"
+	},
+	{
+		"annId": 22952,
+		"animeEnglish": "Fire Force Season 2",
+		"animeRomaji": "Enen no Shōbōtai: Ni no Shō",
+		"songName": "Inferno",
+		"type": "Ending 3",
+		"linkWebm": "https://files.catbox.moe/xsyalf.webm",
+		"linkMP3": "https://files.catbox.moe/4r3bvj.mp3"
+	},
+	{
+		"annId": 16344,
+		"animeEnglish": "Food Wars! Shokugeki no Soma",
+		"animeRomaji": "Shokugeki no Sōma",
+		"songName": "Kibō no Uta",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/myu5fk.webm",
+		"linkMP3": "https://files.catbox.moe/dtbgrd.mp3"
+	},
+	{
+		"annId": 14089,
+		"animeEnglish": "From the New World",
+		"animeRomaji": "Shinsekai yori",
+		"songName": "Wareta Ringo",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/3f41oi.webm",
+		"linkMP3": "https://files.catbox.moe/dlqg1y.mp3"
+	},
+	{
+		"annId": 10216,
+		"animeEnglish": "Fullmetal Alchemist: Brotherhood",
+		"animeRomaji": "Hagane no Renkinjutsushi: Brotherhood",
+		"songName": "again",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/0rxibv.webm",
+		"linkMP3": "https://files.catbox.moe/8f21w2.mp3"
+	},
+	{
+		"annId": 10216,
+		"animeEnglish": "Fullmetal Alchemist: Brotherhood",
+		"animeRomaji": "Hagane no Renkinjutsushi: Brotherhood",
+		"songName": "Hologram",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/sieuy4.webm",
+		"linkMP3": "https://files.catbox.moe/ee8kh2.mp3"
+	},
+	{
+		"annId": 20562,
+		"animeEnglish": "Gegege no Kitarō",
+		"animeRomaji": "Gegege no Kitarō",
+		"songName": "Gegege no Kitarō",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/im1eyy.webm",
+		"linkMP3": "https://files.catbox.moe/y0hol8.mp3"
+	},
+	{
+		"annId": 3699,
+		"animeEnglish": "Gegege no Kitarō: Obake Nighter",
+		"animeRomaji": "Gegege no Kitarō: Obake Nighter",
+		"songName": "Gegege no Kitarō",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/70819d.webm",
+		"linkMP3": "https://files.catbox.moe/uzpupd.mp3"
+	},
+	{
+		"annId": 23828,
+		"animeEnglish": "Gintama: The Very Final",
+		"animeRomaji": "Gintama: The Final",
+		"songName": "CHA-LA HEAD-CHA-LA",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/50m8po.webm",
+		"linkMP3": "https://files.catbox.moe/d5auxu.mp3"
+	},
+	{
+		"annId": 20709,
+		"animeEnglish": "Grand Blue",
+		"animeRomaji": "Grand Blue",
+		"songName": "Grand Blue",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/3jmpf3.webm",
+		"linkMP3": "https://files.catbox.moe/ykevsc.mp3"
+	},
+	{
+		"annId": 6698,
+		"animeEnglish": "Gurren Lagann",
+		"animeRomaji": "Tengen Toppa Gurren Lagann",
+		"songName": "Sora-iro Days",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/11yjkz.webm",
+		"linkMP3": "https://files.catbox.moe/lg16op.mp3"
+	},
+	{
+		"annId": 14549,
+		"animeEnglish": "HENNEKO: The Hentai Prince and the Stony Cat",
+		"animeRomaji": "Hentai Ōji to Warawanai Neko.",
+		"songName": "Baby Sweet Berry Love",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/bw1vag.webm",
+		"linkMP3": "https://files.catbox.moe/kkm1hp.mp3"
+	},
+	{
+		"annId": 15683,
+		"animeEnglish": "Haikyu!!",
+		"animeRomaji": "Haikyu!!",
+		"songName": "Imagination",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/bittzk.webm",
+		"linkMP3": "https://files.catbox.moe/fqwcd3.mp3"
+	},
+	{
+		"annId": 23297,
+		"animeEnglish": "Higurashi: When They Cry - Gou",
+		"animeRomaji": "Higurashi no Naku Koro ni Gō",
+		"songName": "Higurashi no Naku Koro ni",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/qdyctu.webm",
+		"linkMP3": "https://files.catbox.moe/50gq0p.mp3"
+	},
+	{
+		"annId": 16845,
+		"animeEnglish": "Himōto! Umaru-chan",
+		"animeRomaji": "Himōto! Umaru-chan",
+		"songName": "Kakushinteki☆Metamorphose!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/k8gn13.webm",
+		"linkMP3": "https://files.catbox.moe/cqvs1w.mp3"
+	},
+	{
+		"annId": 18428,
+		"animeEnglish": "Honobono Log",
+		"animeRomaji": "Honobono Log",
+		"songName": "morning",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/hr31fn.webm",
+		"linkMP3": "https://files.catbox.moe/hm273m.mp3"
+	},
+	{
+		"annId": 21764,
+		"animeEnglish": "How Heavy Are the Dumbbells You Lift?",
+		"animeRomaji": "Dumbbell Nan-Kilo Moteru?",
+		"songName": "Onegai Muscle",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/izj713.webm",
+		"linkMP3": "https://files.catbox.moe/3sef32.mp3"
+	},
+	{
+		"annId": 13262,
+		"animeEnglish": "Hunter x Hunter",
+		"animeRomaji": "Hunter x Hunter",
+		"songName": "departure!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/9nf5k2.webm",
+		"linkMP3": "https://files.catbox.moe/nnuuj0.mp3"
+	},
+	{
+		"annId": 13262,
+		"animeEnglish": "Hunter x Hunter",
+		"animeRomaji": "Hunter x Hunter",
+		"songName": "departure! -second version-",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/a8ulv9.webm",
+		"linkMP3": "https://files.catbox.moe/6pns5z.mp3"
+	},
+	{
+		"annId": 13262,
+		"animeEnglish": "Hunter x Hunter",
+		"animeRomaji": "Hunter x Hunter",
+		"songName": "Hyōri Ittai",
+		"type": "Ending 5",
+		"linkWebm": "https://files.catbox.moe/ca208v.webm",
+		"linkMP3": "https://files.catbox.moe/wxcwe3.mp3"
+	},
+	{
+		"annId": 22612,
+		"animeEnglish": "Interspecies Reviewers",
+		"animeRomaji": "Ishuzoku Reviewers",
+		"songName": "Ikōze☆Paradise",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/8d12lc.webm",
+		"linkMP3": "https://files.catbox.moe/y1www2.mp3"
+	},
+	{
+		"annId": 19670,
+		"animeEnglish": "Inuyashiki Last Hero",
+		"animeRomaji": "Inuyashiki Last Hero",
+		"songName": "My Hero",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/lc29v0.webm",
+		"linkMP3": "https://files.catbox.moe/w7hvem.mp3"
+	},
+	{
+		"annId": 21992,
+		"animeEnglish": "Isekai Quartet",
+		"animeRomaji": "Isekai Quartet",
+		"songName": "Isekai Quartet",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/tylwfd.webm",
+		"linkMP3": "https://files.catbox.moe/x4hnjm.mp3"
+	},
+	{
+		"annId": 14445,
+		"animeEnglish": "JoJo's Bizarre Adventure",
+		"animeRomaji": "JoJo no Kimyō na Bōken",
+		"songName": "JoJo ~Sono Chi no Sadame~",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/g9fq1a.webm",
+		"linkMP3": "https://files.catbox.moe/2fvazd.mp3"
+	},
+	{
+		"annId": 14445,
+		"animeEnglish": "JoJo's Bizarre Adventure",
+		"animeRomaji": "JoJo no Kimyō na Bōken",
+		"songName": "ROUNDABOUT",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/xzgswj.webm",
+		"linkMP3": "https://files.catbox.moe/os28yw.mp3"
+	},
+	{
+		"annId": 21131,
+		"animeEnglish": "JoJo's Bizarre Adventure: Golden Wind",
+		"animeRomaji": "JoJo no Kimyō na Bōken: Ōgon no Kaze",
+		"songName": "Fighting Gold",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/tadu65.webm",
+		"linkMP3": "https://files.catbox.moe/iu8sec.mp3"
+	},
+	{
+		"annId": 16303,
+		"animeEnglish": "JoJo's Bizarre Adventure: Stardust Crusaders",
+		"animeRomaji": "JoJo no Kimyō na Bōken: Stardust Crusaders",
+		"songName": "JoJo Sono Chi no Kioku ~end of THE WORLD~",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/75c5tr.webm",
+		"linkMP3": "https://files.catbox.moe/axieu5.mp3"
+	},
+	{
+		"annId": 22944,
+		"animeEnglish": "Jujutsu Kaisen",
+		"animeRomaji": "Jujutsu Kaisen",
+		"songName": "Kaikai Kitan",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/l99nhq.webm",
+		"linkMP3": "https://files.catbox.moe/xxpl3r.mp3"
+	},
+	{
+		"annId": 22944,
+		"animeEnglish": "Jujutsu Kaisen",
+		"animeRomaji": "Jujutsu Kaisen",
+		"songName": "LOST IN PARADISE",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/ttmvl5.webm",
+		"linkMP3": "https://files.catbox.moe/6d3f5m.mp3"
+	},
+	{
+		"annId": 10562,
+		"animeEnglish": "K-On!",
+		"animeRomaji": "K-On!",
+		"songName": "Cagayake! GIRLS",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ugu8wv.webm",
+		"linkMP3": "https://files.catbox.moe/945c88.mp3"
+	},
+	{
+		"annId": 10562,
+		"animeEnglish": "K-On!",
+		"animeRomaji": "K-On!",
+		"songName": "Cagayake! GIRLS (5-nin Ver.)",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/sy1iii.webm",
+		"linkMP3": "https://files.catbox.moe/g6gy1m.mp3"
+	},
+	{
+		"annId": 11262,
+		"animeEnglish": "K-On! Season 2",
+		"animeRomaji": "K-On!!",
+		"songName": "GO! GO! MANIAC",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/icvn16.webm",
+		"linkMP3": "https://files.catbox.moe/h7yqpn.mp3"
+	},
+	{
+		"annId": 17123,
+		"animeEnglish": "KONOSUBA: God’s Blessing on This Wonderful World!",
+		"animeRomaji": "Kono Subarashii Sekai ni Shukufuku o!",
+		"songName": "fantastic dreamer",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/rt7xoy.webm",
+		"linkMP3": "https://files.catbox.moe/o24uwx.mp3"
+	},
+	{
+		"annId": 18777,
+		"animeEnglish": "KONOSUBA: God’s Blessing on This Wonderful World! 2",
+		"animeRomaji": "Kono Subarashii Sekai ni Shukufuku o! 2",
+		"songName": "Ouchi ni Kaeritai",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/okzp64.webm",
+		"linkMP3": "https://files.catbox.moe/sm70yv.mp3"
+	},
+	{
+		"annId": 21401,
+		"animeEnglish": "Kaguya-sama: Love is War",
+		"animeRomaji": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunōsen",
+		"songName": "Love Dramatic",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/2f1f2y.webm",
+		"linkMP3": "https://files.catbox.moe/9czxwm.mp3"
+	},
+	{
+		"annId": 21401,
+		"animeEnglish": "Kaguya-sama: Love is War",
+		"animeRomaji": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunōsen",
+		"songName": "Chikatto Chika Chika♡",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/dlubeo.webm",
+		"linkMP3": "https://files.catbox.moe/v8ipwa.mp3"
+	},
+	{
+		"annId": 22587,
+		"animeEnglish": "Kaguya-sama: Love is War Season 2",
+		"animeRomaji": "Kaguya-sama wa Kokurasetai?: Tensai-tachi no Renai Zunōsen",
+		"songName": "DADDY! DADDY! DO!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/peucdp.webm",
+		"linkMP3": "https://files.catbox.moe/zhhdh4.mp3"
+	},
+	{
+		"annId": 12435,
+		"animeEnglish": "Kaiji: Against All Rules",
+		"animeRomaji": "Gyakkyō Burai Kaiji: Hakairoku-hen",
+		"songName": "Mirai wa Bokura no Te no Naka",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/o39xmp.webm",
+		"linkMP3": "https://files.catbox.moe/n3lxp8.mp3"
+	},
+	{
+		"annId": 8550,
+		"animeEnglish": "Kaiji: Ultimate Survivor",
+		"animeRomaji": "Kaiji: Ultimate Survivor",
+		"songName": "Mirai wa Bokura no Te no Naka",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/xkg010.webm",
+		"linkMP3": "https://files.catbox.moe/h3x4ma.mp3"
+	},
+	{
+		"annId": 19102,
+		"animeEnglish": "Kakegurui",
+		"animeRomaji": "Kakegurui",
+		"songName": "Deal with the devil",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/d8sqk8.webm",
+		"linkMP3": "https://files.catbox.moe/90t6bx.mp3"
+	},
+	{
+		"annId": 14441,
+		"animeEnglish": "Kamisama Kiss",
+		"animeRomaji": "Kamisama Kiss",
+		"songName": "Kamisama Onegai",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/76xtoz.webm",
+		"linkMP3": "https://files.catbox.moe/gc3jog.mp3"
+	},
+	{
+		"annId": 22561,
+		"animeEnglish": "Keep Your Hands Off Eizouken!",
+		"animeRomaji": "Eizōken ni wa Te o Dasu na!",
+		"songName": "Easy Breezy",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/niqpzz.webm",
+		"linkMP3": "https://files.catbox.moe/s9owuv.mp3"
+	},
+	{
+		"annId": 13289,
+		"animeEnglish": "Kill Me Baby",
+		"animeRomaji": "Kill Me Baby",
+		"songName": "Kill Me Baby!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ubf5gn.webm",
+		"linkMP3": "https://files.catbox.moe/k3fsgp.mp3"
+	},
+	{
+		"annId": 1394,
+		"animeEnglish": "Kirby: Right Back At Ya!",
+		"animeRomaji": "Hoshi no Kirby",
+		"songName": "Kirby Theme",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cu9590.webm",
+		"linkMP3": "https://files.catbox.moe/2e2sz4.mp3"
+	},
+	{
+		"annId": 15002,
+		"animeEnglish": "Kuroko's Basketball",
+		"animeRomaji": "Kuroko no Basuke",
+		"songName": "Hengenjizai no Magical Star",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/qr1wbl.webm",
+		"linkMP3": "https://files.catbox.moe/9mideg.mp3"
+	},
+	{
+		"annId": 16343,
+		"animeEnglish": "Kuroko's Basketball",
+		"animeRomaji": "Kuroko no Basuke",
+		"songName": "Punky Funky Love",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/5gf7id.webm",
+		"linkMP3": "https://files.catbox.moe/zxhoc4.mp3"
+	},
+	{
+		"annId": 16134,
+		"animeEnglish": "Log Horizon",
+		"animeRomaji": "Log Horizon",
+		"songName": "database",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/1so6be.webm",
+		"linkMP3": "https://files.catbox.moe/07xj2r.mp3"
+	},
+	{
+		"annId": 15118,
+		"animeEnglish": "Log Horizon",
+		"animeRomaji": "Log Horizon",
+		"songName": "Your song*",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/w9h0is.webm",
+		"linkMP3": "https://files.catbox.moe/3v791x.mp3"
+	},
+	{
+		"annId": 19145,
+		"animeEnglish": "Love and Lies",
+		"animeRomaji": "Koi to Uso",
+		"songName": "Kanashii Ureshii",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/i98t5p.webm",
+		"linkMP3": "https://files.catbox.moe/dhf7sq.mp3"
+	},
+	{
+		"annId": 14448,
+		"animeEnglish": "Love, Chunibyo & Other Delusions!",
+		"animeRomaji": "Chu-2 Byo demo Koi ga Shitai!",
+		"songName": "Sparkling Daydream",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ri6tl6.webm",
+		"linkMP3": "https://files.catbox.moe/ofy3iq.mp3"
+	},
+	{
+		"annId": 7222,
+		"animeEnglish": "Lucky Star",
+		"animeRomaji": "Lucky Star",
+		"songName": "Motteke! Sailor Fuku",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/hq87c7.webm",
+		"linkMP3": "https://files.catbox.moe/3ka154.mp3"
+	},
+	{
+		"annId": 18166,
+		"animeEnglish": "March comes in like a lion",
+		"animeRomaji": "3-gatsu no Lion",
+		"songName": "Nyaa Shougi Ondo",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/gxgiax.webm",
+		"linkMP3": "https://files.catbox.moe/3kjcic.mp3"
+	},
+	{
+		"annId": 18807,
+		"animeEnglish": "Miss Kobayashi's Dragon Maid",
+		"animeRomaji": "Kobayashi-san Chi no Maid Dragon",
+		"songName": "Aozora no Rhapsody",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/thsitv.webm",
+		"linkMP3": "https://files.catbox.moe/7bqtto.mp3"
+	},
+	{
+		"annId": 18807,
+		"animeEnglish": "Miss Kobayashi's Dragon Maid",
+		"animeRomaji": "Kobayashi-san Chi no Maid Dragon",
+		"songName": "Ishukan Communication",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/c9rteu.webm",
+		"linkMP3": "https://files.catbox.moe/jav92h.mp3"
+	},
+	{
+		"annId": 23562,
+		"animeEnglish": "Miss Kobayashi's Dragon Maid S",
+		"animeRomaji": "Kobayashi-san Chi no Maid Dragon S",
+		"songName": "Aozora no Rhapsody",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/bzi11k.webm",
+		"linkMP3": "https://files.catbox.moe/mq0a1d.mp3"
+	},
+	{
+		"annId": 18064,
+		"animeEnglish": "Mob Psycho 100",
+		"animeRomaji": "Mob Psycho 100",
+		"songName": "99",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/axn8xg.webm",
+		"linkMP3": "https://files.catbox.moe/zeh0v8.mp3"
+	},
+	{
+		"annId": 3750,
+		"animeEnglish": "Monster",
+		"animeRomaji": "Monster",
+		"songName": "GRAIN",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/kwe1b1.webm",
+		"linkMP3": "https://files.catbox.moe/2qiwmr.mp3"
+	},
+	{
+		"annId": 16036,
+		"animeEnglish": "Monthly Girls' Nozaki-kun",
+		"animeRomaji": "Gekkan Shōjo Nozaki-kun",
+		"songName": "Kimi Janakya Dame Mitai",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/0887qx.webm",
+		"linkMP3": "https://files.catbox.moe/slvfpo.mp3"
+	},
+	{
+		"annId": 17786,
+		"animeEnglish": "My Hero Academia",
+		"animeRomaji": "Boku no Hero Academia",
+		"songName": "THE DAY",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/qropjh.webm",
+		"linkMP3": "https://files.catbox.moe/jzrvwn.mp3"
+	},
+	{
+		"annId": 11512,
+		"animeEnglish": "My Little Sister Can't Be This Cute!",
+		"animeRomaji": "Oreimo",
+		"songName": "irony",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/fw9jxq.webm",
+		"linkMP3": "https://files.catbox.moe/7u2kmb.mp3"
+	},
+	{
+		"annId": 16329,
+		"animeEnglish": "My Teen Romantic Comedy SNAFU TOO!",
+		"animeRomaji": "Oregairu Zoku",
+		"songName": "Yukitoki",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/ax756s.webm",
+		"linkMP3": "https://files.catbox.moe/z8t7ci.mp3"
+	},
+	{
+		"annId": 1825,
+		"animeEnglish": "Naruto",
+		"animeRomaji": "Naruto",
+		"songName": "GO!!!",
+		"type": "Opening 4",
+		"linkWebm": "https://files.catbox.moe/0v7oq4.webm",
+		"linkMP3": "https://files.catbox.moe/eatyo9.mp3"
+	},
+	{
+		"annId": 1825,
+		"animeEnglish": "Naruto",
+		"animeRomaji": "Naruto",
+		"songName": "Haruka Kanata",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/4774uh.webm",
+		"linkMP3": "https://files.catbox.moe/84hvw5.mp3"
+	},
+	{
+		"annId": 1825,
+		"animeEnglish": "Naruto",
+		"animeRomaji": "Naruto",
+		"songName": "Kanashimi wo Yasashisa ni",
+		"type": "Opening 3",
+		"linkWebm": "https://files.catbox.moe/h1qgc7.webm",
+		"linkMP3": "https://files.catbox.moe/05v054.mp3"
+	},
+	{
+		"annId": 7293,
+		"animeEnglish": "Naruto Shippuuden",
+		"animeRomaji": "Naruto Shippuuden",
+		"songName": "Blue Bird",
+		"type": "Opening 3",
+		"linkWebm": "https://files.catbox.moe/enrlw0.webm",
+		"linkMP3": "https://files.catbox.moe/uyioek.mp3"
+	},
+	{
+		"annId": 7293,
+		"animeEnglish": "Naruto Shippuuden",
+		"animeRomaji": "Naruto Shippuuden",
+		"songName": "Silhouette",
+		"type": "Opening 16",
+		"linkWebm": "https://files.catbox.moe/obrvnk.webm",
+		"linkMP3": "https://files.catbox.moe/05538v.mp3"
+	},
+	{
+		"annId": 49,
+		"animeEnglish": "Neon Genesis Evangelion",
+		"animeRomaji": "Shinseiki Evangelion",
+		"songName": "Zankoku na Tenshi no Thesis",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/71u5bi.webm",
+		"linkMP3": "https://files.catbox.moe/4pdfza.mp3"
+	},
+	{
+		"annId": 17756,
+		"animeEnglish": "New Game!",
+		"animeRomaji": "New Game!",
+		"songName": "Sakura Skip",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/e6y3c5.webm",
+		"linkMP3": "https://files.catbox.moe/sqh383.mp3"
+	},
+	{
+		"annId": 15349,
+		"animeEnglish": "Nisekoi",
+		"animeRomaji": "Nisekoi",
+		"songName": "CLICK",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/388uyj.webm",
+		"linkMP3": "https://files.catbox.moe/sukbjo.mp3"
+	},
+	{
+		"annId": 15784,
+		"animeEnglish": "No Game No Life",
+		"animeRomaji": "No Game No Life",
+		"songName": "This game",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ulrtzw.webm",
+		"linkMP3": "https://files.catbox.moe/4ph8y8.mp3"
+	},
+	{
+		"annId": 15008,
+		"animeEnglish": "No Matter How I Look at It, It’s You Guys' Fault I’m Not Popular!",
+		"animeRomaji": "Watamote",
+		"songName": "Watashi ga Motenai no wa Dō Kangaete mo Omaera ga Warui",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/wh370a.webm",
+		"linkMP3": "https://files.catbox.moe/2nzq6r.mp3"
+	},
+	{
+		"annId": 15585,
+		"animeEnglish": "Noragami",
+		"animeRomaji": "Noragami",
+		"songName": "Goya no Machiawase",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cnduhh.webm",
+		"linkMP3": "https://files.catbox.moe/4xappz.mp3"
+	},
+	{
+		"annId": 16906,
+		"animeEnglish": "Noragami Aragoto",
+		"animeRomaji": "Noragami Aragoto",
+		"songName": "Kyōran Hey Kids!!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/dlvkgy.webm",
+		"linkMP3": "https://files.catbox.moe/z0hzhp.mp3"
+	},
+	{
+		"annId": 10199,
+		"animeEnglish": "One Outs",
+		"animeRomaji": "One Outs",
+		"songName": "Bury",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/mbrc5k.webm",
+		"linkMP3": "https://files.catbox.moe/7w95zt.mp3"
+	},
+	{
+		"annId": 836,
+		"animeEnglish": "One Piece",
+		"animeRomaji": "One Piece",
+		"songName": "We Are!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/c7pqug.webm",
+		"linkMP3": "https://files.catbox.moe/ukhghw.mp3"
+	},
+	{
+		"annId": 836,
+		"animeEnglish": "One Piece",
+		"animeRomaji": "One Piece",
+		"songName": "We Are!~7-nin no Mugiwara Kaizoku-danpen",
+		"type": "Opening 7",
+		"linkWebm": "https://files.catbox.moe/zjypxh.webm",
+		"linkMP3": "https://files.catbox.moe/xf8skp.mp3"
+	},
+	{
+		"annId": 836,
+		"animeEnglish": "One Piece",
+		"animeRomaji": "One Piece",
+		"songName": "We Go!",
+		"type": "Opening 15",
+		"linkWebm": "https://files.catbox.moe/io0s7q.webm",
+		"linkMP3": "https://files.catbox.moe/ouqlb9.mp3"
+	},
+	{
+		"annId": 836,
+		"animeEnglish": "One Piece",
+		"animeRomaji": "One Piece",
+		"songName": "We Are!~Animation One Piece 10 Shuunen Ver.~",
+		"type": "Opening 10",
+		"linkWebm": "https://files.catbox.moe/bwx8pb.webm",
+		"linkMP3": "https://files.catbox.moe/0fjn8c.mp3"
+	},
+	{
+		"annId": 3708,
+		"animeEnglish": "One Piece: The Movie",
+		"animeRomaji": "One Piece: The Movie",
+		"songName": "We Are!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/u6wbwb.webm",
+		"linkMP3": "https://files.catbox.moe/ab1vhf.mp3"
+	},
+	{
+		"annId": 16840,
+		"animeEnglish": "One Punch Man",
+		"animeRomaji": "One Punch Man",
+		"songName": "THE HERO !! ~Ikareru Ken ni Honō o Tsukeru~",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/p5bjvw.webm",
+		"linkMP3": "https://files.catbox.moe/cz0ubn.mp3"
+	},
+	{
+		"annId": 18889,
+		"animeEnglish": "One Room",
+		"animeRomaji": "One Room",
+		"songName": "Harumachi Clover",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/l1itf2.webm",
+		"linkMP3": "https://files.catbox.moe/wb3kvj.mp3"
+	},
+	{
+		"annId": 18075,
+		"animeEnglish": "Orange",
+		"animeRomaji": "Orange",
+		"songName": "Hikari no Hahen",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/8cm625.webm",
+		"linkMP3": "https://files.catbox.moe/78c3oy.mp3"
+	},
+	{
+		"annId": 16729,
+		"animeEnglish": "Overlord",
+		"animeRomaji": "Overlord",
+		"songName": "Clattanoia",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/gmip23.webm",
+		"linkMP3": "https://files.catbox.moe/3efzdr.mp3"
+	},
+	{
+		"annId": 21105,
+		"animeEnglish": "Overlord III",
+		"animeRomaji": "Overlord III",
+		"songName": "VORACITY",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/r9jtdv.webm",
+		"linkMP3": "https://files.catbox.moe/cz3rsw.mp3"
+	},
+	{
+		"annId": 11605,
+		"animeEnglish": "Panty & Stocking with Garterbelt",
+		"animeRomaji": "Panty & Stocking with Garterbelt",
+		"songName": "Theme for Panty & Stocking",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/x7o8de.webm",
+		"linkMP3": "https://files.catbox.moe/xanvle.mp3"
+	},
+	{
+		"annId": 6142,
+		"animeEnglish": "Paprika",
+		"animeRomaji": "Paprika",
+		"songName": "Baikai",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/e8qaem.webm",
+		"linkMP3": "https://files.catbox.moe/m3lzkg.mp3"
+	},
+	{
+		"annId": 3169,
+		"animeEnglish": "Paranoia Agent",
+		"animeRomaji": "Mōsō Dairinin",
+		"songName": "Yume no Shima Shinen Kouen",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/89u48t.webm",
+		"linkMP3": "https://files.catbox.moe/7uejru.mp3"
+	},
+	{
+		"annId": 15855,
+		"animeEnglish": "Parasyte -the maxim-",
+		"animeRomaji": "Kiseijuu: Sei no Kakuritsu",
+		"songName": "Let Me Hear",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/spq586.webm",
+		"linkMP3": "https://files.catbox.moe/v0eseu.mp3"
+	},
+	{
+		"annId": 20469,
+		"animeEnglish": "Persona 5 the Animation",
+		"animeRomaji": "Persona 5 the Animation",
+		"songName": "The Whims of Fate",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/i0p8ru.webm",
+		"linkMP3": "https://files.catbox.moe/k3y8ky.mp3"
+	},
+	{
+		"annId": 270,
+		"animeEnglish": "Pokémon",
+		"animeRomaji": "Pocket Monsters",
+		"songName": "Pokémon Theme",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/vyudhr.webm",
+		"linkMP3": "https://files.catbox.moe/yjxs9q.mp3"
+	},
+	{
+		"annId": 270,
+		"animeEnglish": "Pokémon",
+		"animeRomaji": "Pocket Monsters",
+		"songName": "Pokémon World",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/lhr5ol.webm",
+		"linkMP3": "https://files.catbox.moe/z0jcry.mp3"
+	},
+	{
+		"annId": 270,
+		"animeEnglish": "Pokémon",
+		"animeRomaji": "Pocket Monsters",
+		"songName": "Born to be a Winner",
+		"type": "Opening 4",
+		"linkWebm": "https://files.catbox.moe/28b86c.webm",
+		"linkMP3": "https://files.catbox.moe/742umx.mp3"
+	},
+	{
+		"annId": 11685,
+		"animeEnglish": "Pokémon: Black and White",
+		"animeRomaji": "Pocket Monsters: Best Wishes!",
+		"songName": "Black and White",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/p5xdkn.webm",
+		"linkMP3": "https://files.catbox.moe/1eisap.mp3"
+	},
+	{
+		"annId": 7814,
+		"animeEnglish": "Ponyo on the Cliff by the Sea",
+		"animeRomaji": "Gake no Ue no Ponyo",
+		"songName": "Gake no Ue no Ponyo",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/klxepk.webm",
+		"linkMP3": "https://files.catbox.moe/y6ewfp.mp3"
+	},
+	{
+		"annId": 16838,
+		"animeEnglish": "Prison School",
+		"animeRomaji": "Prison School",
+		"songName": "Ai no Prison",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/yalaam.webm",
+		"linkMP3": "https://files.catbox.moe/nia1u5.mp3"
+	},
+	{
+		"annId": 12120,
+		"animeEnglish": "Puella Magi Madoka Magica",
+		"animeRomaji": "Mahō Shōjo Madoka★Magica",
+		"songName": "Sis puella magica!",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/q11fy2.webm",
+		"linkMP3": "https://files.catbox.moe/iwcbrq.mp3"
+	},
+	{
+		"annId": 20848,
+		"animeEnglish": "Rascal Does Not Dream of Bunny Girl Senpai",
+		"animeRomaji": "Seishun Buta Yarō wa Bunny Girl Senpai no Yume o Minai",
+		"songName": "Fukashigi no Karte",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/jacr7b.webm",
+		"linkMP3": "https://files.catbox.moe/m49m2s.mp3"
+	},
+	{
+		"annId": 20848,
+		"animeEnglish": "Rascal Does Not Dream of Bunny Girl Senpai",
+		"animeRomaji": "Seishun Buta Yarō wa Bunny Girl Senpai no Yume o Minai",
+		"songName": "Fukashigi no Karte",
+		"type": "Ending 5",
+		"linkWebm": "https://files.catbox.moe/9vgw43.webm",
+		"linkMP3": "https://files.catbox.moe/g4aidu.mp3"
+	},
+	{
+		"annId": 21406,
+		"animeEnglish": "Rascal Does Not Dream of a Dreaming Girl",
+		"animeRomaji": "Seishun Buta Yarō wa Yumemiru Shōjo no Yume o Minai",
+		"songName": "Fukashigi no Karte movie ver.",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/begtqe.webm",
+		"linkMP3": "https://files.catbox.moe/nrwyt0.mp3"
+	},
+	{
+		"annId": 17360,
+		"animeEnglish": "Re:ZERO -Starting Life in Another World-",
+		"animeRomaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
+		"songName": "Redo",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/kbniko.webm",
+		"linkMP3": "https://files.catbox.moe/31hh0o.mp3"
+	},
+	{
+		"annId": 17360,
+		"animeEnglish": "Re:ZERO -Starting Life in Another World-",
+		"animeRomaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
+		"songName": "Paradisus-Paradoxum",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/64kj54.webm",
+		"linkMP3": "https://files.catbox.moe/5z8rbu.mp3"
+	},
+	{
+		"annId": 17360,
+		"animeEnglish": "Re:ZERO -Starting Life in Another World-",
+		"animeRomaji": "Re:Zero kara Hajimeru Isekai Seikatsu",
+		"songName": "STYX HELIX",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/g9irj2.webm",
+		"linkMP3": "https://files.catbox.moe/6erwzz.mp3"
+	},
+	{
+		"annId": 16917,
+		"animeEnglish": "ReLIFE",
+		"animeRomaji": "ReLIFE",
+		"songName": "Button",
+		"type": "Ending 13",
+		"linkWebm": "https://files.catbox.moe/bnwhoj.webm",
+		"linkMP3": "https://files.catbox.moe/3dt1to.mp3"
+	},
+	{
+		"annId": 20509,
+		"animeEnglish": "Saga of Tanya the Evil: The Movie",
+		"animeRomaji": "Gekijōban Yōjo Senki",
+		"songName": "Los! Los! Los!",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/l2tasp.webm",
+		"linkMP3": "https://files.catbox.moe/09qyq2.mp3"
+	},
+	{
+		"annId": 2636,
+		"animeEnglish": "Samurai Champloo",
+		"animeRomaji": "Samurai Champloo",
+		"songName": "battlecry",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/8evcom.webm",
+		"linkMP3": "https://files.catbox.moe/mr2jw1.mp3"
+	},
+	{
+		"annId": 166,
+		"animeEnglish": "Serial Experiments Lain",
+		"animeRomaji": "Serial Experiments Lain",
+		"songName": "DUVET",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/flk2by.webm",
+		"linkMP3": "https://files.catbox.moe/o0cxhv.mp3"
+	},
+	{
+		"annId": 13003,
+		"animeEnglish": "Shakugan no Shana III (Final)",
+		"animeRomaji": "Shakugan no Shana III (Final)",
+		"songName": "Hishoku no Sora",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/755yc8.webm",
+		"linkMP3": "https://files.catbox.moe/hn3but.mp3"
+	},
+	{
+		"annId": 22557,
+		"animeEnglish": "Shinkansen Henkei Robo Shinkalion: Mirai Kara Shinsoku no ALFA-X",
+		"animeRomaji": "Shinkansen Henkei Robo Shinkalion: Mirai Kara Shinsoku no ALFA-X",
+		"songName": "Zankoku na Tenshi no Thesis",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/uqnohy.webm",
+		"linkMP3": "https://files.catbox.moe/vyg4hz.mp3"
+	},
+	{
+		"annId": 2266,
+		"animeEnglish": "Sonic X",
+		"animeRomaji": "Sonic X",
+		"songName": "Gotta Go Fast",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/zg8xcg.webm",
+		"linkMP3": "https://files.catbox.moe/xamcv6.mp3"
+	},
+	{
+		"annId": 9070,
+		"animeEnglish": "Soul Eater",
+		"animeRomaji": "Soul Eater",
+		"songName": "resonance",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ipjror.webm",
+		"linkMP3": "https://files.catbox.moe/d46hnj.mp3"
+	},
+	{
+		"annId": 16657,
+		"animeEnglish": "Sound! Euphonium",
+		"animeRomaji": "Hibike! Euphonium",
+		"songName": "Dream Solister (Wind Orchestra Ver.)",
+		"type": "Ending 3",
+		"linkWebm": "https://files.catbox.moe/ab6tkx.webm",
+		"linkMP3": "https://files.catbox.moe/euy1gz.mp3"
+	},
+	{
+		"annId": 377,
+		"animeEnglish": "Spirited Away",
+		"animeRomaji": "Sen to Chihiro no Kamikakushi",
+		"songName": "Itsumo Nando demo",
+		"type": "Ending 1",
+		"linkWebm": "https://files.catbox.moe/5azbnv.webm",
+		"linkMP3": "https://files.catbox.moe/q2lwec.mp3"
+	},
+	{
+		"annId": 2214,
+		"animeEnglish": "Spooky Kitaro",
+		"animeRomaji": "Gegege no Kitarō",
+		"songName": "Gegege no Kitarō",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/yobnqk.webm",
+		"linkMP3": "https://files.catbox.moe/0ioonn.mp3"
+	},
+	{
+		"annId": 7616,
+		"animeEnglish": "Spooky Kitaro",
+		"animeRomaji": "Gegege no Kitarō",
+		"songName": "Gegege no Kitaro",
+		"type": "Opening 2",
+		"linkWebm": "https://files.catbox.moe/qy7cmi.webm",
+		"linkMP3": "https://files.catbox.moe/r45g8r.mp3"
+	},
+	{
+		"annId": 11770,
+		"animeEnglish": "Steins;Gate",
+		"animeRomaji": "Steins;Gate",
+		"songName": "Hacking to the Gate",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/kqcr2z.webm",
+		"linkMP3": "https://files.catbox.moe/8yqtn1.mp3"
+	},
+	{
+		"annId": 20446,
+		"animeEnglish": "Steins;Gate 0",
+		"animeRomaji": "Steins;Gate 0",
+		"songName": "Fatima",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/dfaeda.webm",
+		"linkMP3": "https://files.catbox.moe/xdhyp5.mp3"
+	},
+	{
+		"annId": 13858,
+		"animeEnglish": "Sword Art Online",
+		"animeRomaji": "Sword Art Online",
+		"songName": "crossing field",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/35s57l.webm",
+		"linkMP3": "https://files.catbox.moe/1t8c97.mp3"
+	},
+	{
+		"annId": 15804,
+		"animeEnglish": "Sword Art Online II",
+		"animeRomaji": "Sword Art Online II",
+		"songName": "IGNITE",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/n8h0fu.webm",
+		"linkMP3": "https://files.catbox.moe/2u2ii0.mp3"
+	},
+	{
+		"annId": 23503,
+		"animeEnglish": "TONIKAWA: Over The Moon For You",
+		"animeRomaji": "Tonikaku Kawaii",
+		"songName": "Koi no Uta (feat. Tsukasa Yuzaki)",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/6n2iiy.webm",
+		"linkMP3": "https://files.catbox.moe/bk88am.mp3"
+	},
+	{
+		"annId": 14613,
+		"animeEnglish": "Teekyuu",
+		"animeRomaji": "Teekyuu",
+		"songName": "Botsuraku Kizoku no Tame no Teekyuu",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/qmkksy.webm",
+		"linkMP3": "https://files.catbox.moe/e004i4.mp3"
+	},
+	{
+		"annId": 15974,
+		"animeEnglish": "Terror in Resonance",
+		"animeRomaji": "Zankyō no Terror",
+		"songName": "Trigger",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/heu2fw.webm",
+		"linkMP3": "https://files.catbox.moe/zhzj39.mp3"
+	},
+	{
+		"annId": 11120,
+		"animeEnglish": "The Disappearance of Haruhi Suzumiya",
+		"animeRomaji": "Suzumiya Haruhi no Shōshitsu",
+		"songName": "Bouken Desho Desho?",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/1ogrky.webm",
+		"linkMP3": "https://files.catbox.moe/pp1tnm.mp3"
+	},
+	{
+		"annId": 12896,
+		"animeEnglish": "The Future Diary",
+		"animeRomaji": "Mirai Nikki",
+		"songName": "Kuusō Mesorogiwi",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/u9c7qd.webm",
+		"linkMP3": "https://files.catbox.moe/ai3851.mp3"
+	},
+	{
+		"annId": 23279,
+		"animeEnglish": "The God of High School",
+		"animeRomaji": "The God of High School",
+		"songName": "Contradiction",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/1ogwyb.webm",
+		"linkMP3": "https://files.catbox.moe/m6sbb9.mp3"
+	},
+	{
+		"annId": 6430,
+		"animeEnglish": "The Melancholy of Haruhi Suzumiya",
+		"animeRomaji": "Suzumiya Haruhi no Yuuutsu",
+		"songName": "God knows...",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/mk1eey.webm",
+		"linkMP3": "https://files.catbox.moe/r48m62.mp3"
+	},
+	{
+		"annId": 10924,
+		"animeEnglish": "The Melancholy of Haruhi Suzumiya",
+		"animeRomaji": "Suzumiya Haruhi no Yuuutsu",
+		"songName": "Super Driver",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/4n7ki9.webm",
+		"linkMP3": "https://files.catbox.moe/zvwxy0.mp3"
+	},
+	{
+		"annId": 21552,
+		"animeEnglish": "The Promised Neverland",
+		"animeRomaji": "Yakusoku no Neverland",
+		"songName": "Touch off",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/dpymb3.webm",
+		"linkMP3": "https://files.catbox.moe/bij29k.mp3"
+	},
+	{
+		"annId": 22925,
+		"animeEnglish": "The Quintessential Quintuplets 2",
+		"animeRomaji": "Gotōbun no Hanayome ∬",
+		"songName": "Gotōbun no Kimochi",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/uvqani.webm",
+		"linkMP3": "https://files.catbox.moe/nhgbqc.mp3"
+	},
+	{
+		"annId": 19826,
+		"animeEnglish": "The Rising of the Shield Hero",
+		"animeRomaji": "Tate no Yuusha no Nariagari",
+		"songName": "RISE",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/ru0tpc.webm",
+		"linkMP3": "https://files.catbox.moe/xxoha6.mp3"
+	},
+	{
+		"annId": 11571,
+		"animeEnglish": "The World God Only Knows",
+		"animeRomaji": "Kami Nomi zo Shiru Sekai",
+		"songName": "God only knows Daisanmaku",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/cw6v8a.webm",
+		"linkMP3": "https://files.catbox.moe/2ucsq5.mp3"
+	},
+	{
+		"annId": 12375,
+		"animeEnglish": "The World God Only Knows Season Two",
+		"animeRomaji": "Kami Nomi zo Shiru Sekai II",
+		"songName": "God only knows Daisanmaku",
+		"type": "Ending 3",
+		"linkWebm": "https://files.catbox.moe/7q4d23.webm",
+		"linkMP3": "https://files.catbox.moe/5qtgo9.mp3"
+	},
+	{
+		"annId": 15334,
+		"animeEnglish": "The World God Only Knows: Goddesses Arc",
+		"animeRomaji": "Kami nomi zo Shiru Sekai: Megami-hen",
+		"songName": "God only knows Daisanmaku",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/8i5ymy.webm",
+		"linkMP3": "https://files.catbox.moe/gmf15u.mp3"
+	},
+	{
+		"annId": 16087,
+		"animeEnglish": "Tokyo Ghoul",
+		"animeRomaji": "Tokyo Ghoul",
+		"songName": "unravel",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/zzkjlg.webm",
+		"linkMP3": "https://files.catbox.moe/lkhvvb.mp3"
+	},
+	{
+		"annId": 21116,
+		"animeEnglish": "Tokyo Ghoul:re",
+		"animeRomaji": "Tokyo Ghoul:re",
+		"songName": "katharsis",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/g2ldjm.webm",
+		"linkMP3": "https://files.catbox.moe/1lexo5.mp3"
+	},
+	{
+		"annId": 10050,
+		"animeEnglish": "Toradora!",
+		"animeRomaji": "Toradora!",
+		"songName": "Pre-Parade",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/571ev6.webm",
+		"linkMP3": "https://files.catbox.moe/09ies4.mp3"
+	},
+	{
+		"annId": 10050,
+		"animeEnglish": "Toradora!",
+		"animeRomaji": "Toradora!",
+		"songName": "Holy Night",
+		"type": "Ending 3",
+		"linkWebm": "https://files.catbox.moe/sk4d8e.webm",
+		"linkMP3": "https://files.catbox.moe/1uyv3x.mp3"
+	},
+	{
+		"annId": 23068,
+		"animeEnglish": "Tower of God",
+		"animeRomaji": "Kami no Tō",
+		"songName": "TOP -Japanese ver.-",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/v5wu34.webm",
+		"linkMP3": "https://files.catbox.moe/oya4dn.mp3"
+	},
+	{
+		"annId": 6134,
+		"animeEnglish": "When They Cry",
+		"animeRomaji": "Higurashi no Naku Koro ni",
+		"songName": "Higurashi no Naku Koro ni",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/3czpgu.webm",
+		"linkMP3": "https://files.catbox.moe/50gq0p.mp3"
+	},
+	{
+		"annId": 20478,
+		"animeEnglish": "Wotakoi: Love is Hard for Otaku",
+		"animeRomaji": "Otaku ni Koi wa Muzukashii",
+		"songName": "Fiction",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/rehox3.webm",
+		"linkMP3": "https://files.catbox.moe/l37nxf.mp3"
+	},
+	{
+		"annId": 16108,
+		"animeEnglish": "Your Lie in April",
+		"animeRomaji": "KimiUso",
+		"songName": "Hikaru Nara",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/mw0lqu.webm",
+		"linkMP3": "https://files.catbox.moe/d3oasy.mp3"
+	},
+	{
+		"annId": 16108,
+		"animeEnglish": "Your Lie in April",
+		"animeRomaji": "KimiUso",
+		"songName": "Étude Op. 25 No. 5",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/v4psxf.webm",
+		"linkMP3": "https://files.catbox.moe/xqep3g.mp3"
+	},
+	{
+		"annId": 18171,
+		"animeEnglish": "Your Name.",
+		"animeRomaji": "Kimi no Na wa.",
+		"songName": "Yume Tourou",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/p2ievv.webm",
+		"linkMP3": "https://files.catbox.moe/mq0b2a.mp3"
+	},
+	{
+		"annId": 18171,
+		"animeEnglish": "Your Name.",
+		"animeRomaji": "Kimi no Na wa.",
+		"songName": "Zen Zen Zense movie ver.",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/r8w58t.webm",
+		"linkMP3": "https://files.catbox.moe/i2mpeu.mp3"
+	},
+	{
+		"annId": 15004,
+		"animeEnglish": "Yowamushi Pedal",
+		"animeRomaji": "Yowamushi Pedal",
+		"songName": "Koi no Hime Hime☆Pettanko",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/sedua7.webm",
+		"linkMP3": "https://files.catbox.moe/b310gy.mp3"
+	},
+	{
+		"annId": 18191,
+		"animeEnglish": "Yuri!!! on Ice",
+		"animeRomaji": "Yuri!!! on Ice",
+		"songName": "History Maker",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/z2zxcv.webm",
+		"linkMP3": "https://files.catbox.moe/o6i75g.mp3"
+	},
+	{
+		"annId": 18191,
+		"animeEnglish": "Yuri!!! on Ice",
+		"animeRomaji": "Yuri!!! on Ice",
+		"songName": "History Maker",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/yi14r5.webm",
+		"linkMP3": "https://files.catbox.moe/5e5c9p.mp3"
+	},
+	{
+		"annId": 12828,
+		"animeEnglish": "Yuruyuri - Happy Go Lily",
+		"animeRomaji": "Yuru Yuri",
+		"songName": "Yuriyurarararayuruyuri Daijiken",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/4kqpxk.webm",
+		"linkMP3": "https://files.catbox.moe/1l86tl.mp3"
+	},
+	{
+		"annId": 16843,
+		"animeEnglish": "Yuruyuri San Hai!",
+		"animeRomaji": "Yuruyuri San Hai!",
+		"songName": "Chochocho! Yuruyuri Kapuriccho!!",
+		"type": "Opening 1",
+		"linkWebm": "https://files.catbox.moe/lycewl.webm",
+		"linkMP3": "https://files.catbox.moe/bb1gtm.mp3"
+	},
+	{
+		"annId": 21363,
+		"animeEnglish": "Zombie Land Saga",
+		"animeRomaji": "Zombie Land Saga",
+		"songName": "DEAD or RAP!!!",
+		"type": "Insert Song",
+		"linkWebm": "https://files.catbox.moe/cfumi6.webm",
+		"linkMP3": "https://files.catbox.moe/vv83sr.mp3"
+	},
+	{
+		"annId": 12368,
+		"animeEnglish": "anohana: The Flower We Saw That Day",
+		"animeRomaji": "Ano Hi Mita Hana no Namae o Boku-tachi wa Mada Shiranai.",
+		"songName": "secret base ~Kimi ga Kureta Mono~ (10 years after ver.)",
+		"type": "Ending 2",
+		"linkWebm": "https://files.catbox.moe/qoewvg.webm",
+		"linkMP3": "https://files.catbox.moe/pzj7kj.mp3"
+	}
 ]
