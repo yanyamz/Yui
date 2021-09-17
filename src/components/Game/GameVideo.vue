@@ -69,12 +69,7 @@
 				list="datalistOptions"
 			/>
 			<datalist id="datalistOptions">
-				<option
-					@click="UpdateGuess(entry)"
-					@keyup.enter="UpdateGuess(entry)"
-					v-for="entry in possibleEntries"
-					:key="entry"
-					:value="entry"
+				<option v-for="entry in possibleEntries" :key="entry" :value="entry"
 					>{{ entry }}
 				</option>
 			</datalist>
@@ -114,7 +109,6 @@ export default {
 		return {
 			startingTime: 0,
 			guess: '',
-			showOptions: false,
 			possibleEntries: [],
 			socket: io('https://animeopbackend.herokuapp.com/'),
 		}
@@ -151,17 +145,14 @@ export default {
 				this.guess = ' '
 			}
 		},
-		async guess() {
-			this.possibleEntries = await this.filterSearch(this.guess)
-			this.showOptions = true
+		async guess(value) {
+			if (value.length > 2) {
+				this.possibleEntries = await this.filterSearch(this.guess)
+			}
 		},
 	},
 	methods: {
 		...mapActions('game', ['filterSearch']),
-		UpdateGuess(input) {
-			this.guess = input
-			this.showOptions = false
-		},
 		NewVideo() {
 			this.SetVolume()
 		},

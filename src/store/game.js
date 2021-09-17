@@ -34,16 +34,17 @@ export default {
 					`https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
 				)
 				entries = await data.json()
+				context.state.database = entries
 			}
 			const possibleEntries = []
 			for (let i = 0; i < entries.length; i++) {
 				if (
 					entries[i].animeEnglish
 						.toLowerCase()
-						.indexOf(input.toLowerCase()) > -1 ||
+						.indexOf(input.toLowerCase()) != -1 ||
 					entries[i].animeRomaji
 						.toLowerCase()
-						.indexOf(input.toLowerCase()) > -1
+						.indexOf(input.toLowerCase()) != -1
 				) {
 					possibleEntries.push(entries[i].animeEnglish)
 					possibleEntries.push(entries[i].animeRomaji)

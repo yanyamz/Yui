@@ -84,7 +84,7 @@ export default {
 			'deleteRoom',
 			'setRoomInSession',
 		]),
-		...mapActions('game', ['createGame', 'createPlaylist']),
+		...mapActions('game', ['createGame']),
 		getAvatar(number) {
 			return this.avatars[number % this.avatars.length]
 		},

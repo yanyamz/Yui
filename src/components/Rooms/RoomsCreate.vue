@@ -31,6 +31,19 @@
 			</div>
 			<div class="field">
 				<div class="control">
+					<div class="label">Number of songs</div>
+					<input
+						v-model.number="numberOfSongs"
+						id="room-name"
+						type="number"
+						max="50"
+						min="2"
+						class="input is-primary block"
+					/>
+				</div>
+			</div>
+			<div class="field">
+				<div class="control">
 					<div class="label">Difficulty</div>
 					<div class="select is-primary">
 						<select v-model="difficulty">
@@ -67,7 +80,8 @@ export default {
 			roomName: '',
 			difficulty: null,
 			isValid: true,
-			guessingTime: 25,
+			guessingTime: 20,
+			numberOfSongs: 10,
 		}
 	},
 	computed: {
@@ -106,7 +120,7 @@ export default {
 				})
 				this.$router.push(`/lobby/${this.roomName}+${this.displayName}`)
 
-				const playList = await this.createPlaylist(10)
+				const playList = await this.createPlaylist(this.numberOfSongs)
 				const socket = io('https://animeopbackend.herokuapp.com/')
 
 				socket.emit(

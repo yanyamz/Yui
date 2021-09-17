@@ -17,7 +17,7 @@ const createGame = ({ host, guessingTime, difficulty, playList }) => {
 		currentSongNum: 0,
 		currentSongTime: 0,
 		phase: 0,
-		endPhase: playList.length * 2 - 1,
+		endPhase: playList.length * 2,
 		playList,
 		isCorrect: false,
 		isWrong: false,
