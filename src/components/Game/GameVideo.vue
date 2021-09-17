@@ -38,7 +38,6 @@
 		<div class="video-player is-loading">
 			<h1 class="question-mark" v-show="phase == 'guessing'">?</h1>
 			<video
-				v-if="!refreshComponent"
 				@loadeddata="NewVideo"
 				@canplaythrough.once="CanPlay"
 				class="video"
@@ -112,7 +111,7 @@ import { mapActions, mapGetters } from 'vuex'
 
 export default {
 	mixins: [helpers],
-	props: ['game', 'users'],
+	props: ['game', 'users', 'host'],
 	data() {
 		return {
 			startingTime: 0,

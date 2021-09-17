@@ -28,7 +28,13 @@ export default {
 			return playlist
 		},
 		async filterSearch(context, input) {
-			const entries = context.state.database
+			let entries = context.state.database
+			if (!entries) {
+				const data = await fetch(
+					`https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
+				)
+				entries = await data.json()
+			}
 			const possibleEntries = []
 			for (let i = 0; i < entries.length; i++) {
 				if (
