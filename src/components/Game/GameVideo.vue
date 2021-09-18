@@ -68,11 +68,7 @@
 				placeholder="guess"
 				list="datalistOptions"
 			/>
-			<datalist id="datalistOptions">
-				<option v-for="entry in possibleEntries" :key="entry" :value="entry"
-					>{{ entry }}
-				</option>
-			</datalist>
+			<SearchOptions @updateGuess="updateGuess" :entries="possibleEntries" />
 		</div>
 		<div class="users grid block">
 			<div
@@ -101,14 +97,19 @@
 import helpers from '@/mixins/helpers.js'
 import { io } from 'socket.io-client'
 import { mapActions, mapGetters } from 'vuex'
+import SearchOptions from '@/components/Game/SearchOptions'
 
 export default {
 	mixins: [helpers],
 	props: ['game', 'users', 'host'],
+	components: {
+		SearchOptions,
+	},
 	data() {
 		return {
 			startingTime: 0,
 			guess: '',
+			submitted: false,
 			possibleEntries: [],
 			socket: io('https://animeopbackend.herokuapp.com/'),
 		}
@@ -146,13 +147,18 @@ export default {
 			}
 		},
 		async guess(value) {
-			if (value.length > 2) {
+			if (value.length > 2 && this.submitted == false) {
 				this.possibleEntries = await this.filterSearch(this.guess)
+			} else {
+				this.possibleEntries = []
 			}
 		},
 	},
 	methods: {
 		...mapActions('game', ['filterSearch']),
+		updateGuess(input) {
+			this.guess = input
+		},
 		NewVideo() {
 			this.SetVolume()
 		},
