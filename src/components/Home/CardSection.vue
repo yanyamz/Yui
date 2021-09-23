@@ -15,7 +15,9 @@
 					</div>
 					<div class="card-image has-text-centered mt-2">
 						<img
-							:src="'@/assets/images/avatars/yui_positive.png'"
+							:src="
+								require('@/assets/images/avatars/yui_positive.png')
+							"
 							alt="image"
 						/>
 					</div>
