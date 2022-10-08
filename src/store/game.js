@@ -11,7 +11,7 @@ export default {
 			console.log('createPlaylist')
 			const playlist = []
 			const data = await fetch(
-				`https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
+				`https://api.jsonbin.io/v3/b/613e947e4a82881d6c4dcfe8`
 			)
 			const database = await data.json()
 			context.state.database = database
@@ -31,7 +31,7 @@ export default {
 			let entries = context.state.database
 			if (!entries) {
 				const data = await fetch(
-					`https://api.jsonbin.io/b/613e947e4a82881d6c4dcfe8`
+					`https://api.jsonbin.io/v3/b/613e947e4a82881d6c4dcfe8`
 				)
 				entries = await data.json()
 				context.state.database = entries
